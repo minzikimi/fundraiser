@@ -1,0 +1,56 @@
+.diploma {
+    width: 750px; 
+    height: 550px;
+    padding: 3rem;
+    border: 2px solid var(--color-darkblue); 
+    border-radius: 10px; 
+    font-family: var(--font-serif); 
+    color: var(--color-midnight);
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+  }
+  
+  h1 {
+    font-size: 2.5rem; 
+    font-weight: bold;
+    color: var(--color-darkblue); 
+    margin-bottom: 1rem;
+  }
+  
+  h2 {
+    font-size: 2rem; 
+    font-weight: 600;
+    margin: 1.5rem 0;
+    color: var(--color-darkblue); 
+  }
+  
+  p {
+    font-size: 1.2rem; 
+    color: var(--color-midnight);
+    line-height: 1.5;
+    margin-bottom: 1.5rem; 
+  }
+  
+  .date {
+    margin-top: 2.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-dimblue); 
+  }
+  
+  p:nth-of-type(2) {
+    margin-top: 1.5rem; 
+    font-style: italic; 
+    color: var(--color-seablue); 
+  }
+  
+  footer {
+    margin-top: 3rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--color-darkblue); 
+  }
+  
