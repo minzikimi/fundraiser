@@ -2,7 +2,7 @@ import React from 'react'
 
 const QuoteSection = () => {
   return (
-    <div>
+    <div className='container'>
       <p>im quotesection</p>
     </div>
   )
