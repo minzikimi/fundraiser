@@ -8,7 +8,7 @@ import DonationSection from '../components/DonationSection/DonationSection'
 import Certificate from '../components/Certificate/Certificate'
 
 const Home = () => {
-  const name = "MinJi Kim"; 
+  const name = "Kim"; 
   const date = new Date().toLocaleDateString(); 
   return (
     <div>
