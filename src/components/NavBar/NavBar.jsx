@@ -23,7 +23,7 @@ const NavBar = () => {
         </li>
         <span className={styles.divider}>|</span>
         <li className={styles.languageToggle}> English</li>
-        <span class="material-symbols-outlined">language</span>
+        <span className="material-symbols-outlined">language</span>
       </ul>
     </nav>
   );
