@@ -6,63 +6,38 @@ const ThankYou = () => {
   const navigate = useNavigate();
 
   return (
-    <main className="container">
-      <nav className="navbarGoBack" aria-label="Go back navigation">
+    <main className={styles.thankYouContainer}>
+      <nav className={styles.navbarGoBack} aria-label="Go back navigation">
         <button
-          className="goBackBtn"
+          className={styles.goBackBtn}
           type="button"
           onClick={() => navigate(-1)}
           aria-label="Go back"
         >
-          ← Go back
+          ← GO BACK
         </button>
       </nav>
-      <header className="headerThankYou">
-        <p>logo goes here</p>
-        <h1 className="titleThankYou">Thank you</h1>
+      <header className={styles.headerThankYou}>
+        <div>
+          <p>logo goes here</p>
+          <h1 className={styles.titleThankYou}>Thank you!</h1>
+        </div>
       </header>
-      <section className="progressBarSection" aria-label="Donation Progress">
-        <p>progress bar goes here</p>
-        <h2>
-          Your contribution helps preserve the stories of those who can no
-          longer speak.
-        </h2>
-      </section>
-      <section className="formSection">
-        <p>
-          Providing your name is optional. In case you would like your name
-          printed on your certificate, please enter name below:
-        </p>
-        <form className="nameAndEmailForm">
-          <div>
-            <label htmlFor="name">Name: (optional)</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              autoComplete="name"
-            ></input>
-          </div>
-          <div>
-            <label htmlFor="email">E-mail:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              autoComplete="email"
-              required
-            ></input>
-          </div>
-        </form>
-        <button type="submit" id="submitBtn">
-          SUBMIT
-        </button>
-      </section>
-      <section className="downloadCertificate">
-        <h3>Thank you for contributing to our mission.</h3>
-        <button type="button" id="downloadBtn">
-          DOWNLOAD CERTIFICATE
-        </button>
+      <section
+        className={styles.progressBarSection}
+        aria-label="Donation Progress"
+      >
+        <div>
+          <p>progress bar goes here</p>
+          <h3>
+            Your contribution helps preserve the stories of those who can no
+            longer speak. Thank you for supporting our mission to ensure history
+            is never forgotten.
+          </h3>
+          <button type="button" id={styles.getDiplomaBtn}>
+            GET YOUR PERSONAL DIPLOMA
+          </button>
+        </div>
       </section>
     </main>
   );

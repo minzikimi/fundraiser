@@ -12,42 +12,51 @@
   --color-midnight: #1c1f2a;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.container {
+.thankYouContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   max-width: 1400px;
   margin: 0 auto;
   padding: 2rem;
+  background-color: var(--color-darkblue);
+  color: var(--color-sand40);
 }
 .navbarGoBack {
+  padding: 2rem;
 }
 
 .goBackBtn {
 }
+
 .headerThankYou {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
 }
 
 .titleThankYou {
+  color: var(--color-sand40);
+  font: ;
 }
 
 .progressBarSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
 }
 
-.formSection {
+.progressBarSection p,
+h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-sand40);
 }
 
-.nameAndEmailForm {
-}
-
-#submitBtn {
-}
-
-.downloadCertificate {
-}
-
-#downloadBtn {
+#getDiplomaBtn {
 }
