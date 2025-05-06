@@ -1,0 +1,53 @@
+:root {
+  --font-sans: Arial, sans-serif;
+  --font-serif: Georgia, serif;
+
+  --color-darkblue: #1f2a44;
+  --color-dimblue: #8e9fbc;
+  --color-seablue: #b9d3dc;
+  --color-yellow: #e6b730;
+  --color-sand: #c5b9ac;
+  --color-sand40: #e7e2dd;
+  --color-sand20: #f2f0ed;
+  --color-midnight: #1c1f2a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.navbarGoBack {
+}
+
+.goBackBtn {
+}
+.headerThankYou {
+}
+
+.titleThankYou {
+}
+
+.progressBarSection {
+}
+
+.formSection {
+}
+
+.nameAndEmailForm {
+}
+
+#submitBtn {
+}
+
+.downloadCertificate {
+}
+
+#downloadBtn {
+}
