@@ -1,22 +1,31 @@
-import React from 'react';
-import { Link } from 'react-router-dom'; 
+import React from "react";
+import logo from "../../assets/images/logo-temporary.png";
+import { Link } from "react-router-dom";
+import styles from "./NavBar.module.css";
+
 const NavBar = () => {
   return (
-    <div className='container'>
-      <nav>
-        <ul>
-          <li>
-            <Link to='/'>Main</Link>
-          </li>
-          <li>
-            <Link to='/how-it-works'>How It Works</Link>
-          </li>
-          <li>
-            <Link to='/thank-you'>Thank You(temporary)</Link>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <nav className={styles.navbar}>
+      <div className={styles.logoContainer}>
+        <img src={logo} alt="Logo" className={styles.logo} />
+      </div>
+      <ul className={styles.navLinks}>
+        <li>
+          <Link to="/" className={styles.link}>
+            Main
+          </Link>
+        </li>
+        <span className={styles.divider}>|</span>
+        <li>
+          <Link to="/how-it-works" className={styles.link}>
+            How it works
+          </Link>
+        </li>
+        <span className={styles.divider}>|</span>
+        <li className={styles.languageToggle}> English</li>
+        <span className="material-symbols-outlined">language</span>
+      </ul>
+    </nav>
   );
 };
 
