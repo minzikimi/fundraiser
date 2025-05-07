@@ -5,6 +5,7 @@
   background-color: #1b2640;
   padding: 1rem 2rem;
   color: white;
+  font-family: var(--font-sans);
 }
 
 .logoContainer {

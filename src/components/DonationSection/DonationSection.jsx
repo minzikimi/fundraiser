@@ -2,9 +2,12 @@ import React from 'react'
 
 const DonationSection = () => {
   return (
-    <div>
-      <p>im donationsection</p>
-    </div>
+    <section>
+      <div>
+       <p>im donationsection</p>
+      </div>
+    </section>
+    
   )
 }
 
