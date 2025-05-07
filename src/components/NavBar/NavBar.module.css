@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color:var(--color-midnight);
+  background-color:var(--color-darkblue);
   padding: 2rem 3rem;
   color: var(--color-sand20);
   font-family: var(--font-sans);
@@ -14,7 +14,7 @@
 }
 
 .logo {
-  height: 60px;
+  height: 70px;
   padding: 4px;
   filter: invert(100%);
 }

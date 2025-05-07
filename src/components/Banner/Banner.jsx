@@ -10,7 +10,7 @@ const Banner = () => {
     >
        <img src={bannerImage} alt="Banner" className={styles.fullImage} />
       <div className={styles.textBox}>
-        <h1 className={styles.text}>From Memory to Meaning</h1>
+        <h1 className={styles.text}>FROM MEMORY TO MEANING</h1>
       </div>
     </section>
   );
