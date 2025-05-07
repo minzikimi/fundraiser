@@ -34,8 +34,9 @@
   margin-bottom: 30px;
 }
 
-.style-logo {
-  width: 8rem;
+.logo {
+  width: 10rem;
+  margin-bottom: 10px;
   opacity: 0.93;
 }
 
@@ -61,7 +62,7 @@
 
 .donor-name {
   font-size: 2em;
-  color: #232e6d;
+  color:#1f2a44;
   margin-bottom: 18px;
   font-family: 'Merriweather', serif;
   font-weight: 700;
@@ -75,13 +76,6 @@
   margin: 0 0 16px 0;
 }
 
-.dedication {
-  margin-top: 18px;
-  font-size: 1.1em;
-  color: #757575;
-  font-style: italic;
-}
-
 .certificate-footer {
   display: flex;
   justify-content: space-between;
@@ -89,20 +83,7 @@
   margin-top: 30px;
 }
 
-.signature {
-  text-align: left;
-}
 
-.sig-line {
-  border-bottom: 2px solid #1a237e;
-  width: 180px;
-  margin-bottom: 6px;
-}
-
-.sig-title {
-  font-size: 1em;
-  color: #1a237e;
-}
 
 .date {
   font-size: 1em;
