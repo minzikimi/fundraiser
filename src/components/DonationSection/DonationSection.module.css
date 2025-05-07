@@ -1,13 +1,11 @@
 .donationSection {
-    position: relative;
-    width: 100%;
-    height: auto;
-  }
-  
-  .fullImage {
-    width: 100%;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
 
-    height: auto;
-    display: block;
-  }
-  
+.fullImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
