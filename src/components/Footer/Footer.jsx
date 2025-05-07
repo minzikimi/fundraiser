@@ -7,13 +7,13 @@ const Footer = () => (
   <footer className={styles.footer}>
     <div className={styles.container}>
       <div className={styles.logoTitle}>
+      <a href="https://museumforintelsen.se/" aria-label="Go to homepage">
          <img
     src={logo}
     alt="Sveriges Museum om Förintelsen logo"
     className={styles.logo}
   />
-        <div className={styles.logo} aria-label="Sveriges Museum om Förintelsen logo"></div>
-      
+  </a>
       </div>
 
       <nav className={styles.navSection} aria-label="Footer navigation">
