@@ -5,7 +5,7 @@ import logo from "../../assets/images/logo-temporary.png";
 const Certificate = ({
   donorName = "Donor Name",
   museumName = "Holocaust Museum",
-  date = "May 7, 2025",
+  date = new Date().toLocaleDateString('sv-SE'),
 }) => (
   <div className={styles.certificate}>
     <div className={styles["certificate-header"]}>
