@@ -1,0 +1,24 @@
+.donationSection {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  
+  .fullImage {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .overlayBox {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: var(--color-darkblue);
+    opacity: 80%;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+
+  }
+  

@@ -5,7 +5,7 @@ import bannerImage from '../../assets/images/image1.jpg';
 const Banner = () => {
   return (
     <section
-      className={`${styles.banner} container`}
+      className={`${styles.banner} `}
       style={{ backgroundImage: `url(${bannerImage})` }}
     >
       <div className={styles.textBox}>
