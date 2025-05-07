@@ -1,13 +1,14 @@
 import React from 'react';
 import styles from './banner.module.css';
-import bannerImage from '../../assets/images/image1.jpg';
+import bannerImage from '../../assets/images/image2.jpg';
 
 const Banner = () => {
   return (
     <section
       className={`${styles.banner} `}
-      style={{ backgroundImage: `url(${bannerImage})` }}
+      // style={{ backgroundImage: `url(${bannerImage})` }}
     >
+       <img src={bannerImage} alt="Banner" className={styles.fullImage} />
       <div className={styles.textBox}>
         <h1 className={styles.text}>From Memory to Meaning</h1>
       </div>
