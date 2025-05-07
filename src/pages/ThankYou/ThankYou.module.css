@@ -13,10 +13,12 @@
 }
 
 .thankYouContainer {
+  position: relative;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   min-height: 100vh;
   max-width: 1400px;
   margin: 0 auto;
@@ -24,39 +26,65 @@
   background-color: var(--color-darkblue);
   color: var(--color-sand40);
 }
-.navbarGoBack {
-  padding: 2rem;
+
+.goBack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 16px;
+  padding: 1rem;
 }
 
 .goBackBtn {
+  width: 7rem;
+  height: 2.8rem;
+  border-radius: 5px;
+  border: none;
+  font-family: var(--font-sans);
+  font-weight: bold;
+  font-size: 0.9rem;
 }
 
 .headerThankYou {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  padding: 2rem;
+  gap: 1.5rem;
+  padding: 1rem;
 }
 
 .titleThankYou {
   color: var(--color-sand40);
-  font: ;
+  font-family: var(--font-sans);
 }
 
 .progressBarSection {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 1rem;
 }
 
-.progressBarSection p,
-h3 {
+.getDiploma {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
   color: var(--color-sand40);
 }
 
+.getDiploma h3 {
+  max-width: 55%;
+  padding: 1rem;
+}
+
 #getDiplomaBtn {
+  width: 16rem;
+  height: 2.8rem;
+  border-radius: 5px;
+  border: none;
+  font-family: var(--font-sans);
+  font-weight: bold;
+  font-size: 0.9rem;
 }
