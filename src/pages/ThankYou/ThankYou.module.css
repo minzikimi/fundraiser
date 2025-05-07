@@ -25,6 +25,7 @@
   padding: 2rem;
   background-color: var(--color-darkblue);
   color: var(--color-sand40);
+  font-family: var(--font-sans);
 }
 
 .goBack {
@@ -40,9 +41,16 @@
   height: 2.8rem;
   border-radius: 5px;
   border: none;
-  font-family: var(--font-sans);
   font-weight: bold;
   font-size: 0.9rem;
+  color: var(--color-sand40);
+  background-color: var(--color-dimblue);
+  transition: 0.4s;
+}
+
+.goBackBtn:hover {
+  background-color: var(--color-yellow);
+  color: var(--color-midnight);
 }
 
 .headerThankYou {
@@ -55,7 +63,6 @@
 
 .titleThankYou {
   color: var(--color-sand40);
-  font-family: var(--font-sans);
 }
 
 .progressBarSection {
@@ -84,7 +91,14 @@
   height: 2.8rem;
   border-radius: 5px;
   border: none;
-  font-family: var(--font-sans);
   font-weight: bold;
   font-size: 0.9rem;
+  color: var(--color-sand40);
+  background-color: var(--color-dimblue);
+  transition: 0.4s;
+}
+
+#getDiplomaBtn:hover {
+  background-color: var(--color-yellow);
+  color: var(--color-midnight);
 }
