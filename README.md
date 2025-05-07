@@ -11,4 +11,3 @@ Do not use inline styles. Always use CSS classes or CSS Modules for styling to k
 ## 5.Naming Conventions:
 Component names: Use PascalCase (e.g., MyComponent, Header).
 File names: Use camelCase for component files (e.g., myComponent.jsx).
-## 6.UI Components for Home need to be wrapped with "className:Container"
