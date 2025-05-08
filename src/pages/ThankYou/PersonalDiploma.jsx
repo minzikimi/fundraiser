@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./PersonalDiploma.module.css";
 import React, { useState } from "react";
 

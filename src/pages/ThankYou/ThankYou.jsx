@@ -29,8 +29,8 @@ const ThankYou = () => {
           longer speak. Thank you for supporting our mission to ensure history
           is never forgotten.
         </h3>
-        {/* <Button onClick={() => navigate('/personal-diploma')}> */}
-        <Button>
+        <Button onClick={() => navigate('/personal-diploma')}>
+        
           GET YOUR PERSONAL DIPLOMA
         </Button>
       </section>
