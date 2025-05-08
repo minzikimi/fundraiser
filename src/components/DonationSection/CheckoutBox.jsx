@@ -3,6 +3,7 @@ import styles from './CheckoutBox.module.css';
 import Button from '../Button/Button';
 import CheckoutModal from './CheckoutModal';
 import { useNavigate } from 'react-router-dom';
+import swishSample from '../../assets/images/swishSample.jpeg'
 
 const CheckoutBox = () => {
   const [amount, setAmount] = useState('');
@@ -123,7 +124,7 @@ const CheckoutBox = () => {
                     checked={paymentMethod === 'Bank Account'}
                     onChange={(e) => setPaymentMethod(e.target.value)}
                   />
-                  Bank Account
+                  Bank Transfer
                 </label>
               </div>
             </div>
@@ -138,6 +139,7 @@ const CheckoutBox = () => {
             <div>
               <h2>Swish Payment</h2>
               <p>Plese scan the QR code to proceed with the payment. Close the window to cancel.</p>
+              <img src={swishSample} alt="swish sample" className={styles.swishSample} />
               <button onClick={()=>navigate('/thank-you')}>I HAVE DONATED!</button>
             </div>
             
