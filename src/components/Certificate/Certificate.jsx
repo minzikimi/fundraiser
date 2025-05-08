@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Certificate.module.css"; // Correct import for CSS Modules
+import styles from "./Certificate.module.css"; 
 import logo from "../../assets/images/logo-temporary.png";
 
 const Certificate = ({
@@ -26,8 +26,7 @@ const Certificate = ({
     </div>
     <div className={styles["certificate-footer"]}>
       <div className={styles.signature}>
-        <div className={styles["sig-line"]}></div>
-      </div>
+     </div>
       <div className={styles.date}>Date: {date}</div>
     </div>
     <p className={styles.quote}>
