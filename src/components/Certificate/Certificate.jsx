@@ -1,21 +1,40 @@
-import styles from './Certificate.module.css';
+import React from "react";
+import styles from "./Certificate.module.css"; // Correct import for CSS Modules
+import logo from "../../assets/images/logo-temporary.png";
 
-export default function Certificate({ name, date }) {
-  const displayName = name || 'Anonym'; 
-
-  return (
-    <div className={styles.diploma}>
-      <p className={styles.logo}>Logo här</p> 
-      <h1>Donationsbevis</h1> 
-      <p>Detta intygar att</p> 
-      <h2>{displayName}</h2> 
-      <p>
-        har bidragit till arbetet för att etablera <span className={styles.museum}>Sveriges museum om Förintelsen</span> 
-        som en permanent statlig institution.
-      </p>
-      <p className={styles.date}>{date}</p>
-      <p>Med uppriktigt tack från SMF.</p> 
+const Certificate = ({
+  donorName = "Donor Name",
+  museumName = "Holocaust Museum",
+  date = new Date().toLocaleDateString('sv-SE'),
+}) => (
+  <div className={styles.certificate}>
+    <div className={styles["certificate-header"]}>
+      <img
+        src={logo}
+        alt="Sveriges Museum om Förintelsen logo"
+        className={styles.logo}
+      />
+      <h1 className={styles["certificate-title"]}>Certificate of Donation</h1>
     </div>
-  );
-}
+    <div className={styles["certificate-body"]}>
+      <p className={styles.presented}>Presented to</p>
+      <h2 className={styles["donor-name"]}>{donorName}</h2>
+      <p>
+        In recognition and appreciation of your generous donation to the <strong>{museumName}</strong>.<br /><br />
+        Your support helps us preserve the memory and lessons of the Holocaust for future generations.
+      </p>
+    </div>
+    <div className={styles["certificate-footer"]}>
+      <div className={styles.signature}>
+        <div className={styles["sig-line"]}></div>
+      </div>
+      <div className={styles.date}>Date: {date}</div>
+    </div>
+    <p className={styles.quote}>
+      “For the dead and the living, we must bear witness.”<br />
+      - Elie Wiesel
+    </p>
+  </div>
+);
 
+export default Certificate;

@@ -1,0 +1,14 @@
+.quoteSection{
+    background-color: var(--color-midnight);
+    padding:3rem;
+    font-family: var(--font-sans);
+
+    h2{
+        font-size:2rem;
+        color: var(--color-sand20);
+    }
+    p{
+        color: var(--color-sand20);
+       
+    }
+}
