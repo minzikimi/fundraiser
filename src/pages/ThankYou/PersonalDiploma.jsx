@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import styles from './PersonalDiploma.module.css';
 import logo from "../../assets/images/logo-temporary.png";
+import Certificate from "../../components/Certificate/Certificate";
+
 
 const PersonalDiploma = () => {
   const [name, setName] = useState('');
@@ -17,7 +19,7 @@ const PersonalDiploma = () => {
               </a>
       <h2>Receive Your Personalized <br/>Donation Certificate</h2>
       <div className={styles.nameForm}>
-      <label htmlFor="name">Name</label>
+      <label htmlFor="DonorName">Name</label>
       <input
         id="name"
         type="text"
@@ -59,7 +61,8 @@ const PersonalDiploma = () => {
       </label>
 
       <button className={styles.button}>Download Your Certificate</button>
-    </div>
+      <Certificate donorName={name || "Donor Name"} />
+      </div>
   );
 };
 
