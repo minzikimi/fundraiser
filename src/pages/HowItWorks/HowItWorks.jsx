@@ -1,12 +1,16 @@
 import React from 'react';
 import styles from './howItWorks.module.css';
+import NavBar from '../../components/NavBar/NavBar';
+import Footer from '../../components/Footer/Footer';
 
 const HowItWorks = () => {
   return (
-  <div className={styles.howItWorksContainer}>
-    <div className={styles.content}>
-      <h2 className={styles.heading}>How It Works</h2>
-      <p className={styles.intro}>
+    <>
+      <NavBar />
+      <div className={styles.howItWorksContainer}>
+        <div className={styles.content}>
+          <h2 className={styles.heading}>How It Works</h2>
+            <p className={styles.intro}>
         Giving Should Be Easy — We are proud to be part of Sweden’s national museum network...
       </p>
 
@@ -61,6 +65,8 @@ const HowItWorks = () => {
     </div>
     </div>
   </div>
+  <Footer />
+    </>
   );
 };
 
