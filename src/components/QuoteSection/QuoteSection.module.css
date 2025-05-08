@@ -4,24 +4,17 @@
     font-family: var(--font-sans);
     display: flex;
 
-    h2, p {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-    }
-
     h2{
         font-size:3.5rem;
         color: var(--color-sand20);
         display: flex;
-        flex-direction: column;  
+        flex-direction: column; 
+        width: 35%;
     }
     p{
         color: var(--color-sand20);
         flex: 1;
-        display: flex;
-        flex-direction: column;
-        margin-top: auto;     
+        margin-top: auto;  
     }
 }
 .quoteDiscription{
@@ -29,3 +22,4 @@
     padding-bottom: 1.5rem;
     line-height: 1.7rem;
 }
+
