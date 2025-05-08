@@ -27,7 +27,7 @@
 }
 
 .link {
-  color: white;
+  color: var(--color-sand20);
   text-decoration: none;
   font-size: 0.95rem;
   font-family: var(--font-sans);
@@ -46,6 +46,7 @@
   cursor: pointer;
   display: flex;
   align-items: center;
+  font-size: 0.95rem;
   gap: 4px;
   user-select: none;
 }
@@ -67,6 +68,7 @@
   background-color:var(--color-sand);
   color: var(--color-darkblue);
   list-style: none;
+  font-size: 0.95rem;
   padding: 0;
   border-radius: 4px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
