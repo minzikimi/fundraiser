@@ -1,66 +1,100 @@
-
 .container {
   max-width: 1400px;
-  height: 100%;
-  margin: auto;
+  background-color: #1c1f2a;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 2rem;
-  background-color: #1F2A44;
+  font-family: 'Arial', sans-serif;
   color: white;
-  font-family: sans-serif;
-  border-radius: 8px;
-  text-align: center;
+  margin: 0 auto;
 }
 
 .logo {
-  width: 150px;
-  margin-bottom: 10rem;
-  margin-top: 10rem;
+  width: 200px;
+  margin-top: 10px;
 }
 
-.input {
-  padding: 8px 10px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+h2 {
+  color: #f2f0ed;
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  line-height: 1.4;
+}
+.nameForm {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  max-width: 500px;
+  align-items: baseline;
+  gap: 20px;  
 }
 
 .nameForm label {
-  font-size: 1rem;
+  justify-items: center;
   font-weight: 600;
-  display: block;
-  margin-bottom: 6px;
+  color: #B9D3DC;
+  font-size: 1.1rem;
+
 }
 
-.nameForm {
-  display: flex;
-  flex-direction: column;
+.input {
+  padding: 14px 16px;
+  font-size: 1rem;
+  border: 1px solid;
+  border-radius: 6px;
+  width: 600px;
+}
+
+.language {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 40px;
+  margin-top: 30px;
   gap: 16px;
 }
-.language {
-  justify-content: left;
-  margin-bottom: 1rem;
+.language p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #B9D3DC;
+  margin-bottom: 14px;
 }
 
 .language label {
-  display: block;
-  margin: 0.25rem 0;
+  display: flex;
+  font-size: 1.1rem;
+  color: #f2f0ed;
+  margin-bottom: 14px;
+  gap: 16px;
 }
-
 .checkbox {
-  display: block;
-  text-align: left;
-  margin: 1rem 0;
+  width: 100%;
+  max-width: 500px;
+  font-size: 1rem;
+  color: #f2f0ed;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 12px;
 }
 
 .button {
-  background-color: #e1e1e1;
-  color: #84a4e4;
-  padding: 0.75rem;
-  width: 40%;
+  width: 100%;
+  max-width: 500px;
+  background-color: #B9D3DC;
+  color: #061127;
   border: none;
-  border-radius: 5px;
+  padding: 18px;
   font-weight: bold;
+  border-radius: 8px;
+  font-size: 1.15rem;
   cursor: pointer;
-  color: black;
-}
+  margin-top: 28px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 
+}

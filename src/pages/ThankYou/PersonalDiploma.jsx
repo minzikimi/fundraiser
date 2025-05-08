@@ -15,7 +15,7 @@ const PersonalDiploma = () => {
                   className={styles.logo}
                 />
               </a>
-      <h2>Receive Your Personalized Donation Certificate</h2>
+      <h2>Receive Your Personalized <br/>Donation Certificate</h2>
       <div className={styles.nameForm}>
       <label htmlFor="name">Name</label>
       <input
