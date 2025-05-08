@@ -1,0 +1,59 @@
+.checkoutBox {
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    background-color: var(--color-darkblue);
+    opacity: 0.8;
+    padding: 10px 15px;
+    border-radius: 4px;
+    z-index: 2;
+    width: 500px;
+    height: 400px;
+  }
+  
+  .radioGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-family: var(--font-sans);
+    background-color: var(--color-sand20);
+
+
+  }
+
+  .radioItem{
+    padding:1rem;
+    border-bottom: 1px solid var(--color-darkblue);
+  }
+  
+  .heading {
+    color: var(--color-sand20);
+    font-family: var(--font-sans);
+    margin-bottom: 1rem;
+  }
+  
+  .input {
+    margin-left: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 2px;
+  }
+  
+  .optionalAmount {
+    display: flex;
+    align-items: center;
+  }
+  
+  .button {
+    margin-top: 1rem;
+    background: var(--color-sand20);
+    color: var(--color-darkblue);
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .swishSample{
+    width:200px;
+  }

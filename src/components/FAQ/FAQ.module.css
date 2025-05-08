@@ -1,0 +1,6 @@
+.faqSection {
+    background: linear-gradient(to bottom, #1c1f2a, #1F2A44 );
+    padding: 3rem;
+    font-family: var(--font-sans);
+}
+
