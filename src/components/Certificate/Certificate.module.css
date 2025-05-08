@@ -5,7 +5,7 @@
   margin: 40px auto;
   padding: 50px 50px 40px 50px;
   background:
-    linear-gradient(135deg, #ffffff 90%, #f9d923 100%),
+    linear-gradient(135deg, #ffffff 90%, #e6b730 100%),
     url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="220" height="220"><polygon points="110,20 44,200 200,66 20,66 176,200 110,20" fill="none" stroke="rgba(26,35,126,0.07)" stroke-width="10"/></svg>')
     center 180px no-repeat;
   background-size: cover, 220px 220px;
@@ -22,7 +22,7 @@
   display: block;
   width: 100%;
   height: 10px;
-  background: linear-gradient(90deg, #ffe082 0%, #ffd700 100%);
+  background: #e6b730;
   border-radius: 4px 4px 0 0;
   position: absolute;
   top: 0;
@@ -41,7 +41,7 @@
 }
 
 .certificate-header h1 {
-  font-family: 'Merriweather', serif;
+  font-family: 'Georgia', serif;
   font-size: 2.5em;
   color: #1a237e;
   margin: 0;
@@ -64,7 +64,7 @@
   font-size: 2em;
   color:#1f2a44;
   margin-bottom: 18px;
-  font-family: 'Merriweather', serif;
+  font-family: 'Georgia', serif;
   font-weight: 700;
   letter-spacing: 1px;
 }
