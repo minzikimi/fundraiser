@@ -1,91 +1,89 @@
-
 .thankYouContainer {
-    position: relative;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 2rem;
-    background-color: var(--color-darkblue);
-    color: var(--color-sand40);
-    font-family: var(--font-sans);
-  }
-  
-  .goBack {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 16px;
-    padding: 1rem;
-  }
-  
-  .goBackBtn {
-    width: 7rem;
-    height: 2.8rem;
-    border-radius: 5px;
-    border: none;
-    font-weight: bold;
-    font-size: 0.9rem;
-    color: var(--color-sand40);
-    background-color: var(--color-dimblue);
-    transition: 0.4s;
-  }
-  
-  .goBackBtn:hover {
-    background-color: var(--color-yellow);
-    color: var(--color-midnight);
-  }
-  
-  .headerThankYou {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 1rem;
-  }
-  
-  .titleThankYou {
-    color: var(--color-sand40);
-  }
-  
-  .progressBarSection {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-  }
-  
-  .getDiploma {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 1rem;
-    color: var(--color-sand40);
-  }
-  
-  .getDiploma h3 {
-    max-width: 55%;
-    padding: 1rem;
-  }
-  
-  #getDiplomaBtn {
-    width: 16rem;
-    height: 2.8rem;
-    border-radius: 5px;
-    border: none;
-    font-weight: bold;
-    font-size: 0.9rem;
-    color: var(--color-sand40);
-    background-color: var(--color-dimblue);
-    transition: 0.4s;
-  }
-  
-  #getDiplomaBtn:hover {
-    background-color: var(--color-yellow);
-    color: var(--color-midnight);
-  }
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--color-darkblue);
+  color: var(--color-sand40);
+  font-family: var(--font-sans);
+}
+
+.goBack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 16px;
+  padding: 1rem;
+}
+
+.goBackBtn {
+  width: 7rem;
+  height: 2.8rem;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: var(--color-sand40);
+  background-color: var(--color-dimblue);
+  transition: 0.4s;
+}
+
+.goBackBtn:hover {
+  background-color: var(--color-yellow);
+  color: var(--color-midnight);
+}
+
+.headerThankYou {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.titleThankYou {
+  color: var(--color-sand40);
+}
+
+.progressBarSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.getDiploma {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  color: var(--color-sand40);
+}
+
+.getDiploma h3 {
+  max-width: 55%;
+  padding: 1rem;
+}
+
+#getDiplomaBtn {
+  width: 16rem;
+  height: 2.8rem;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: var(--color-sand40);
+  background-color: var(--color-dimblue);
+  transition: 0.4s;
+}
+
+#getDiplomaBtn:hover {
+  background-color: var(--color-yellow);
+  color: var(--color-midnight);
+}

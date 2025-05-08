@@ -3,12 +3,11 @@ import styles from "./ThankYou.module.css";
 import { useNavigate } from "react-router-dom";
 import Button from "../../components/Button/Button";
 
-
 const ThankYou = () => {
   const navigate = useNavigate();
 
   return (
-    <main className={styles.mainThankYou}>
+    <main className={styles.thankYouContainer}>
       <header className={styles.headerThankYou}>
         <div className={styles.logoPlaceholder}>Logo goes here</div>
         <h1 className={styles.titleThankYou}>Thank you!</h1>
@@ -30,7 +29,6 @@ const ThankYou = () => {
           is never forgotten.
         </h3>
         <Button onClick={() => navigate('/personal-diploma')}>
-        
           GET YOUR PERSONAL DIPLOMA
         </Button>
       </section>
@@ -39,4 +37,3 @@ const ThankYou = () => {
 };
 
 export default ThankYou;
-
