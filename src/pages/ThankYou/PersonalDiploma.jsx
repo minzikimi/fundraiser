@@ -1,6 +1,6 @@
-import React from "react";
 import styles from "./PersonalDiploma.module.css";
 import React, { useState } from "react";
+import logo from "../../assets/images/logo-temporary.png";
 
 const PersonalDiploma = () => {
   const [updates, setUpdates] = useState(false);
@@ -10,7 +10,11 @@ const PersonalDiploma = () => {
     <main className={styles.personalDiplomaContainer}>
       <header className={styles.headerPersonalDiploma}>
         <div>
-          <p>logo goes here</p>
+           <img
+                      src={logo}
+                      alt="Sveriges Museum om Förintelsen logo"
+                      className={styles.logo}
+                    />
           <h1 className={styles.titlePersonalDiploma}>
             Receive Your Personalized Donation Certificate
           </h1>
