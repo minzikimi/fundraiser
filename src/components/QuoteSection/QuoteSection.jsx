@@ -1,13 +1,21 @@
-import React from 'react'
-import styles from './QuoteSection.module.css';
+import React from "react";
+import styles from "./QuoteSection.module.css";
 
 const QuoteSection = () => {
   return (
     <div className={styles.quoteSection}>
-      <h2>im quotesection</h2>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+      <h2>
+        <p>Your Support Is a</p>
+        <p>Voice Against</p>
+        <p>Forgetting</p>
+      </h2>
+      <p className={styles.quoteDiscription}>
+        Your donation helps preserve the history of the Holocaust and educate
+        future generations. Together, we can ensure that the lessons of the past
+        are never forgotten.
+      </p>
     </div>
-  )
-}
+  );
+};
 
-export default QuoteSection
+export default QuoteSection;
