@@ -1,47 +1,42 @@
 import React from "react";
 import styles from "./ThankYou.module.css";
 import { useNavigate } from "react-router-dom";
+import Button from "../../components/Button/Button";
+
 
 const ThankYou = () => {
   const navigate = useNavigate();
 
   return (
-    <main className={styles.thankYouContainer}>
-      <div className={styles.goBack}>
-        <button
-          className={styles.goBackBtn}
-          type="button"
-          onClick={() => navigate(-1)}
-          aria-label="Go back button"
-        >
-          GO BACK
-        </button>
-      </div>
-
+    <main className={styles.mainThankYou}>
       <header className={styles.headerThankYou}>
-        <p>logo goes here</p>
+        <div className={styles.logoPlaceholder}>Logo goes here</div>
         <h1 className={styles.titleThankYou}>Thank you!</h1>
       </header>
+
       <section
         className={styles.progressBarSection}
         aria-label="Donation Progress"
       >
-        <div>
-          <p>progress bar goes here</p>
+        <div className={styles.progressBarPlaceholder}>
+          Progress bar goes here
         </div>
       </section>
+
       <section className={styles.getDiploma}>
         <h3>
           Your contribution helps preserve the stories of those who can no
           longer speak. Thank you for supporting our mission to ensure history
           is never forgotten.
         </h3>
-        <button type="button" id={styles.getDiplomaBtn}>
+        {/* <Button onClick={() => navigate('/personal-diploma')}> */}
+        <Button>
           GET YOUR PERSONAL DIPLOMA
-        </button>
+        </Button>
       </section>
     </main>
   );
 };
 
 export default ThankYou;
+
