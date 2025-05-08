@@ -2,9 +2,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #1b2640;
-  padding: 1rem 2rem;
-  color: white;
+  background-color:var(--color-darkblue);
+  padding: 2rem 3rem;
+  color: var(--color-sand20);
+  font-family: var(--font-sans);
 }
 
 .logoContainer {
@@ -13,9 +14,9 @@
 }
 
 .logo {
-  height: 40px;
-  background: white;
+  height: 70px;
   padding: 4px;
+  filter: invert(100%);
 }
 
 .navLinks {

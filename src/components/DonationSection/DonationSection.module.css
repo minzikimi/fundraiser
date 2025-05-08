@@ -1,0 +1,11 @@
+.donationSection {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.fullImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
