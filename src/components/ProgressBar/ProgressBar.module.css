@@ -1,3 +1,17 @@
+:root {
+  --font-sans: Arial, sans-serif;
+  --font-serif: Georgia, serif;
+
+  --color-darkblue: #1f2a44;
+  --color-dimblue: #8e9fbc;
+  --color-seablue: #b9d3dc;
+  --color-yellow: #e6b730;
+  --color-sand: #c5b9ac;
+  --color-sand40: #e7e2dd;
+  --color-sand20: #f2f0ed;
+  --color-midnight: #1c1f2a;
+}
+
 .progressContainer {
   height: 6rem;
   width: 100%;
@@ -22,7 +36,7 @@
 
 .progressFill {
   height: 100%;
-  background: linear-gradient(90deg, yellow, black);
+  background: linear-gradient(90deg, #e6b730, #e6b730);
   width: 0;
   transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }

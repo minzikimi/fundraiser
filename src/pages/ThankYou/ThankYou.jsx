@@ -11,7 +11,7 @@ const GOAL_AMOUNT = 100000;
 
 const ThankYou = () => {
   const navigate = useNavigate();
-  const [totalRaised, setTotalRaised] = useState(20000); // sample raised
+  const [totalRaised, setTotalRaised] = useState(40000); // sample raised
 
   const handleDonation = (amount) => {
     setTotalRaised((prev) => prev + amount);
