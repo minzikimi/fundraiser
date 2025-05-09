@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../assets/images/smf-logo.png";
+import logo from "../../assets/images/white-logo.png";
 import { Link } from "react-router-dom";
 import styles from "./NavBar.module.css";
 import { useState } from "react";
