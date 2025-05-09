@@ -13,11 +13,9 @@ const ThankYou = () => {
   const navigate = useNavigate();
   const [totalRaised, setTotalRaised] = useState(2000); //inital amount
 
-  // pass to CheckoutBox to update total
-  // const handleDonation = (amount) => {
-  //   setTotalRaised((prev) => prev + amount);
-  // };
-  // s;
+  const handleDonation = (amount) => {
+    setTotalRaised((prev) => prev + amount);
+  };
 
   return (
     <main className={styles.thankYouContainer}>
