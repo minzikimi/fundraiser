@@ -1,15 +1,13 @@
 .quoteSection{
     background-color: var(--color-midnight);
-    padding: 3rem;
     font-family: var(--font-sans);
     display: flex;
 
-
     h2{
         font-size:3.5rem;
-        color: var(--color-sand20);
         display: flex;
         flex-direction: column; 
+        padding: 3rem;
         width: 35%;
     }
     p{
