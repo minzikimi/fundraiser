@@ -1,30 +1,32 @@
 .howItWorksContainer {
-  background-color: var(--color-darkblue);
+  background: linear-gradient(to top, #1c1f2a, #1F2A44 );
   color: var(--color-sand20);
   font-family: var(--font-sans);
-  padding: 4rem 2rem;
+  padding-bottom: 15rem;
+  padding-top:3rem;
   display: flex;
   justify-content: center;
+  
 }
 
 .content {
-  max-width: 720px;
+  max-width: 800px;
   width: 100%;
 }
 
 .heading {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: bold;
   color: var(--color-sand20);
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .intro {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   line-height: 1.8;
   margin-bottom: 2rem;
   color: var(--color-sand20);
-  font-family: var(--font-serif);
+  font-family: var(--font-serif-light);
   font-weight: 100;
 }
 
@@ -39,14 +41,14 @@
 }
 
 .stepTitle {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
   color: var(--color-sand20); 
   margin-bottom: 0.5rem;
 }
 
 .stepText {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   line-height: 1.7;
   color: var(--color-sand20);
   margin-bottom: 1rem;
@@ -84,14 +86,14 @@ li {
 
 .sampleText {
   color: var(--color-sand40);
-  font-size: 0.9rem;
+  font-size: 1.3rem;
   font-style: italic;
   margin-top: 0.5rem;
 }
 
 .contact {
   margin-top: 2.5rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
   line-height: 1.6;
   font-style: italic;
   color: var(--color-sand20); 
@@ -102,6 +104,22 @@ li {
   text-decoration: underline;
 }
 
+.stepList {
+  padding-left: 1.25rem; 
+  margin-top: 0.5rem;
+}
+
+.stepListItem {
+  font-size: 1.3rem; 
+  line-height: 1.7; 
+  margin-bottom: 0.5rem;
+  color: var(--color-sand20);
+}
+
+.questionTitle {
+  padding-bottom: 2rem;
+  display: inline-block;  
+}
 
 @media (max-width: 768px) {
   .howItWorksContainer {

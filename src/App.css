@@ -5,11 +5,26 @@
   font-style: normal; 
 }
 
+@font-face {
+  font-family: 'Georgia';
+  src: url('../../assets/fonts/georgia.ttf') format('truetype'); 
+  font-weight: normal; 
+  font-style: normal; 
+}
+
+@font-face {
+  font-family: 'Georgia light';
+  src: url('../../assets/fonts/sd-georgia-light.ttf') format('truetype'); 
+  font-weight: normal; 
+  font-style: normal; 
+}
+
 
 :root {
   --font-sans: Arial, sans-serif;
   --font-serif: Georgia, serif;
   --font-sans-light : Arial Light , sans-serif;
+  --font-serif-light : Georgia light, serif;
 
   --color-darkblue: #1F2A44;
   --color-dimblue: #8E9FBC;
