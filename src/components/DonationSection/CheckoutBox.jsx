@@ -12,7 +12,7 @@ const CheckoutBox = ({ onDonation }) => {
   const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
 
-  // Helper to parse the amount string (e.g., "100kr" or "250")
+  // Helper to parse the amount string
   const parseAmount = (amt) => {
     if (!amt) return 0;
     return parseInt(amt.replace("kr", "").trim(), 10) || 0;
