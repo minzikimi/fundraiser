@@ -1,12 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import html2pdf from 'html2pdf.js';
 import styles from './PersonalDiploma.module.css';
-import logo from "../../assets/images/logo-temporary.png";
+import logo from "../../assets/images/white-logo.png";
 import Certificate from "../../components/Certificate/Certificate";
 
 
-const PersonalDiploma = () => {
+  const PersonalDiploma = () => {
   const [name, setName] = useState('');
   const [language, setLanguage] = useState('English');
+  const certificateRef = useRef(); 
+
+  
+  const handleDownload = () => {
+    const element = certificateRef.current;
+    const opt = {
+      margin:       0.5,
+      filename:     'donation-certificate.pdf',
+      image:        { type: 'jpeg', quality: 0.98 },
+      html2canvas:  { scale: 2 },
+      jsPDF:        { unit: 'pt', format: 'a4', orientation: 'landscape' }
+    };
+    html2pdf().set(opt).from(element).save();
+  };
+
 
   return (
     <div className={styles.container}>
@@ -60,8 +76,10 @@ const PersonalDiploma = () => {
         I consent to my name being printed on the digital donor wall (optional). SAMPLE TEXT
       </label>
 
-      <button className={styles.button}>Download Your Certificate</button>
-      <Certificate donorName={name || "Donor Name"} />
+      <button className={styles.button} onClick={handleDownload}>Download Your Certificate</button>
+       <div style={{ display: 'inline-block', width: '100%' }} ref={certificateRef}>
+        <Certificate donorName={name.trim() !== "" ? name : "Anonymous"} />
+      </div>
       </div>
   );
 };
