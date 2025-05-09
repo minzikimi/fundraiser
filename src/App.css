@@ -1,6 +1,15 @@
+@font-face {
+  font-family: 'Arial Light';
+  src: url('../../assets/fonts/ARIALI.TTF') format('truetype'); 
+  font-weight: normal; 
+  font-style: normal; 
+}
+
+
 :root {
   --font-sans: Arial, sans-serif;
   --font-serif: Georgia, serif;
+  --font-sans-light : Arial Light , sans-serif;
 
   --color-darkblue: #1F2A44;
   --color-dimblue: #8E9FBC;
