@@ -4,10 +4,10 @@ import styles from "./QuoteSection.module.css";
 const QuoteSection = () => {
   return (
     <div className={styles.quoteSection}>
-      <h2>
-        <p>Your Support Is a</p>
-        <p>Voice Against</p>
-        <p>Forgetting</p>
+      <h2 className={styles.quoteSectionHeading}>
+        <p className={styles.headingPart}>Your Support Is a</p>
+        <p className={styles.headingPart}>Voice Against</p>
+        <p className={styles.headingPart}>Forgetting</p>
       </h2>
       <p className={styles.quoteDiscription}>
         Your donation helps preserve the history of the Holocaust and educate
