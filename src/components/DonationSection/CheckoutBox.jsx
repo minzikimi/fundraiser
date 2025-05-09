@@ -4,6 +4,8 @@ import Button from '../Button/Button';
 import CheckoutModal from './CheckoutModal';
 import { useNavigate } from 'react-router-dom';
 import swishSample from '../../assets/images/swishSample.jpeg'
+import { useTranslation } from 'react-i18next';
+
 
 const CheckoutBox = () => {
   const [amount, setAmount] = useState('');
@@ -11,6 +13,7 @@ const CheckoutBox = () => {
   const [paymentMethod, setPaymentMethod] = useState('');
   const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
 
   const handleConfirm = () => {
@@ -35,7 +38,7 @@ const CheckoutBox = () => {
       <div className={styles.checkoutBox}>
         {stage === 1 && (
           <>
-            <h2 className={styles.heading}>Choose your donation amount</h2>
+            <h2 className={styles.heading}>{t('donation-box.title')}</h2>
             <div className={styles.radioGroup}>
               <div className={styles.radioItem}>
                 <label>
@@ -84,7 +87,7 @@ const CheckoutBox = () => {
                   />
                   <input
                     type="text"
-                    placeholder="Optional amount"
+                    placeholder={t('donation-box.optional amount')}
                     value={
                       amount !== '100kr' &&
                       amount !== '200kr' &&
@@ -98,12 +101,12 @@ const CheckoutBox = () => {
                 </label>
               </div>
             </div>
-            <Button onClick={handleConfirm}>CONFIRM</Button>
+            <Button onClick={handleConfirm}>{t('donation-box.confirm')}</Button>
           </>
         )}
         {stage === 2 && (
           <>
-            <h2 className={styles.heading}>Choose payment method</h2>
+            <h2 className={styles.heading}>{t('donation-box.choose payment')}</h2>
             <div className={styles.radioGroup}>
               <div className={styles.radioItem}>
                 <label>
@@ -124,12 +127,12 @@ const CheckoutBox = () => {
                     checked={paymentMethod === 'Bank Account'}
                     onChange={(e) => setPaymentMethod(e.target.value)}
                   />
-                  Bank Transfer
+                    {t('donation-box.bank transfer')}
                 </label>
               </div>
             </div>
-            <Button onClick={handlePaymentConfirm}>CHECK OUT</Button>
-            <Button onClick={() => setStage(1)}>BACK</Button>
+            <Button onClick={handlePaymentConfirm}>{t('donation-box.check out')}</Button>
+            <Button onClick={() => setStage(1)}>{t('donation-box.back')}</Button>         
           </>
         )}
       </div>
@@ -137,8 +140,8 @@ const CheckoutBox = () => {
         <CheckoutModal onClose={handleCloseModal}>
           {paymentMethod === 'Swish' && (
             <div>
-              <h2>Swish Payment</h2>
-              <p>Plese scan the QR code to proceed with the payment. Close the window to cancel.</p>
+              <h2>{t('donation-modal.swish title')}</h2>
+              <p>{t('donation-modal.instruction')}</p>
               <img src={swishSample} alt="swish sample" className={styles.swishSample} />
               <button onClick={()=>navigate('/thank-you')}>I HAVE DONATED!</button>
             </div>

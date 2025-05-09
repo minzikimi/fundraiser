@@ -4,16 +4,20 @@ import { Link } from "react-router-dom";
 import styles from "./NavBar.module.css";
 import { useState } from "react";
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
+import { useTranslation } from 'react-i18next';
+
 
 const NavBar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [language, setLanguage] = useState("SV");
   const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
-
+  const { t, i18n } = useTranslation();
   const selectLanguage = (lang) => {
-    setLanguage(lang);
-    setDropdownOpen(false);
+    setLanguage(lang);        
+    i18n.changeLanguage(lang.toLowerCase()); 
+    setDropdownOpen(false);   
   };
+  
   return (
     <nav className={styles.navbar}>
       <div className={styles.logoContainer}>
@@ -22,13 +26,13 @@ const NavBar = () => {
       <ul className={styles.navLinks}>
         <li>
           <Link to="/" className={styles.link}>
-            Main
+          {t('nav.main')}
           </Link>
         </li>
         <span className={styles.divider}>|</span>
         <li>
           <Link to="/how-it-works" className={styles.link}>
-            How it works
+          {t('nav.howItWorks')}
           </Link>
         </li>
         <span className={styles.divider}>|</span>
