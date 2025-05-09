@@ -7,11 +7,11 @@ import buttonStyles from "../../components/Button/Button.module.css";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import { useState } from "react";
 
-const GOAL_AMOUNT = 10000; //sample amount
+const GOAL_AMOUNT = 100000;
 
 const ThankYou = () => {
   const navigate = useNavigate();
-  const [totalRaised, setTotalRaised] = useState(2000); //inital amount
+  const [totalRaised, setTotalRaised] = useState(20000); // sample raised
 
   const handleDonation = (amount) => {
     setTotalRaised((prev) => prev + amount);
@@ -29,7 +29,7 @@ const ThankYou = () => {
           className={styles.progressBarSection}
           aria-label="Donation Progress"
         >
-          <ProgressBar current={totalRaised} goal={GOAL_AMOUNT} />
+          <ProgressBar raised={totalRaised} goal={GOAL_AMOUNT} />
         </div>
 
         <div className={styles.getDiploma}>
