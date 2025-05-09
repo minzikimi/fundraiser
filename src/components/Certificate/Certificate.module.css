@@ -1,11 +1,11 @@
 .certificate {
   position: relative;
-  width: 700px;
+  width: 900px;
   max-width: 95vw;
   margin: 40px auto;
   padding: 50px 50px 40px 50px;
   background:
-    linear-gradient(135deg, #ffffff 90%, #e6b730 100%),
+    linear-gradient(135deg, #ffffff 90%),
     url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="220" height="220"><polygon points="110,20 44,200 200,66 20,66 176,200 110,20" fill="none" stroke="rgba(26,35,126,0.07)" stroke-width="10"/></svg>')
     center 180px no-repeat;
   background-size: cover, 220px 220px;

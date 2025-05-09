@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "./Footer.module.css";
-import logo from "../../assets/images/logo-temporary.png";
+import logo from "../../assets/images/white-logo.png";
 import { FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa';
 
 const Footer = () => (
   <footer className={styles.footer}>
-    <div className={styles.container}>
+  
       <div className={styles.logoTitle}>
         <a href="https://museumforintelsen.se/" aria-label="Go to homepage">
           <img
@@ -67,7 +67,7 @@ const Footer = () => (
           <FaYoutube />
         </a>
       </div>
-    </div>
+    
   </footer>
 );
 
