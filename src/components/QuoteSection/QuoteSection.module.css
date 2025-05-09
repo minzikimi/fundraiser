@@ -1,24 +1,31 @@
 .quoteSection{
     background-color: var(--color-midnight);
+    padding: 3rem;
     font-family: var(--font-sans);
     display: flex;
-
-    h2{
-        font-size:3.5rem;
-        display: flex;
-        flex-direction: column; 
-        padding: 3rem;
-        width: 35%;
-    }
-    p{
-        color: var(--color-sand20);
-        flex: 1;
-        margin-top: auto;  
-    }
 }
+.quoteSectionHeading{
+    font-size:3.5rem;
+    display: flex;
+    flex-direction: column; 
+    width: 40%;
+}
+.headingPart{
+    color: var(--color-seablue);
+    flex: 1;
+    margin-top: auto; 
+    text-align: start;
+    
+}
+
 .quoteDiscription{
     font-size: 1.2rem;
-    padding-bottom: 1.5rem;
+    padding: 3rem;
     line-height: 1.7rem;
+    width: 60%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    color:var(--color-sand20) ;
 }
 
