@@ -1,5 +1,6 @@
 .banner {
-    height: 60vh;
+    width: 100vw;
+    height: 100vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -7,23 +8,47 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: var(--spacing-large);
   }
+
+  .fullImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(5, 5, 5, 0.212) 30%, 
+      #1c1f2a 90%            
+    );
+    z-index: 1;
+  }
+  
   
   .textBox {
     position: absolute;
-    right:10%;
-    top: 75%; /* Slightly below center */
+    right:8%;
+    top: 65%; /* Slightly below center */
     transform: translateY(-50%);
     border-radius: 4px;
-    font-family: var(--font-sans);
+    z-index: 2;
   }
   
   .text {
-    color: white;
-    font-size: 3rem;
-    font-weight: bold;
+    color: var(--color-sand20);
+    font-size: 4.5rem;
+    font-weight:bolder;
+    font-family: var(--font-sans);
     margin: 0;
+  
   }
   
   @media (max-width: 768px) {

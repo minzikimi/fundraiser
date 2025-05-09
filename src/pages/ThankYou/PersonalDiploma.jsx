@@ -1,70 +1,68 @@
-import React from "react";
-import styles from "./PersonalDiploma.module.css";
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import styles from './PersonalDiploma.module.css';
+import logo from "../../assets/images/logo-temporary.png";
+import Certificate from "../../components/Certificate/Certificate";
+
 
 const PersonalDiploma = () => {
-  const [updates, setUpdates] = useState(false);
-  const [consent, setConsent] = useState(false);
+  const [name, setName] = useState('');
+  const [language, setLanguage] = useState('English');
 
   return (
-    <main className={styles.personalDiplomaContainer}>
-      <header className={styles.headerPersonalDiploma}>
-        <div>
-          <p>logo goes here</p>
-          <h1 className={styles.titlePersonalDiploma}>
-            Receive Your Personalized Donation Certificate
-          </h1>
-        </div>
-      </header>
+    <div className={styles.container}>
+        <a href="https://museumforintelsen.se/" aria-label="Go to homepage">
+                <img
+                  src={logo}
+                  alt="Sveriges Museum om Förintelsen logo"
+                  className={styles.logo}
+                />
+              </a>
+      <h2>Receive Your Personalized <br/>Donation Certificate</h2>
+      <div className={styles.nameForm}>
+      <label htmlFor="DonorName">Name</label>
+      <input
+        id="name"
+        type="text"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        className={styles.input}
+      />
+       </div>
+      <div className={styles.language}>
+        <p>Choose language</p>
+        <label>
+          <input
+            type="radio"
+            value="Svenska"
+            checked={language === 'Svenska'}
+            onChange={() => setLanguage('Svenska')}
+          />
+          Svenska
+        </label>
+        <label>
+          <input
+            type="radio"
+            value="English"
+            checked={language === 'English'}
+            onChange={() => setLanguage('English')}
+          />
+          English
+        </label>
+      </div>
 
-      <section className={styles.nameAndLangSection}>
-        <div>
-          <form className={styles.nameForm}>
-            <div>
-              <label htmlFor="name">Name </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="(optional)"
-                autoComplete="name"
-              ></input>
-            </div>
-            <div className={styles.languageBtns}>
-              Choose language
-              <button>Svenska</button>
-              <button>English</button>
-            </div>
-          </form>
-        </div>
-      </section>
-      <form className={styles.preferenceForm}>
-        <div>
-          <input
-            type="checkbox"
-            id="updates"
-            checked={updates}
-            onChange={() => setUpdates(!updates)}
-          />
-          <label htmlFor="updates">
-            Yes, I’d like to receive updates and stories from the Swedish
-            Holocaust Museum. (SAMPLE TEXT)
-          </label>
-        </div>
-        <div>
-          <input
-            type="checkbox"
-            id="consent"
-            checked={consent}
-            onChange={() => setConsent(!consent)}
-          />
-          <label htmlFor="consent">
-            I consent to my name being printed on the digital donor wall
-            (optional) SAMPLE TEXT
-          </label>
-        </div>
-      </form>
-    </main>
+      <label className={styles.checkbox}>
+        <input type="checkbox" />
+        Yes, I’d like to receive updates and stories from the Swedish Holocaust Museum. (SAMPLE TEXT)
+      </label>
+
+      <label className={styles.checkbox}>
+        <input type="checkbox" />
+        I consent to my name being printed on the digital donor wall (optional). SAMPLE TEXT
+      </label>
+
+      <button className={styles.button}>Download Your Certificate</button>
+      <Certificate donorName={name || "Donor Name"} />
+      </div>
   );
 };
 

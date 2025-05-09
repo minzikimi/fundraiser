@@ -2,9 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #1b2640;
-  padding: 1rem 2rem;
-  color: white;
+  background-color:var(--color-darkblue);
+  padding: 2rem 3rem;
+  color: var(--color-sand20);
   font-family: var(--font-sans);
 }
 
@@ -14,8 +14,7 @@
 }
 
 .logo {
-  height: 40px;
-  background: white;
+  height: 70px;
   padding: 4px;
 }
 
@@ -27,9 +26,10 @@
 }
 
 .link {
-  color: white;
+  color: var(--color-sand20);
   text-decoration: none;
   font-size: 0.95rem;
+  font-family: var(--font-sans);
 }
 
 .link:hover {
@@ -45,6 +45,7 @@
   cursor: pointer;
   display: flex;
   align-items: center;
+  font-size: 0.95rem;
   gap: 4px;
   user-select: none;
 }
@@ -53,6 +54,34 @@
   color: white;
 }
 
+.languageIcon{
+  font-family: 'Material Symbols Outlined';
+  font-size: 24px;
+  color:var(--color-sand20);
+}
 
+.dropdown {
+  position: absolute;
+  top: 2rem;
+  right: 0;
+  background-color:var(--color-sand);
+  color: var(--color-darkblue);
+  list-style: none;
+  font-size: 0.95rem;
+  padding: 0;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  width: 80px;
+  z-index: 1000;
+}
 
+.dropdown li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.dropdown li:hover {
+  background-color: var(--color-darkblue);
+  color: var(--color-sand); ;
+}
 
