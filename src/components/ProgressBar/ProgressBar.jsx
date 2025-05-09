@@ -1,5 +1,5 @@
 import React from "react";
-import "./ProgressBar.module.css";
+import styles from "./ProgressBar.module.css";
 
 const ProgressBar = ({ raised, goal }) => {
   const percent = Math.min((raised / goal) * 100, 100);
