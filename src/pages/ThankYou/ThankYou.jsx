@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./ThankYou.module.css";
 import { useNavigate } from "react-router-dom";
+import ProgressBar from "../../components/ProgressBar/ProgressBar";
+
+const GOAL_AMOUNT = 10000; //sample amount
 
 const ThankYou = () => {
   const navigate = useNavigate();
+  const [totalRaised, setTotalRaised] = useState(2000); //inital amount
+
+  // pass to CheckoutBox to update total
+  const handleDonation = (amount) => {
+    setTotalRaised((prev) => prev + amount);
+  };
 
   return (
     <main className={styles.thankYouContainer}>
@@ -27,7 +36,7 @@ const ThankYou = () => {
         aria-label="Donation Progress"
       >
         <div>
-          <p>progress bar goes here</p>
+          <ProgressBar current={totalRaised} goal={GOAL_AMOUNT} />
         </div>
       </section>
       <section className={styles.getDiploma}>
