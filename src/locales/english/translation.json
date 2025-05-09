@@ -1,6 +1,28 @@
 {
-    "banner": {
-      "title": "FROM MEMORY TO MEANING"
-    }
+  "nav": {
+    "main": "Main",
+    "howItWorks": "How it works"
+  },
+  "banner": {
+    "title": "FROM MEMORY TO MEANING"
+  },
+  "quote-section": {
+    "title": "Your support helps us not to forget"
+  },
+"donation-box": {
+  "title": "Choose your donation amount",
+  "optional amount": "Optional amount",
+  "confirm": "Confirm",
+  "bank transfer": "Bank Transfer",
+  "check out": "CHECK OUT",
+  "back": "BACK",
+  "swish payment": "Swish Payment",
+  "choose payment": "Choose payment method"
+},
+  "donation-modal": {
+    "swish title": "Swish Payment",
+    "bank title": "Bank Transfer",
+    "instruction": "Please scan the QR code to proceed with the payment. Close the window to cancel.",
+    "button": "I HAVE DONATED"
   }
-  
+}

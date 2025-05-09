@@ -4,6 +4,8 @@ import HowItWorks from './pages/HowItWorks/HowItWorks';
 import ThankYou from './pages/ThankYou/ThankYou';
 import './App.css';
 import PersonalDiploma from './pages/ThankYou/PersonalDiploma';
+import './i18n';
+
 
 function App() {
   return (
