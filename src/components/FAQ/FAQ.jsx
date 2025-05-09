@@ -1,13 +1,24 @@
-import React from 'react'
-import styles from './FAQ.module.css'
+import React from "react";
+import styles from "./FAQ.module.css";
 
 const FAQ = () => {
   return (
     <div className={styles.faqSection}>
-      <h2>i am faq</h2>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+      <h2>FAQ</h2>
+      <hr />
+      <div className={styles.questionsContainer}>
+        <button>Q. Why do you need donations?</button>
+        <button>Q. How will my donation be used?</button>
+        <button>Q. Does a small donation even make a difference?</button>
+        <button>
+          Q. Will my name be made public? Can I donate anonymously?
+        </button>
+      </div>
+      <div className={styles.faqImageContainer}>
+        <img />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default FAQ
+export default FAQ;
