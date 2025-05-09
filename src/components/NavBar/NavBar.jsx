@@ -3,7 +3,6 @@ import logo from "../../assets/images/white-logo.png";
 import { Link } from "react-router-dom";
 import styles from "./NavBar.module.css";
 import { useState } from "react";
-import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 
 const NavBar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
