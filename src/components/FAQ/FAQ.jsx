@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import faqImage from "../../assets/images/temporary-faq-image.png";
 import FAQModal from "./FAQModal";
 
+
 const faqData = [
   {
     question:
