@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color:var(--color-darkblue);
+  background-color: var(--color-darkblue);
   padding: 2rem 3rem;
   color: var(--color-sand20);
   font-family: var(--font-sans-light);
@@ -51,26 +51,22 @@
   user-select: none;
 }
 
-.icon {
-  color: white;
-}
-
-.languageIcon{
+.languageIcon {
   font-family: 'Material Symbols Outlined';
   font-size: 24px;
-  color:var(--color-sand20);
+  color: var(--color-sand20);
 }
 
 .dropdown {
   position: absolute;
   top: 2rem;
   right: 0;
-  background-color:var(--color-sand);
+  background-color: var(--color-sand);
   color: var(--color-darkblue);
   list-style: none;
   padding: 0;
   border-radius: 4px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   width: 80px;
   z-index: 1000;
 }
@@ -78,11 +74,105 @@
 .dropdown li {
   padding: 8px;
   cursor: pointer;
-  font-size: 1.2rem; 
+  font-size: 1.2rem;
 }
 
 .dropdown li:hover {
   background-color: var(--color-darkblue);
-  color: var(--color-sand); ;
+  color: var(--color-sand);
 }
 
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: white;
+}
+
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100%;
+  width: 250px;
+  background-color: var(--color-darkblue);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.2rem; 
+  padding: 2rem 1.5rem;
+  transition: right 0.3s ease-in-out;
+  z-index: 1001;
+}
+
+.mobileMenu.open {
+  right: 0;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  animation: fadeIn 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  align-self: flex-end;
+  margin-bottom: 1rem;
+}
+
+.mobileLanguage {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem;
+}
+
+.mobileLanguage p {
+  font-size: 1rem;
+  color: var(--color-sand20);
+  margin: 0;
+}
+
+.mobileLanguage button {
+  background: none;
+  border: 1px solid white;
+  color: white;
+  padding: 0.25rem 0.6rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.mobileLanguage button:hover {
+  background-color: var(--color-sand);
+  color: var(--color-darkblue);
+}
+
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
