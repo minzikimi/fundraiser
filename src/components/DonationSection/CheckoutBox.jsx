@@ -149,8 +149,8 @@ const CheckoutBox = () => {
           )}
           {paymentMethod === 'Bank Account' && (
             <div>
-              <h2>Bank Transfer</h2>
-              <p>Bank :</p>
+               <h2>{t('donation-modal.bank title')}</h2>
+              
               <button onClick={()=>navigate('/thank-you')}>I HAVE DONATED!</button>
             </div>
           )}
