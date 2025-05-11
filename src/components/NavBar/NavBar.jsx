@@ -83,7 +83,7 @@ const NavBar = () => {
           {t("nav.howItWorks")}
         </Link>
         <div className={styles.mobileLanguage}>
-          <p>{t("nav.language")}</p>
+        {/* <p>{language}</p> */}
           <button onClick={() => selectLanguage("EN")}>EN</button>
           <button onClick={() => selectLanguage("SV")}>SV</button>
         </div>
