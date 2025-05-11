@@ -5,11 +5,9 @@ import Banner from '../components/Banner/Banner'
 import QuoteSection from '../components/QuoteSection/QuoteSection'
 import FAQ from '../components/FAQ/FAQ'
 import DonationSection from '../components/DonationSection/DonationSection'
-import Certificate from '../components/Certificate/Certificate'
+
 
 const Home = () => {
-  const name = "Minji Kim"; 
-  const date = new Date().toLocaleDateString(); 
   return (
     <div>
        <NavBar />
@@ -18,7 +16,6 @@ const Home = () => {
        <FAQ />
        <DonationSection />
        <Footer />
-       <Certificate name={name} date={date} />
     </div>
   )
 }

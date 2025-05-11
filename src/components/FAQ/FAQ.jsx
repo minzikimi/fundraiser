@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./FAQ.module.css";
-import faqImage from "../../assets/images/faqImage.png";
+import faqImage from "../../assets/images/temporary-faq-image.png";
 
 const faqData = [
   {
