@@ -1,6 +1,8 @@
-import React, { useState } from "react";
 import styles from "./FAQ.module.css";
 import faqImage from "../../assets/images/faqImage.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const faqData = [
   {
@@ -27,7 +29,9 @@ const faqData = [
 ];
 
 const FAQ = () => {
-  const [activeFAQ, setActiveFAQ] = useState(null);
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
   return (
     <div className={styles.faqSection}>
       <h2 className={styles.faqHeading}>FAQ</h2>
