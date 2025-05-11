@@ -3,6 +3,7 @@ import html2pdf from 'html2pdf.js';
 import styles from './PersonalDiploma.module.css';
 import logo from "../../assets/images/white-logo.png";
 import Certificate from "../../components/Certificate/Certificate";
+import Button from '../../components/Button/Button';
 
 
   const PersonalDiploma = () => {
@@ -76,7 +77,7 @@ import Certificate from "../../components/Certificate/Certificate";
         I consent to my name being printed on the digital donor wall (optional). SAMPLE TEXT
       </label>
 
-      <button className={styles.button} onClick={handleDownload}>Download Your Certificate</button>
+      <Button className={styles.button} onClick={handleDownload}>Download Your Certificate</Button>
        <div style={{ display: 'inline-block', width: '100%' }} ref={certificateRef}>
         <Certificate donorName={name.trim() !== "" ? name : "Anonymous"} />
       </div>

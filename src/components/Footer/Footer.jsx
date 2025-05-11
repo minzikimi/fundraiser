@@ -2,10 +2,13 @@ import React from "react";
 import styles from "./Footer.module.css";
 import logo from "../../assets/images/white-logo.png";
 import { FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
-const Footer = () => (
-  <footer className={styles.footer}>
-  
+const Footer = () => {
+  const { t } = useTranslation();
+
+  return (
+    <footer className={styles.footer}>
       <div className={styles.logoTitle}>
         <a href="https://museumforintelsen.se/" aria-label="Go to homepage">
           <img
@@ -19,26 +22,26 @@ const Footer = () => (
       <nav className={styles.navSection} aria-label="Footer navigation">
         <div className={styles.mainLinks}>
           <a href="https://museumforintelsen.se/en/about-the-museum/">
-            ABOUT THE MUSEUM
-          </a>
-          <a href="https://museumforintelsen.se/en/about-the-museum/press-and-media/">
-            PRESS AND MEDIA
+            {t('footer.about')}
           </a>
           <a href="https://museumforintelsen.se/en/about-the-museum/contact-us/">
-            CONTACT US
+            {t('footer.contact')}
+          </a>
+          <a href="https://museumforintelsen.se/en/about-the-museum/press-and-media/">
+            {t('footer.press')}
           </a>
         </div>
         <div className={styles.subLinks}>
-          <a href="https://museumforintelsen.se/en/visit-us/">Visit us</a>
+          <a href="https://museumforintelsen.se/en/visit-us/">{t('footer.visit')}</a>
           <a href="https://museumforintelsen.se/en/about-the-museum/research-and-development/">
-            Research
+            {t('footer.research')}
           </a>
         </div>
       </nav>
 
       <address className={styles.contact}>
-        Contact:{" "}
-        <a href="mailto:info@museumforintelsen.se">info@museumforintelsen.se</a>
+        {t('footer.contactLabel')}:{" "}
+        <a href={`mailto:${t('footer.email')}`}>{t('footer.email')}</a>
       </address>
 
       <div className={styles.social}>
@@ -67,9 +70,8 @@ const Footer = () => (
           <FaYoutube />
         </a>
       </div>
-    
-  </footer>
-);
+    </footer>
+  );
+};
 
 export default Footer;
-

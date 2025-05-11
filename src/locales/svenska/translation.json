@@ -7,7 +7,8 @@
     "title": "FRÅN MINNE TILL MENING"
   },
   "quote-section": {
-    "title": "Ditt stöd hjälper oss att inte glömma"
+    "title": "Ditt stöd hjälper oss att inte glömma",
+    "text" :"Din donation hjälper oss att bevara Förintelsens historia och utbilda framtida generationer, så att lärdomarna från det förflutna aldrig glöms bort."
   },
 "donation-box": {
   "title": "Välj ditt donationsbelopp",
@@ -24,5 +25,15 @@
     "bank title" :"Banköverföring",
     "instruction" :"Skanna QR-koden för att fortsätta med betalningen. Stäng fönstret för att avbryta.",
     "button" : "JAG HAR DONERAT"
-  }
+  },
+  "footer": {
+  "about": "OM MUSEET",
+  "press": "PRESS OCH MEDIA",
+  "contact": "KONTAKT",
+  "visit": "Besök oss",
+  "research": "Forskning",
+  "contactLabel": "Kontakt oss",
+  "email": "info@museumforintelsen.se"
+}
+
 }

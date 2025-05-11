@@ -1,50 +1,55 @@
 .faqSection {
-    background: linear-gradient(to bottom, #1c1f2a, #1F2A44 );
-    font-family: var(--font-sans);
-    padding: 3rem;
-    display: flex;
-    flex-direction: column;
+  background: linear-gradient(to bottom, #1c1f2a, #1F2A44 );
+  font-family: var(--font-sans);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
 }
 .faqHeading{
-    padding-top: 3rem;
-    padding-bottom: 0;
-    text-align: left;
-    color: var(--color-seablue);
+  padding-top: 3rem;
+  margin-bottom: 0;
+  text-align: left;
+  color: var(--color-seablue);
+  font-size: 3.5rem;
 }
 .underline{
-    border: none;
-    border-top: 1px solid var(--color-seablue);
-    margin: 3rem 0;
+  border: none;
+  border-top: 1px solid var(--color-seablue);
+  margin-top: 2rem;
+  margin-bottom: 4rem;;
 }
 .faqContent{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-left: 3rem;
-    margin-right: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 3rem 0 5rem 0 ;
+   
 }
 .questionsContainer{
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
     
 }
 .button{
-    margin: 0 3rem 3rem 0;
-    height: 3.5rem;
-    padding-left: 1rem;
-    text-align: start;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    font-weight: 500;
-    width: 98%;
-    background-color: var(--color-darkblue);
-    color: var(--color-sand20);
-    border: 2px solid #f2f0ed;
+  margin: 0 3rem 3rem 0;
+  height: 3.5rem;
+  padding-left: 1rem;
+  text-align: start;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  width: 98%;
+  background-color: var(--color-darkblue);
+  color: var(--color-sand20);
+  border: 2px solid #f2f0ed;
 
 }
+.button:hover{
+cursor: pointer;
+}
+
 .faqImage{
-   width: 50%;
-   height: 23rem;
+  width: 50%;
+  height: 23rem;
 }
-
 
