@@ -1,6 +1,12 @@
-import React, { useState } from "react";
 import styles from "./FAQ.module.css";
+<<<<<<< HEAD
+import faqImage from "../../assets/images/faqImage.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+=======
 import faqImage from "../../assets/images/temporary-faq-image.png";
+>>>>>>> 4e3be710263abc8a07b116d9e5f7d37de978474b
 
 const faqData = [
   {
@@ -27,7 +33,9 @@ const faqData = [
 ];
 
 const FAQ = () => {
-  const [activeFAQ, setActiveFAQ] = useState(null);
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
   return (
     <div className={styles.faqSection}>
       <h2 className={styles.faqHeading}>FAQ</h2>
