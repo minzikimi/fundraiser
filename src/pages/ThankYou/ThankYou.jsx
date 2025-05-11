@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import Button from '../../components/Button/Button';
 import logo from '../../assets/images/smf-logo.png';
 import buttonStyles from '../../components/Button/Button.module.css'
-const { t } = useTranslation();
 
 const ThankYou = () => {
   const navigate = useNavigate();
