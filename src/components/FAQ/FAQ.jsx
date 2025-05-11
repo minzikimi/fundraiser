@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 import faqImage from "../../assets/images/temporary-faq-image.png";
 import FAQModal from "./FAQModal";
 
-
 const faqData = [
   {
     question:
@@ -64,6 +63,13 @@ const FAQ = () => {
         </div>
         <img src={faqImage} alt="FAQ_image" className={styles.faqImage} />
       </div>
+      {activeFAQ && (
+        <FAQModal
+          question={activeFAQ.question}
+          answer={activeFAQ.answer}
+          onClose={closeModal}
+        />
+      )}
     </div>
   );
 };
