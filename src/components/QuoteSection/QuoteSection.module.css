@@ -3,7 +3,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 3rem;
+    padding: 8rem 3rem;
 }
 
 .quoteSectionContent {
@@ -23,7 +23,7 @@
 }
 
 .quoteSectionHeading {
-    font-size: 3.5rem;
+    font-size: 3rem;
     color: var(--color-seablue);
     margin: 0;
     text-align: start;
@@ -40,7 +40,7 @@
 
 .quoteDiscription {
     width: 60%;              
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     line-height: 3rem;
     color: var(--color-sand20);
     display: flex;
@@ -54,6 +54,7 @@
         flex-direction: column;
         gap: 2rem;
         align-items: stretch;
+    
     }
     .headingWrapper,
     .quoteDiscription {
@@ -61,6 +62,7 @@
         text-align: start;
         justify-content: flex-start;
         align-items: flex-start;
+        
     }
     .quoteSectionHeading {
         font-size: 2.3rem;
