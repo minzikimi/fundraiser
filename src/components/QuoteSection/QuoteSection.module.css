@@ -10,7 +10,7 @@
     max-width: 1400px;
     width: 100%;
     display: flex;
-    gap: 8rem;
+    gap: 9rem;
     box-sizing: border-box;
     flex-direction: row;
 }
@@ -71,9 +71,11 @@
 @media (max-width: 768px) {
 
     .quoteSectionHeading {
-        font-size: 2rem;
+        font-size: 1.9rem;
     }
-    .quoteDiscription {            
+    .quoteDiscription {
+        line-height: 2rem;      
         font-size: 1.4rem;
     }
 }
+
