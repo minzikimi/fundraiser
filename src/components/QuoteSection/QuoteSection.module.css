@@ -71,11 +71,9 @@
 @media (max-width: 768px) {
 
     .quoteSectionHeading {
-        font-size: 1.9rem;
+        font-size: 2rem;
     }
-    .quoteDiscription {
-                   
+    .quoteDiscription {            
         font-size: 1.4rem;
-       
     }
 }
