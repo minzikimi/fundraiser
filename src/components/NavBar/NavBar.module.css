@@ -46,7 +46,7 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  font-size: 0.95rem;
+  font-size: 1.2rem; 
   gap: 4px;
   user-select: none;
 }
@@ -57,8 +57,8 @@
 
 .languageIcon{
   font-family: 'Material Symbols Outlined';
-  font-size: 24px;
   color:var(--color-sand20);
+
 }
 
 .dropdown {
