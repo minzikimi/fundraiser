@@ -5,9 +5,13 @@ import CheckoutBox from './CheckoutBox';
 
 const DonationSection = () => (
   <section className={styles.donationSection}>
+  <div className={styles.imageWrapper}>
     <img src={donationImage} alt="Donation" className={styles.fullImage} />
-    <CheckoutBox />
-  </section>
+    <div className={styles.checkoutBoxWrapper}>
+      <CheckoutBox />
+    </div>
+  </div>
+</section>
 );
 
 export default DonationSection;

@@ -1,21 +1,11 @@
 .footer {
   background-color: #1f2a44;
   color: #e0ddd7;
-  padding: 3rem;
-  font-size: 0.9rem;
+  padding: 5rem 3rem;
+  font-size: 1.2rem;
   font-family: var(--font-sans);
 }
 
-/* .container {
-  max-width: 1400px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  text-align: left;
-} */
-
-/* Logo and title stacked vertically */
 .logoTitle {
   display: flex;
   flex-direction: column;
@@ -25,9 +15,9 @@
 }
 
 .logo {
-
-width: 8rem;
-
+  height: 70px;
+  padding: 4px;
+  margin-bottom: 2rem;
 }
 
 .title {
@@ -37,7 +27,6 @@ width: 8rem;
   font-weight: bolder;
 }
 
-/* Navigation links stacked vertically with spacing */
 .navSection {
   display: flex;
   flex-direction: column;
@@ -47,7 +36,6 @@ width: 8rem;
   align-items: baseline;
 }
 
-/* Main links in a horizontal row */
 .mainLinks {
   display: flex;
   justify-content: center;
@@ -58,7 +46,7 @@ width: 8rem;
 }
 
 .mainLinks a {
-  color: #e0ddd7;
+  color: var(--color-sand20);
   text-decoration: none;
   letter-spacing: 0.03em;
   transition: color 0.2s ease;
@@ -97,6 +85,8 @@ width: 8rem;
   font-size: 0.85rem;
   font-weight: 400;
   color: #e0ddd7;
+  margin-bottom: 2rem;
+  margin-top:2rem;
 }
 
 .contact a {
@@ -121,7 +111,7 @@ width: 8rem;
 
 .social a {
   color: #e0ddd7;
-  font-size: 1.4rem;
+  font-size: 1rem;
   transition: color 0.2s ease;
 }
 

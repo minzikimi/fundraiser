@@ -1,15 +1,35 @@
-.quoteSection{
+.quoteSection {
     background-color: var(--color-midnight);
-    padding: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 3rem 0;
+}
+
+.quoteSectionContent {
+    max-width: 1400px;
+    width: 100%;
+    display: flex;
+    gap: 8rem;
+    box-sizing: border-box;
+   
+}
+
+.headingWrapper {
+    width: 40%;        
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.quoteSectionHeading {
+    font-size: 3.5rem;
+    color: var(--color-seablue);
+    margin: 0;
+    text-align: start;
     font-family: var(--font-sans);
-    display: flex;
 }
-.quoteSectionHeading{
-    font-size:3.5rem;
-    display: flex;
-    flex-direction: column; 
-    width: 40%;
-}
+
 .headingPart{
     color: var(--color-seablue);
     flex: 1;
@@ -18,14 +38,14 @@
     
 }
 
-.quoteDiscription{
-    font-size: 1.2rem;
-    padding: 3rem;
-    line-height: 1.7rem;
-    width: 60%;
+.quoteDiscription {
+    width: 60%;              
+    font-size: 1.7rem;
+    line-height: 3rem;
+    color: var(--color-sand20);
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
-    color:var(--color-sand20) ;
+    font-family: var(--font-sans-light);
 }
 

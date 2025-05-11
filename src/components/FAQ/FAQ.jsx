@@ -1,8 +1,12 @@
 import styles from "./FAQ.module.css";
+<<<<<<< HEAD
 import faqImage from "../../assets/images/faqImage.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+=======
+import faqImage from "../../assets/images/temporary-faq-image.png";
+>>>>>>> 4e3be710263abc8a07b116d9e5f7d37de978474b
 
 const faqData = [
   {
