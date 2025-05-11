@@ -23,7 +23,7 @@
 }
 
 .quoteSectionHeading {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     color: var(--color-seablue);
     margin: 0;
     text-align: start;
@@ -41,7 +41,7 @@
 .quoteDiscription {
     width: 60%;              
     font-size: 1.7rem;
-    line-height: 3rem;
+    line-height: clamp(1.5rem, 4vw, 3rem);
     color: var(--color-sand20);
     display: flex;
     align-items: flex-end;
@@ -49,7 +49,7 @@
     font-family: var(--font-sans-light);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
     .quoteSectionContent {
         flex-direction: column;
         gap: 2rem;
@@ -63,10 +63,19 @@
         align-items: flex-start;
     }
     .quoteSectionHeading {
-        font-size: 2.3rem;
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .quoteSectionHeading {
+        font-size: 1.9rem;
     }
     .quoteDiscription {
-        font-size: 1.2rem;
-        line-height: 2rem;
+                   
+        font-size: 1.4rem;
+       
     }
 }
