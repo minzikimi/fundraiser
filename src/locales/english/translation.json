@@ -25,5 +25,14 @@
     "bank title": "Bank Transfer",
     "instruction": "Please scan the QR code to proceed with the payment. Close the window to cancel.",
     "button": "I HAVE DONATED"
+  },
+  "footer": {
+    "about": "ABOUT THE MUSEUM",
+    "press": "PRESS AND MEDIA",
+    "contact": "CONTACT",
+    "visit": "Visit us",
+    "research": "Research",
+    "contactLabel": "Contact us",
+    "email": "info@museumforintelsen.se"
   }
 }

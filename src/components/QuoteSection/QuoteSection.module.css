@@ -10,9 +10,9 @@
     max-width: 1400px;
     width: 100%;
     display: flex;
-    gap: 5rem;
+    gap: 8rem;
     box-sizing: border-box;
-    padding: 0 2rem;
+   
 }
 
 .headingWrapper {

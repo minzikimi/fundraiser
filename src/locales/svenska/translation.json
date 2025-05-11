@@ -25,5 +25,15 @@
     "bank title" :"Banköverföring",
     "instruction" :"Skanna QR-koden för att fortsätta med betalningen. Stäng fönstret för att avbryta.",
     "button" : "JAG HAR DONERAT"
-  }
+  },
+  "footer": {
+  "about": "OM MUSEET",
+  "press": "PRESS OCH MEDIA",
+  "contact": "KONTAKT",
+  "visit": "Besök oss",
+  "research": "Forskning",
+  "contactLabel": "Kontakt oss",
+  "email": "info@museumforintelsen.se"
+}
+
 }
