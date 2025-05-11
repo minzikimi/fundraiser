@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './banner.module.css';
+import styles from './Banner.module.css';
 import bannerImage from '../../assets/images/image2.jpg';
 import { useTranslation } from 'react-i18next';
 
