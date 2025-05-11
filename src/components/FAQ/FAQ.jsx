@@ -63,14 +63,6 @@ const FAQ = () => {
         </div>
         <img src={faqImage} alt="FAQ_image" className={styles.faqImage} />
       </div>
-
-      {activeFAQ && (
-        <FAQModal
-          question={activeFAQ.question}
-          answer={activeFAQ.answer}
-          onClose={closeModal}
-        />
-      )}
     </div>
   );
 };
