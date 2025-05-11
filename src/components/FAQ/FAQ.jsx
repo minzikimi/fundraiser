@@ -1,12 +1,10 @@
 import styles from "./FAQ.module.css";
-<<<<<<< HEAD
-import faqImage from "../../assets/images/faqImage.png";
+import React from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
-=======
+import { useEffect, useState } from "react";
 import faqImage from "../../assets/images/temporary-faq-image.png";
->>>>>>> 4e3be710263abc8a07b116d9e5f7d37de978474b
+import FAQModal from "./FAQModal";
 
 const faqData = [
   {
@@ -36,6 +34,16 @@ const FAQ = () => {
   useEffect(() => {
     AOS.init({ duration: 800, once: true });
   }, []);
+  const [activeFAQ, setActiveFAQ] = useState(null);
+
+  const openModal = (faq) => {
+    setActiveFAQ(faq);
+  };
+
+  const closeModal = () => {
+    setActiveFAQ(null);
+  };
+
   return (
     <div className={styles.faqSection}>
       <h2 className={styles.faqHeading}>FAQ</h2>
@@ -43,13 +51,26 @@ const FAQ = () => {
       <div className={styles.faqContent}>
         <div className={styles.questionsContainer}>
           {faqData.map((faq, index) => (
-            <button key={index} className={styles.button} data-aos="fade-up">
+            <button
+              key={index}
+              className={styles.button}
+              data-aos="fade-up"
+              onClick={() => openModal(faq)}
+            >
               Q. {faq.question}
             </button>
           ))}
         </div>
         <img src={faqImage} alt="FAQ_image" className={styles.faqImage} />
       </div>
+
+      {activeFAQ && (
+        <FAQModal
+          question={activeFAQ.question}
+          answer={activeFAQ.answer}
+          onClose={closeModal}
+        />
+      )}
     </div>
   );
 };

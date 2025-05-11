@@ -3,9 +3,7 @@ import logo from "../../assets/images/white-logo.png";
 import { Link } from "react-router-dom";
 import styles from "./NavBar.module.css";
 import { useState } from "react";
-import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
-import { useTranslation } from 'react-i18next';
-
+import { useTranslation } from "react-i18next";
 
 const NavBar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -13,11 +11,11 @@ const NavBar = () => {
   const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
   const { t, i18n } = useTranslation();
   const selectLanguage = (lang) => {
-    setLanguage(lang);        
-    i18n.changeLanguage(lang.toLowerCase()); 
-    setDropdownOpen(false);   
+    setLanguage(lang);
+    i18n.changeLanguage(lang.toLowerCase());
+    setDropdownOpen(false);
   };
-  
+
   return (
     <nav className={styles.navbar}>
       <div className={styles.logoContainer}>
@@ -26,13 +24,13 @@ const NavBar = () => {
       <ul className={styles.navLinks}>
         <li>
           <Link to="/" className={styles.link}>
-          {t('nav.main')}
+            {t("nav.main")}
           </Link>
         </li>
         <span className={styles.divider}>|</span>
         <li>
           <Link to="/how-it-works" className={styles.link}>
-          {t('nav.howItWorks')}
+            {t("nav.howItWorks")}
           </Link>
         </li>
         <span className={styles.divider}>|</span>
