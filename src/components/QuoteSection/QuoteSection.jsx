@@ -13,27 +13,30 @@ const QuoteSection = () => {
 
   return (
     <div className={styles.quoteSection}>
-      <motion.h2
-        className={styles.quoteSectionHeading}
-        variants={fadeInFromTop}
-        initial='hidden'
-        whileInView='visible'
-        viewport={{ once: true, amount: 0.5 }}
-        transition={{ duration: 0.6, ease: 'easeOut' }}
-      >
-        {t('quote-section.title')}
-      </motion.h2>
-
-      <motion.p
-        className={styles.quoteDiscription}
-        variants={fadeInFromTop}
-        initial='hidden'
-        whileInView='visible'
-        viewport={{ once: true, amount: 0.5 }}
-        transition={{ duration: 0.6, ease: 'easeOut', delay: 0.3 }}
-      >
-        {t('quote-section.text')}
-      </motion.p>
+      <div className={styles.quoteSectionContent}>
+      <div className={styles.headingWrapper}>
+        <motion.h2
+          className={styles.quoteSectionHeading}
+          variants={fadeInFromTop}
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+        >
+          {t('quote-section.title')}
+        </motion.h2>
+        </div>
+        <motion.p
+          className={styles.quoteDiscription}
+          variants={fadeInFromTop}
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.6, ease: 'easeOut', delay: 0.3 }}
+        >
+          {t('quote-section.text')}
+        </motion.p>
+      </div>
     </div>
   );
 };
