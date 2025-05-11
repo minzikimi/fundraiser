@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import logo from "../../assets/images/white-logo.png";
 import { Link } from "react-router-dom";
 import styles from "./NavBar.module.css";
+import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
 import { useTranslation } from "react-i18next";
@@ -20,6 +21,7 @@ const NavBar = () => {
     setLanguage(lang);
     i18n.changeLanguage(lang.toLowerCase());
     setDropdownOpen(false);
+  };
     setMenuOpen(false);
   };
 
@@ -32,7 +34,6 @@ const NavBar = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, [menuOpen]);
-
   return (
     <>
       <nav className={styles.navbar}>
@@ -88,7 +89,33 @@ const NavBar = () => {
           <button onClick={() => selectLanguage("SV")}>SV</button>
         </div>
       </div>
+      <ul className={styles.navLinks}>
+        <li>
+          <Link to="/" className={styles.link}>
+            {t("nav.main")}
+          </Link>
+        </li>
+        <span className={styles.divider}>|</span>
+        <li>
+          <Link to="/how-it-works" className={styles.link}>
+            {t("nav.howItWorks")}
+          </Link>
+        </li>
+        <span className={styles.divider}>|</span>
+        <li className={styles.languageToggle} onClick={toggleDropdown}>
+          {language}
+          <span className={styles.languageIcon}>language</span>
+          {dropdownOpen && (
+            <ul className={styles.dropdown}>
+              <li onClick={() => selectLanguage("EN")}>EN</li>
+              <li onClick={() => selectLanguage("SV")}>SV</li>
+            </ul>
+          )}
+        </li>
+      </ul>
+    </nav>
     </>
+
   );
 };
 
