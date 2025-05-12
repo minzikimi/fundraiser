@@ -13,7 +13,7 @@
   "donation-box": {
     "title": "Välj ditt donationsbelopp",
     "optional amount": "Valfritt belopp",
-    "confirm": "Bekräfta",
+    "confirm": "BEKRÄFTA",
     "bank transfer": "Banköverföring",
     "check out": "BETALA",
     "back": "TILLBAKA",
@@ -43,7 +43,7 @@
   },
   "howItWorks": {
     "title": "Så fungerar det",
-    "intro": "Att ge ska vara enkelt och meningsfullt. Som en del av Sveriges nationella museinätverk är vi engagerade i full transparens, ansvarstagande och att säkerställa att ditt stöd skapar långvarig effekt.\n\nÄven om vi ännu inte erbjuder betalning med kreditkort är det fortfarande enkelt och säkert att donera. Du kan stödja oss genom direktbanköverföringar eller via Swish, Sveriges populära mobila betalningstjänst.\n\nDitt bidrag hjälper till att bevara minnet av Förintelsen, stödja våra utställningar, utbildningsprogram och den pågående insamlingen av vittnesmål och föremål. Tillsammans säkerställer vi att dessa viktiga berättelser fortsätter att utbilda och inspirera kommande generationer.\n\nTack för att du står med oss.",
+    "intro": "Att ge ska vara enkelt och meningsfullt. Som en del av Sveriges nationella museinätverk är vi transparenta och ansvarstagande för att ditt stöd gör skillnad. Även utan kortbetalning är det enkelt och säkert att donera via Swish eller banköverföring. Ditt bidrag hjälper oss att bevara minnet av Förintelsen och stödja utställningar, utbildning och insamling av vittnesmål. Tack för ditt stöd!",
     "steps": [
       {
         "title": "1. Välj din donationsmetod",

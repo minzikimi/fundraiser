@@ -37,7 +37,11 @@ const NavBar = () => {
     <>
       <nav className={styles.navbar} aria-label="Main Navigation">
         <div className={styles.logoContainer}>
-          <img src={logo} alt="Swedish Holocaust Museum logo" className={styles.logo} />
+          <img
+            src={logo}
+            alt="Swedish Holocaust Museum logo"
+            className={styles.logo}
+          />
         </div>
 
         <ul className={styles.navLinks}>
@@ -54,12 +58,12 @@ const NavBar = () => {
           </li>
           <span className={styles.divider}>|</span>
           <li
-              className={styles.languageToggle}
-              onClick={toggleDropdown}
-              aria-haspopup="true"
-              aria-expanded={dropdownOpen}
-              aria-label="Language selector"
-            >
+            className={styles.languageToggle}
+            onClick={toggleDropdown}
+            aria-haspopup="true"
+            aria-expanded={dropdownOpen}
+            aria-label="Language selector"
+          >
             {language}
             <span className={styles.languageIcon}>language</span>
             {dropdownOpen && (
@@ -72,23 +76,25 @@ const NavBar = () => {
         </ul>
 
         <button
-             className={styles.hamburger}
-             onClick={toggleMenu}
-             aria-label="Open menu"
-             aria-expanded={menuOpen}
-           >
+          className={styles.hamburger}
+          onClick={toggleMenu}
+          aria-label="Open menu"
+          aria-expanded={menuOpen}
+        >
           <GiHamburgerMenu />
         </button>
       </nav>
 
-      {menuOpen && <div className={styles.backdrop} onClick={toggleMenu}></div>}
+      {menuOpen && (
+        <div className={styles.backdrop} onClick={toggleMenu}></div>
+      )}
 
       <div className={`${styles.mobileMenu} ${menuOpen ? styles.open : ""}`}>
         <button
-            className={styles.close}
-            onClick={toggleMenu}
-            aria-label="Close menu"
-          >
+          className={styles.close}
+          onClick={toggleMenu}
+          aria-label="Close menu"
+        >
           <IoMdClose />
         </button>
         <Link to="/" className={styles.link} onClick={toggleMenu}>
@@ -97,7 +103,11 @@ const NavBar = () => {
         <Link to="/how-it-works" className={styles.link} onClick={toggleMenu}>
           {t("nav.howItWorks")}
         </Link>
-        <section className={styles.mobileLanguage} aria-label="Language selection">
+
+        <section
+          className={styles.mobileLanguage}
+          aria-label="Language selection"
+        >
           <p>{t("nav.language")}</p>
           <button onClick={() => selectLanguage("EN")}>EN</button>
           <button onClick={() => selectLanguage("SV")}>SV</button>
@@ -108,4 +118,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-

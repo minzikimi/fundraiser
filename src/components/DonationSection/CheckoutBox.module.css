@@ -13,25 +13,40 @@
 .checkoutBox {
   position: absolute;
   top: 200px;
-  left: 200px;
+  left: 300px;
+  height:auto;
   background-color: var(--color-midnight);
-  padding: clamp(0.7rem, 2vw, 1.5rem) clamp(1rem, 5vw, 3rem);
-  border-radius: 10px;
+  padding: 3rem;
   z-index: 2;
   width: clamp(220px, 30vw, 500px);
-  min-width: 120px;
-  max-width: 95vw;
   box-sizing: border-box;
   font-size: clamp(0.9rem, 2vw, 1.1rem);
   transition: all 0.3s cubic-bezier(.4,0,.2,1);
 }
 
 
-@media (max-width: 1400px) {
-  .checkoutBox { top: 140px; left: 120px; }
+@media (max-width: 1550px) {
+  .checkoutBox { top: 100px; left: 132px; }
 }
-@media (max-width: 1200px) {
-  .checkoutBox { top: 90px; left: 60px; }
+@media (max-width: 1400px) {
+  .checkoutBox { top: 80px; left: 132px; }
+}
+@media (max-width: 1300px) {
+  .checkoutBox {
+    position: static;
+    top: auto;
+    left: auto;
+    width: clamp(220px, 98vw, 600px); 
+    max-width: 600px;
+    min-width: 140px;
+    border-radius: 10px;
+    font-size: clamp(0.9rem, 3vw, 1.15rem);
+    padding: clamp(1rem, 4vw, 2rem) clamp(1.2rem, 7vw, 2.5rem);
+    margin: 18px auto 0 auto;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    z-index: 2;
+  }
+  .fullImage { margin-bottom: 18px; }
 }
 @media (max-width: 1024px) {
   .checkoutBox { top: 40px; left: 24px; }
@@ -47,11 +62,7 @@
     left: auto;
     width: clamp(220px, 98vw, 600px); 
     max-width: 600px;
-    min-width: 140px;
-    margin: 18px auto;
-    border-radius: 10px;
-    font-size: clamp(0.9rem, 3vw, 1.15rem);
-    padding: clamp(1rem, 4vw, 2rem) clamp(1.2rem, 7vw, 2.5rem);
+    min-width: 140px  
   }
   .fullImage { margin-bottom: 18px; }
 }
@@ -70,7 +81,7 @@
   color: var(--color-sand20);
   font-family: var(--font-sans);
   margin-bottom: clamp(0.5rem, 2vw, 1.2rem);
-  font-size: clamp(1.1rem, 3vw, 1.7rem);
+  font-size: clamp(1.4rem, 3vw, 1.7rem);
   font-weight: bold;
 }
 
@@ -81,7 +92,6 @@
   font-family: var(--font-sans);
   background-color: var(--color-sand20);
   font-size: clamp(0.9rem, 2vw, 1.1rem);
-  border-radius: 4px;
   padding: clamp(0.3rem, 1vw, 0.8rem);
 }
 
@@ -90,16 +100,21 @@
   border-bottom: 1px solid var(--color-darkblue);
 }
 
+.radioItem:last-child {
+  border-bottom: none;
+}
+
 .input {
   margin-left: clamp(0.3rem, 1vw, 0.5rem);
-  padding: clamp(0.2rem, 0.7vw, 0.4rem) clamp(0.4rem, 1vw, 0.7rem);
   border-radius: 2px;
   font-size: clamp(0.9rem, 2vw, 1.1rem);
+  padding:0.5rem;
 }
 
 .optionalAmount {
   display: flex;
   align-items: center;
+  gap: 3px; 
 }
 
 .button {
