@@ -10,7 +10,7 @@
     max-width: 1400px;
     width: 100%;
     display: flex;
-    gap: 9rem;
+    gap: 8rem;
     box-sizing: border-box;
     flex-direction: row;
 }
