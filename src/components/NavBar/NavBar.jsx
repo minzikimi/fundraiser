@@ -35,7 +35,7 @@ const NavBar = () => {
 
   return (
     <>
-      <nav className={styles.navbar}>
+      <nav className={styles.navbar} aria-label="Main Navigation">
         <div className={styles.logoContainer}>
           <img src={logo} alt="Logo" className={styles.logo} />
         </div>
