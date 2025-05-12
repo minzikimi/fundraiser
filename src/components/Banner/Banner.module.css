@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Arial Black';
+  src: url('../../assets/fonts/ariblk.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .banner {
     width: 100vw;
     height: 100vh;
@@ -43,28 +50,58 @@
   }
   
   .text {
-    color: var(--color-sand20);
+    color: white;
     font-size: 4.5rem;
-    font-weight:bolder;
-    font-family: var(--font-sans);
+    font-family: 'Arial Black', sans-serif;
     margin: 0;
   
   }
-  
-  @media (max-width: 768px) {
-    .banner {
-      height: 40vh;
-      padding: var(--spacing-medium);
-    }
-  
-    .textBox {
-      top: 65%;
-      right: var(--spacing-medium);
-      padding: var(--spacing-xsmall) var(--spacing-small);
-    }
-  
-    .text {
-      font-size: 1.5rem;
-    }
+  @media (max-width: 1224px) {
+  .textBox {
+    left: 3rem;
+    max-width: 50vw;
+    padding: 0.4rem 0.8rem;
   }
-  
+}
+
+@media (max-width: 768px) {
+  .banner {
+    height: 45vh;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  .fullImage {
+    position: absolute;
+  }
+
+  .textBox {
+    top: auto;
+    bottom: 20%;
+    right: var(--spacing-medium, 1rem);
+    max-width: 90vw;
+    padding: var(--spacing-xsmall, 0.3rem) var(--spacing-small, 1rem);
+    transform: none;
+  }
+
+  .text {
+    font-size: clamp(1rem, 5vw, 2rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    height: 30vh;
+  }
+
+  .textBox {
+    bottom: 10%;
+    right: 5%;
+    max-width: 95vw;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .text {
+    font-size: 1.2rem;
+  }
+}

@@ -1,26 +1,82 @@
-.quoteSection{
+.quoteSection {
     background-color: var(--color-midnight);
-    padding: 3rem;
-    font-family: var(--font-sans);
+    width: 100%;
     display: flex;
+    justify-content: center;
+    padding:8rem 3rem;
+}
 
+.quoteSectionContent {
+    max-width: 1400px;
+    width: 100%;
+    display: flex;
+    gap: 9rem;
+    box-sizing: border-box;
+    flex-direction: row;
+}
 
-    h2{
-        font-size:3.5rem;
-        color: var(--color-sand20);
-        display: flex;
-        flex-direction: column; 
-        width: 35%;
+.headingWrapper {
+    width: 45%;        
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.quoteSectionHeading {
+    font-size: 3.2rem;
+    color: var(--color-seablue);
+    margin: 0;
+    text-align: start;
+    font-family: var(--font-sans);
+}
+
+.headingPart{
+    color: var(--color-seablue);
+    flex: 1;
+    margin-top: auto; 
+    text-align: start;
+    
+}
+
+.quoteDiscription {
+    width: 55%;              
+    font-size: 1.7rem;
+    line-height: clamp(1.5rem, 4vw, 3rem);
+    color: var(--color-sand20);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-family: var(--font-sans-light);
+}
+
+@media (max-width: 1200px) {
+    .quoteSectionContent {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: stretch;
     }
-    p{
-        color: var(--color-sand20);
-        flex: 1;
-        margin-top: auto;  
+    .headingWrapper,
+    .quoteDiscription {
+        width: 100%;
+        text-align: start;
+        justify-content: flex-start;
+        align-items: flex-start;
+        line-height: 2rem;   
+    }
+    .quoteSectionHeading {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
     }
 }
-.quoteDiscription{
-    font-size: 1.2rem;
-    padding-bottom: 1.5rem;
-    line-height: 1.7rem;
+
+@media (max-width: 768px) {
+
+    .quoteSectionHeading {
+        font-size: 1.9rem;
+    }
+    .quoteDiscription {   
+        font-size: 1.4rem;
+    }
+
 }
 

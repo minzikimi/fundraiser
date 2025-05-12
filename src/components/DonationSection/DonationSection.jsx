@@ -1,20 +1,17 @@
-import React, { useState } from "react";
-import styles from "./donationSection.module.css";
+import React from "react";
+import styles from "./DonationSection.module.css";
 import donationImage from "../../assets/images/image3.jpg";
 import CheckoutBox from "./CheckoutBox";
 
-const DonationSection = () => {
-  const [totalRaised, setTotalRaised] = useState(2000);
-  const handleDonation = (amount) => {
-    setTotalRaised((prev) => prev + amount);
-  };
-
-  return (
-    <section className={styles.donationSection}>
+const DonationSection = () => (
+  <section className={styles.donationSection}>
+    <div className={styles.imageWrapper}>
       <img src={donationImage} alt="Donation" className={styles.fullImage} />
-      <CheckoutBox onDonation={handleDonation} />
-    </section>
-  );
-};
+      <div className={styles.checkoutBoxWrapper}>
+        <CheckoutBox />
+      </div>
+    </div>
+  </section>
+);
 
 export default DonationSection;
