@@ -37,7 +37,7 @@ const NavBar = () => {
     <>
       <nav className={styles.navbar} aria-label="Main Navigation">
         <div className={styles.logoContainer}>
-          <img src={logo} alt="Logo" className={styles.logo} />
+          <img src={logo} alt="Swedish Holocaust Museum logo" className={styles.logo} />
         </div>
 
         <ul className={styles.navLinks}>
@@ -75,6 +75,7 @@ const NavBar = () => {
              className={styles.hamburger}
              onClick={toggleMenu}
              aria-label="Open menu"
+             aria-expanded={menuOpen}
            >
           <GiHamburgerMenu />
         </button>
@@ -96,11 +97,11 @@ const NavBar = () => {
         <Link to="/how-it-works" className={styles.link} onClick={toggleMenu}>
           {t("nav.howItWorks")}
         </Link>
-        <div className={styles.mobileLanguage}>
+        <section className={styles.mobileLanguage} aria-label="Language selection">
           <p>{t("nav.language")}</p>
           <button onClick={() => selectLanguage("EN")}>EN</button>
           <button onClick={() => selectLanguage("SV")}>SV</button>
-        </div>
+        </section>
       </div>
     </>
   );
