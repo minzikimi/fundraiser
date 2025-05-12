@@ -11,11 +11,23 @@ const ProgressBar = ({ raised, goal }) => {
 
   return (
     <div className={styles.progressContainer}>
-      <p className={styles.progressParagraph}>
+      <p
+        id="progress-status"
+        className={styles.progressParagraph}
+        aria-live="polite"
+      >
         Togeteher we've raised {percent.toFixed(1)}% of our goal to preserve
         history.
       </p>
-      <div className={styles.progressBackground}>
+      <div
+        className={styles.progressBackground}
+        role="progressbar"
+        aria-labelledby="fundraising-progress-label"
+        aria-valuenow={raised}
+        aria-valuemin={0}
+        aria-valuemax={goal}
+        tabIndex={0}
+      >
         <div
           className={styles.progressFill}
           style={{ width: `${displayPercent}%` }}
