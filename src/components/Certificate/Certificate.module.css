@@ -1,9 +1,9 @@
 .certificate {
   position: relative;
-  width: 900px;
+  width: 1000px;
   max-width: 95vw;
   margin: 40px auto;
-  padding: 50px 50px 40px 50px;
+  padding: 70px 70px 60px 70px;
   background:
     linear-gradient(135deg, #ffffff 90%),
     url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="220" height="220"><polygon points="110,20 44,200 200,66 20,66 176,200 110,20" fill="none" stroke="rgba(26,35,126,0.07)" stroke-width="10"/></svg>')
@@ -63,6 +63,7 @@
 .donor-name {
   font-size: 2em;
   color:#1f2a44;
+  margin-top: 0;
   margin-bottom: 18px;
   font-family: 'Georgia', serif;
   font-weight: 700;
@@ -89,11 +90,4 @@
   text-align: right;
 }
 
-.quote {
-  font-size: 1em;
-  color: #757575;
-  text-align: center;
-  margin-top: 28px;
-  font-style: italic;
-  letter-spacing: 0.5px;
-}
+
