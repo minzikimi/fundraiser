@@ -34,5 +34,12 @@
     "research": "Research",
     "contactLabel": "Contact us",
     "email": "info@museumforintelsen.se"
-  }
+  },
+  "thank-you": {
+  "title": "Thank you!",
+  "message": "Your contribution helps preserve the stories of those who can no longer speak. Thank you for supporting our mission to ensure history is never forgotten.",
+  "getDiploma": "GET YOUR PERSONAL DIPLOMA",
+  "progressPlaceholder": "Progress bar goes here"
+}
+
 }

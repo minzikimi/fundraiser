@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './howItWorks.module.css';
+import styles from './HowItWorks.module.css';
 import NavBar from '../../components/NavBar/NavBar';
 import Footer from '../../components/Footer/Footer';
 import { motion } from 'framer-motion';

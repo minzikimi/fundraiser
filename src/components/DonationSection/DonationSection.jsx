@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './donationSection.module.css';
+import styles from './DonationSection.module.css';
 import donationImage from '../../assets/images/image3.jpg';
 import CheckoutBox from './CheckoutBox';
 
