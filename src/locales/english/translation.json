@@ -1,0 +1,45 @@
+{
+  "nav": {
+    "main": "Main",
+    "howItWorks": "How it works"
+  },
+  "banner": {
+    "title": "FROM MEMORY TO MEANING"
+  },
+  "quote-section": {
+    "title": "Your support helps us not to forget",
+    "text" :"Your donation helps preserve the history of the Holocaust and educate future generations. Together, we can ensure that the lessons of the past are never forgotten."
+  },
+"donation-box": {
+  "title": "Choose your donation amount",
+  "optional amount": "Optional amount",
+  "confirm": "Confirm",
+  "bank transfer": "Bank Transfer",
+  "check out": "CHECK OUT",
+  "back": "BACK",
+  "swish payment": "Swish Payment",
+  "choose payment": "Choose payment method"
+},
+  "donation-modal": {
+    "swish title": "Swish Payment",
+    "bank title": "Bank Transfer",
+    "instruction": "Please scan the QR code to proceed with the payment. Close the window to cancel.",
+    "button": "I HAVE DONATED"
+  },
+  "footer": {
+    "about": "ABOUT THE MUSEUM",
+    "press": "PRESS AND MEDIA",
+    "contact": "CONTACT",
+    "visit": "Visit us",
+    "research": "Research",
+    "contactLabel": "Contact us",
+    "email": "info@museumforintelsen.se"
+  },
+  "thank-you": {
+  "title": "Thank you!",
+  "message": "Your contribution helps preserve the stories of those who can no longer speak. Thank you for supporting our mission to ensure history is never forgotten.",
+  "getDiploma": "GET YOUR PERSONAL DIPLOMA",
+  "progressPlaceholder": "Progress bar goes here"
+}
+
+}

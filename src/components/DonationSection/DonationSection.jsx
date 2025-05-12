@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import styles from "./donationSection.module.css";
 import donationImage from "../../assets/images/image3.jpg";
@@ -16,5 +17,6 @@ const DonationSection = () => {
     </section>
   );
 };
+
 
 export default DonationSection;
