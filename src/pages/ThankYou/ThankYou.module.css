@@ -68,35 +68,89 @@
 }
 
 .getDiploma h3 {
- /*  max-width: 55%; */
   padding: 1rem;
   line-height: 3rem;
   text-align: center;
-  font-size:1.5rem;
+  font-size: 1.5rem;
   font-family: var(--font-sans);
   font-weight: lighter;
 }
 
-#getDiplomaBtn {
-  width: 16rem;
-  height: 2.8rem;
-  border-radius: 5px;
+.button {
+  background: var(--color-dimblue);
+  color: var(--color-sand20);
+  padding: 1rem;
   border: none;
-  font-weight: bold;
-  font-size: 0.9rem;
-  color: var(--color-sand40);
-  background-color: var(--color-dimblue);
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 2rem;
   transition: 0.4s;
 }
 
-#getDiplomaBtn:hover {
-  background-color: var(--color-yellow);
+.button:hover {
+  background: var(--color-yellow);
   color: var(--color-midnight);
 }
-
 
 .logo {
   height: 100px;
   filter: invert(100%);
   margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+  .getDiploma h3 {
+    padding: 1rem;
+    line-height: 1.2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: var(--font-sans);
+    font-weight: lighter;
+  }
+
+  .button {
+    width: 16rem;
+    height: 2.8rem;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: var(--color-sand40);
+    background-color: var(--color-dimblue);
+    transition: 0.4s;
+  }
+}
+
+@media (max-width: 390px) {
+  .logo {
+    max-height: 3.5rem;
+  }
+
+  .titleThankYou {
+    font-size: 2.5rem;
+  }
+
+  .getDiploma h3 {
+    padding: 1rem;
+    line-height: 1.4rem;
+    text-align: center;
+    font-size: 1rem;
+    font-family: var(--font-sans);
+    font-weight: lighter;
+  }
+
+  .button {
+    width: 14rem;
+    height: 3rem;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    font-size: 0.7rem;
+    color: var(--color-sand40);
+    background-color: var(--color-dimblue);
+    transition: 0.4s;
+  }
 }
