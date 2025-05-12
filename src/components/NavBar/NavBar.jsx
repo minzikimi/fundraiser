@@ -98,11 +98,12 @@ const NavBar = () => {
           {t("nav.howItWorks")}
         </Link>
 
-        <section className={styles.mobileLanguage} aria-label="Language selection"
+        <section className={styles.mobileLanguage} aria-label="Language selection">
         <div className={styles.mobileLanguage}>
           <button onClick={() => selectLanguage("EN")}>EN</button>
           <button onClick={() => selectLanguage("SV")}>SV</button>
-        </section>
+        </div>
+      </section>
       </div>
     </>
   );
