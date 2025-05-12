@@ -71,7 +71,11 @@ const NavBar = () => {
           </li>
         </ul>
 
-        <button className={styles.hamburger} onClick={toggleMenu}>
+        <button
+             className={styles.hamburger}
+             onClick={toggleMenu}
+             aria-label="Open menu"
+           >
           <GiHamburgerMenu />
         </button>
       </nav>
@@ -79,7 +83,11 @@ const NavBar = () => {
       {menuOpen && <div className={styles.backdrop} onClick={toggleMenu}></div>}
 
       <div className={`${styles.mobileMenu} ${menuOpen ? styles.open : ""}`}>
-        <button className={styles.close} onClick={toggleMenu}>
+        <button
+            className={styles.close}
+            onClick={toggleMenu}
+            aria-label="Close menu"
+          >
           <IoMdClose />
         </button>
         <Link to="/" className={styles.link} onClick={toggleMenu}>
