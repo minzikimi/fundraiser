@@ -63,3 +63,13 @@
   color: white;
   font-weight: bold;
 }
+
+@media (max-width: 390px) {
+  .progressContainer {
+    height: 6rem;
+    width: 100%;
+    max-width: 20rem;
+    margin: 1rem auto;
+    text-align: center;
+  }
+}
