@@ -16,7 +16,7 @@
   left: 300px;
   height:auto;
   background-color: var(--color-midnight);
-  padding: 3rem;
+  padding :2rem 4rem;
   z-index: 2;
   width: clamp(220px, 30vw, 500px);
   box-sizing: border-box;
@@ -80,8 +80,8 @@
 .heading {
   color: var(--color-sand20);
   font-family: var(--font-sans);
-  margin-bottom: clamp(0.5rem, 2vw, 1.2rem);
-  font-size: clamp(1.4rem, 3vw, 1.7rem);
+  margin-bottom:3rem;
+  font-size: clamp(1.8rem, 5vw, 2rem);
   font-weight: bold;
 }
 
