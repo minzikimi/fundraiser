@@ -53,7 +53,13 @@ const NavBar = () => {
             </Link>
           </li>
           <span className={styles.divider}>|</span>
-          <li className={styles.languageToggle} onClick={toggleDropdown}>
+          <li
+              className={styles.languageToggle}
+              onClick={toggleDropdown}
+              aria-haspopup="true"
+              aria-expanded={dropdownOpen}
+              aria-label="Language selector"
+            >
             {language}
             <span className={styles.languageIcon}>language</span>
             {dropdownOpen && (
