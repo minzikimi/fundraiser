@@ -20,7 +20,7 @@ const NavBar = () => {
     setLanguage(lang);
     i18n.changeLanguage(lang.toLowerCase());
     setDropdownOpen(false);
-    setMenuOpen(false);
+    setMenuOpen(false); 
   };
 
   useEffect(() => {
@@ -108,3 +108,4 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
