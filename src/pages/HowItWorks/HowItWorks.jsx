@@ -3,6 +3,7 @@ import styles from './HowItWorks.module.css';
 import NavBar from '../../components/NavBar/NavBar';
 import Footer from '../../components/Footer/Footer';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -17,48 +18,18 @@ const sharedMotionProps = {
   transition: { duration: 0.6, ease: 'easeOut' }
 };
 
-const steps = [
-  {
-    title: '1. Choose Your Donation Method',
-    text: 'You can donate in either of these two ways:',
-    list: ['Bank Transfer', 'Swish (Sweden only)']
-  },
-  {
-    title: '2. Confirm Your Donation',
-    text: 'Once you’ve sent your donation, you can optionally email us to get a confirmation or receipt:',
-    email: true
-  },
-  {
-    title: '3. See Your Impact',
-    text: 'Your donation helps us fund real, ongoing projects. We share regular updates via:',
-    list: [
-      'Our newsletter signup',
-      'Instagram',
-      <>
-        Website blog:{' '}
-        <a
-          className={styles.link}
-          href="https://museumforintelsen.se/om-museet/permanent-museum/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          https://museumforintelsen.se/om-museet/permanent-museum/
-        </a>
-      </>
-    ]
-  }
-];
 
 const HowItWorks = () => {
+  const { t } = useTranslation();
+  const steps = t('howItWorks.steps', { returnObjects: true });
   return (
     <>
       <NavBar />
       <div className={styles.howItWorksContainer}>
         <motion.div className={styles.content} {...sharedMotionProps}>
-          <h2 className={styles.heading}>How It Works</h2>
+          <h2 className={styles.heading}> {t('howItWorks.title')}</h2>
           <p className={styles.intro}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-            standard dummy text ever since the 1500s
+          {t('howItWorks.intro')}
           </p>
 
           <hr className={styles.divider} />
@@ -77,9 +48,11 @@ const HowItWorks = () => {
                 <ul className={styles.stepList}>
                   {step.list.map((item, idx) => (
                     <li key={idx} className={styles.stepListItem}>{item}</li>
+                    
                   ))}
                 </ul>
-              )}
+                
+              )} 
 
 
               {step.email && (
@@ -99,11 +72,12 @@ const HowItWorks = () => {
 
           <motion.div className={styles.contact} {...sharedMotionProps}>
             <p>
-            <strong className={styles.questionTitle}>Still Have Questions?</strong>
+            <strong className={styles.questionTitle}>{t('howItWorks.contact.questionTitle')}</strong>
 
               <br />
-              We’re here to help! Contact <br />
-              <a href="mailto:info@museumforintelsen.se">info@museumforintelsen.se</a> or visit our Contact Page.
+              {t('howItWorks.contact.text')} <br />
+              <a href={`mailto:${t('howItWorks.contact.email')}`}>{t('howItWorks.contact.email')}</a> 
+              {t('howItWorks.contact.extra')}
             </p>
           </motion.div>
         </motion.div>
