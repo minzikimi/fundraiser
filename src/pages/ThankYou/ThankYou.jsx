@@ -1,12 +1,21 @@
 import React from "react";
 import styles from "./ThankYou.module.css";
 import { useNavigate } from "react-router-dom";
-import Button from '../../components/Button/Button';
-import logo from '../../assets/images/smf-logo.png';
-import buttonStyles from '../../components/Button/Button.module.css'
+import Button from "../../components/Button/Button";
+import logo from "../../assets/images/smf-logo.png";
+import buttonStyles from "../../components/Button/Button.module.css";
+import ProgressBar from "../../components/ProgressBar/ProgressBar";
+import { useState } from "react";
+
+const GOAL_AMOUNT = 100000;
 
 const ThankYou = () => {
   const navigate = useNavigate();
+  const [totalRaised, setTotalRaised] = useState(40000); // sample raised
+
+  const handleDonation = (amount) => {
+    setTotalRaised((prev) => prev + amount);
+  };
 
   return (
     <main className={styles.thankYouContainer}>
@@ -20,9 +29,7 @@ const ThankYou = () => {
           className={styles.progressBarSection}
           aria-label="Donation Progress"
         >
-          <div className={styles.progressBarPlaceholder}>
-            Progress bar goes here
-          </div>
+          <ProgressBar raised={totalRaised} goal={GOAL_AMOUNT} />
         </div>
 
         <div className={styles.getDiploma}>
@@ -31,15 +38,16 @@ const ThankYou = () => {
             longer speak. Thank you for supporting our mission to ensure history
             is never forgotten.
           </h3>
-          <Button className={styles.button} onClick={() => navigate('/personal-diploma')}>
+          <Button
+            className={styles.button}
+            onClick={() => navigate("/personal-diploma")}
+          >
             GET YOUR PERSONAL DIPLOMA
           </Button>
         </div>
       </div>
-      
     </main>
   );
 };
 
 export default ThankYou;
-

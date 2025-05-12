@@ -20,7 +20,7 @@ const NavBar = () => {
     setLanguage(lang);
     i18n.changeLanguage(lang.toLowerCase());
     setDropdownOpen(false);
-    setMenuOpen(false);
+    setMenuOpen(false); 
   };
 
   useEffect(() => {
@@ -97,8 +97,9 @@ const NavBar = () => {
         <Link to="/how-it-works" className={styles.link} onClick={toggleMenu}>
           {t("nav.howItWorks")}
         </Link>
-        <section className={styles.mobileLanguage} aria-label="Language selection">
-          <p>{t("nav.language")}</p>
+
+        <section className={styles.mobileLanguage} aria-label="Language selection"
+        <div className={styles.mobileLanguage}>
           <button onClick={() => selectLanguage("EN")}>EN</button>
           <button onClick={() => selectLanguage("SV")}>SV</button>
         </section>
@@ -108,3 +109,4 @@ const NavBar = () => {
 };
 
 export default NavBar;
+

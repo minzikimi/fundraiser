@@ -7,19 +7,19 @@
     "title": "FROM MEMORY TO MEANING"
   },
   "quote-section": {
-    "title": "Your support helps us not to forget",
-    "text" :"Your donation helps preserve the history of the Holocaust and educate future generations. Together, we can ensure that the lessons of the past are never forgotten."
+    "title": "Your Support is a Voice Against Forgetting",
+    "text": "Your donation helps preserve the history of the Holocaust and educate future generations. Together, we can ensure that the lessons of the past are never forgotten."
   },
-"donation-box": {
-  "title": "Choose your donation amount",
-  "optional amount": "Optional amount",
-  "confirm": "Confirm",
-  "bank transfer": "Bank Transfer",
-  "check out": "CHECK OUT",
-  "back": "BACK",
-  "swish payment": "Swish Payment",
-  "choose payment": "Choose payment method"
-},
+  "donation-box": {
+    "title": "Choose your donation amount",
+    "optional amount": "Optional amount",
+    "confirm": "Confirm",
+    "bank transfer": "Bank Transfer",
+    "check out": "CHECK OUT",
+    "back": "BACK",
+    "swish payment": "Swish Payment",
+    "choose payment": "Choose payment method"
+  },
   "donation-modal": {
     "swish title": "Swish Payment",
     "bank title": "Bank Transfer",
@@ -34,5 +34,47 @@
     "research": "Research",
     "contactLabel": "Contact us",
     "email": "info@museumforintelsen.se"
+  },
+  "thank-you": {
+    "title": "Thank you!",
+    "message": "Your contribution helps preserve the stories of those who can no longer speak. Thank you for supporting our mission to ensure history is never forgotten.",
+    "getDiploma": "GET YOUR PERSONAL DIPLOMA",
+    "progressPlaceholder": "Progress bar goes here"
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "intro": "Giving should be simple and meaningful. As part of Sweden’s national museum network, we are committed to transparency and ensuring your support makes a lasting impact. While we don’t yet offer credit card payments, donating is easy and secure via Swish or direct bank transfer. Your contribution helps preserve the memory of the Holocaust and supports our exhibitions, educational programs, and the collection of testimonies and artifacts. Thank you for standing with us.",
+    "steps": [
+      {
+        "title": "1. Choose Your Donation Method",
+        "text": "You can donate in either of these two ways:",
+        "list": [
+          "Bank Transfer",
+          "Swish (Sweden only)"
+        ]
+      },
+      {
+        "title": "2. Confirm Your Donation",
+        "text": "Once you’ve sent your donation, you can optionally email us to get a confirmation or receipt:",
+        "email": "✉️ info@museumforintelsen.se",
+        "sampleText": "Include your name, donation amount, and date if you’d like a receipt or acknowledgment."
+      },
+      {
+        "title": "3. See Your Impact",
+        "text": "Your donation helps us fund real, ongoing projects. We share regular updates via:",
+        "list": [
+          "Our newsletter signup",
+          "Instagram",
+          "Website blog :  https://museumforintelsen.se/om-museet/permanent-museum/"
+        ]
+      }
+    ],
+    "divider": "-",
+    "contact": {
+      "questionTitle": "Still Have Questions?",
+      "text": "We’re here to help! Contact",
+      "email": "info@museumforintelsen.se",
+      "extra": "or visit our Contact Page."
+    }
   }
 }

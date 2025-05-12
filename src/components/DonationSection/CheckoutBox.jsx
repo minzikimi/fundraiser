@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import styles from './CheckoutBox.module.css';
 import Button from '../Button/Button';
@@ -7,28 +8,42 @@ import swishSample from '../../assets/images/swishSample.jpeg'
 import { useTranslation } from 'react-i18next';
 
 
-const CheckoutBox = () => {
-  const [amount, setAmount] = useState('');
+const CheckoutBox = ({ onDonation }) => {
+  const [amount, setAmount] = useState("");
   const [stage, setStage] = useState(1);
-  const [paymentMethod, setPaymentMethod] = useState('');
+  const [paymentMethod, setPaymentMethod] = useState("");
   const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
   const { t } = useTranslation();
 
+  // Helper to parse the amount string
+  const parseAmount = (amt) => {
+    if (!amt) return 0;
+    return parseInt(amt.replace("kr", "").trim(), 10) || 0;
+  };
+
+  // When user confirms donation in the modal
+  const handleDonationConfirmed = () => {
+    const donatedAmount = parseAmount(amount);
+    if (onDonation && donatedAmount > 0) {
+      onDonation(donatedAmount);
+    }
+    navigate("/thank-you");
+  };
 
   const handleConfirm = () => {
     if (amount) {
       setStage(2);
     } else {
-      console.log('yo! select')
+      console.log("yo! select");
     }
   };
 
   const handlePaymentConfirm = () => {
     if (paymentMethod) {
-     setShowModal((prev)=>!prev)
+      setShowModal((prev) => !prev);
     } else {
-      alert('Please select the amount!')
+      alert("Please select the amount!");
     }
   };
   const handleCloseModal = () => setShowModal(false);
@@ -45,7 +60,7 @@ const CheckoutBox = () => {
                   <input
                     type="radio"
                     value="100kr"
-                    checked={amount === '100kr'}
+                    checked={amount === "100kr"}
                     onChange={(e) => setAmount(e.target.value)}
                   />
                   100kr
@@ -56,7 +71,7 @@ const CheckoutBox = () => {
                   <input
                     type="radio"
                     value="200kr"
-                    checked={amount === '200kr'}
+                    checked={amount === "200kr"}
                     onChange={(e) => setAmount(e.target.value)}
                   />
                   200kr
@@ -67,7 +82,7 @@ const CheckoutBox = () => {
                   <input
                     type="radio"
                     value="500kr"
-                    checked={amount === '500kr'}
+                    checked={amount === "500kr"}
                     onChange={(e) => setAmount(e.target.value)}
                   />
                   500kr
@@ -79,21 +94,21 @@ const CheckoutBox = () => {
                     type="radio"
                     value=""
                     checked={
-                      amount !== '100kr' &&
-                      amount !== '200kr' &&
-                      amount !== '500kr'
+                      amount !== "100kr" &&
+                      amount !== "200kr" &&
+                      amount !== "500kr"
                     }
-                    onChange={() => setAmount('')}
+                    onChange={() => setAmount("")}
                   />
                   <input
                     type="text"
                     placeholder={t('donation-box.optional amount')}
                     value={
-                      amount !== '100kr' &&
-                      amount !== '200kr' &&
-                      amount !== '500kr'
+                      amount !== "100kr" &&
+                      amount !== "200kr" &&
+                      amount !== "500kr"
                         ? amount
-                        : ''
+                        : ""
                     }
                     onChange={(e) => setAmount(e.target.value)}
                     className={styles.input}
@@ -111,9 +126,9 @@ const CheckoutBox = () => {
               <div className={styles.radioItem}>
                 <label>
                   <input
-                    type='radio'
-                    value='Swish'
-                    checked={paymentMethod === 'Swish'}
+                    type="radio"
+                    value="Swish"
+                    checked={paymentMethod === "Swish"}
                     onChange={(e) => setPaymentMethod(e.target.value)}
                   />
                   Swish
@@ -122,9 +137,9 @@ const CheckoutBox = () => {
               <div className={styles.radioItem}>
                 <label>
                   <input
-                    type='radio'
-                    value='Bank Account'
-                    checked={paymentMethod === 'Bank Account'}
+                    type="radio"
+                    value="Bank Account"
+                    checked={paymentMethod === "Bank Account"}
                     onChange={(e) => setPaymentMethod(e.target.value)}
                   />
                     {t('donation-box.bank transfer')}
@@ -138,20 +153,19 @@ const CheckoutBox = () => {
       </div>
       {showModal && (
         <CheckoutModal onClose={handleCloseModal}>
-          {paymentMethod === 'Swish' && (
+          {paymentMethod === "Swish" && (
             <div>
+
               <h2>{t('donation-modal.swish title')}</h2>
               <p>{t('donation-modal.instruction')}</p>
               <img src={swishSample} alt="swish sample" className={styles.swishSample} />
               <button onClick={()=>navigate('/thank-you')}>I HAVE DONATED!</button>
+
             </div>
-            
           )}
-          {paymentMethod === 'Bank Account' && (
+          {paymentMethod === "Bank Account" && (
             <div>
-              <h2>Bank Transfer</h2>
-              <p>Bank :</p>
-              <button onClick={()=>navigate('/thank-you')}>I HAVE DONATED!</button>
+
             </div>
           )}
         </CheckoutModal>
