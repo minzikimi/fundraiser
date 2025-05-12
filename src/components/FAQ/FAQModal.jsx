@@ -9,6 +9,12 @@ const FAQModal = ({ question, answer, onClose }) => {
       <div className={styles.modalContent} onClick={stopPropagation}>
         <h3>{question}</h3>
         <p>{answer}</p>
+        <span
+          className={`material-symbols-outlined ${styles.closeButton}`}
+          onClick={onClose}
+        >
+          cancel
+        </span>
       </div>
     </div>
   );
