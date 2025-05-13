@@ -1,5 +1,6 @@
 .quoteSection {
-    background-color: var(--color-midnight);
+    background-image: linear-gradient(to bottom, var(--color-midnight), var(--color-darkblue));
+
     width: 100%;
     display: flex;
     justify-content: center;

@@ -2,11 +2,10 @@
   width: 100%;
   margin: 0;
   padding: 0;
-  background-color: var(--color-midnight);
+  background-image: linear-gradient(to bottom, var(--color-darkblue),var(--color-midnight));
 }
 
 .faqSection {
-  background-color: var(--color-midnight);
   font-family: var(--font-sans);
   display: flex;
   flex-direction: column;
@@ -17,7 +16,7 @@
 }
 
 .faqHeading{
-  padding-top: 3rem;
+  padding-top: 2rem;
   margin-bottom: 0;
   text-align: left;
   color: var(--color-seablue);
