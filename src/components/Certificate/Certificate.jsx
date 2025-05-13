@@ -29,6 +29,7 @@ const Certificate = ({
      </div>
       <div className={styles.date}>Date: {date}</div>
     </div>
+  
   </div>
 );
 

@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import html2pdf from 'html2pdf.js';
 import styles from './PersonalDiploma.module.css';
-import logo from "../../assets/images/white-logo.png";
+import logo from "../../assets/images/smf-logo.png";
 import Certificate from "../../components/Certificate/Certificate";
 import Button from '../../components/Button/Button';
 
@@ -77,7 +77,7 @@ import Button from '../../components/Button/Button';
         I consent to my name being printed on the digital donor wall (optional). SAMPLE TEXT
       </label>
 
-      <Button className={styles.button} onClick={handleDownload}>Download Your Certificate</Button>
+      <Button className={styles.button} onClick={handleDownload}>DOWNLOAD YOUR CERTIFICATE</Button>
        <div style={{ display: 'inline-block', width: '100%' }} ref={certificateRef}>
         <Certificate donorName={name.trim() !== "" ? name : "Anonymous"} />
       </div>
