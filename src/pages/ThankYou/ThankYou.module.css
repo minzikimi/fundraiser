@@ -76,10 +76,12 @@
   font-weight: lighter;
 }
 
+
 .logo {
   height: 100px;
   filter: invert(100%);
   margin-bottom: 3rem;
+
 }
 
 @media (max-width: 768px) {
@@ -92,6 +94,7 @@
     font-weight: lighter;
   }
 }
+
 
 @media (max-width: 390px) {
   .logo {
@@ -110,4 +113,6 @@
     font-family: var(--font-sans);
     font-weight: lighter;
   }
+
+
 }
