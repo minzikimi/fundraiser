@@ -5,39 +5,50 @@ import logo from "../../assets/images/smf-logo.png";
 import Certificate from "../../components/Certificate/Certificate";
 import Button from '../../components/Button/Button';
 
-
-  const PersonalDiploma = () => {
+const PersonalDiploma = () => {
   const [name, setName] = useState('');
   const [language, setLanguage] = useState('English');
-  const certificateRef = useRef(); 
-
   const [subscribe, setSubscribe] = useState(false);
-const [consent, setConsent] = useState(false);
+  const [consent, setConsent] = useState(false);
 
-  const handleCertificateDownload = () => {
-    const element = certificateRef.current;
-    const opt = {
-      margin:       0.5,
-      filename:     'donation-certificate.pdf',
-      image:        { type: 'jpeg', quality: 0.98 },
-      html2canvas:  { scale: 2 },
-      jsPDF:        { unit: 'pt', format: 'a4', orientation: 'landscape' }
+  // Ref for the certificate DOM node
+  const certificateRef = useRef();
+
+  // Handler for PDF download
+  const handleCertificateDownload = (e) => {
+    e.preventDefault(); 
+
+    // Make sure the certificate exists
+    if (!certificateRef.current) {
+      alert('Certificate is not rendered yet.');
+      return;
+    }
+
+    const options = {
+      margin: 0.5,
+      filename: 'donation-certificate.pdf',
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2 },
+      jsPDF: { unit: 'pt', format: 'a4', orientation: 'landscape' }
     };
-    html2pdf().set(opt).from(element).save();
-  };
 
+    html2pdf().set(options).from(certificateRef.current).save();
+  };
 
   return (
     <div className={styles.container}>
-        <a href="https://fundraiser-smf.vercel.app/" aria-label="Go to homepage">
-                <img
-                  src={logo}
-                  alt="Sveriges Museum om Förintelsen logo"
-                  className={styles.logo}
-                />
-              </a>
-      <h2>Receive Your Personalized <br/>Donation Certificate</h2>
-       <form className={styles.form} onSubmit={handleCertificateDownload}>
+      <a href="https://fundraiser-smf.vercel.app/" aria-label="Go to homepage">
+        <img
+          src={logo}
+          alt="Sveriges Museum om Förintelsen logo"
+          className={styles.logo}
+        />
+      </a>
+      <h2>
+        Receive Your Personalized <br />
+        Donation Certificate
+      </h2>
+      <form className={styles.form} onSubmit={handleCertificateDownload}>
         <div className={styles.nameForm}>
           <label htmlFor="DonorName">Name</label>
           <input
@@ -52,7 +63,7 @@ const [consent, setConsent] = useState(false);
           />
         </div>
         <div className={styles.language}>
-          <legend>Choose language</legend>
+          <div className={styles.legend}>Choose language</div>
           <label>
             <input
               type="radio"
@@ -100,7 +111,7 @@ const [consent, setConsent] = useState(false);
           DOWNLOAD YOUR CERTIFICATE
         </Button>
       </form>
-      {/* Render certificate preview (not included in form, so not submitted) */}
+      {/* Certificate Preview */}
       <div
         style={{ display: 'inline-block', width: '100%' }}
         ref={certificateRef}
