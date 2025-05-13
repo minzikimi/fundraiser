@@ -3,7 +3,6 @@ import styles from "./ThankYou.module.css";
 import { useNavigate } from "react-router-dom";
 import Button from "../../components/Button/Button";
 import logo from "../../assets/images/smf-logo.png";
-import buttonStyles from "../../components/Button/Button.module.css";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import { useState } from "react";
 
