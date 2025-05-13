@@ -12,8 +12,8 @@
 
 .checkoutBox {
   position: absolute;
-  top: 200px;
-  left: 300px;
+  top: 150px;
+  left: 280px;
   height:auto;
   background-color: var(--color-midnight);
   padding :2rem 4rem;
