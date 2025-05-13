@@ -64,12 +64,40 @@
   font-weight: bold;
 }
 
-@media (max-width: 390px) {
+@media (max-width: 650px) {
   .progressContainer {
     height: 6rem;
     width: 100%;
-    max-width: 20rem;
+    max-width: 25rem;
     margin: 1rem auto;
     text-align: center;
+  }
+
+  .progressParagraph {
+    font-size: 0.9rem;
+  }
+
+  .progressBackground {
+    border-radius: 20px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 390px) {
+  .progressContainer {
+    height: 4rem;
+    width: 100%;
+    max-width: 14rem;
+    margin: 0.5rem auto;
+    text-align: center;
+  }
+
+  .progressParagraph {
+    font-size: 0.5rem;
+  }
+
+  .progressBackground {
+    border-radius: 20px;
+    height: 14px;
   }
 }

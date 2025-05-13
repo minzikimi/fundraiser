@@ -59,7 +59,7 @@
   text-decoration: underline;
 }
 
-/* Sub-links in a horizontal row below main links */
+
 .subLinks {
   display: flex;
   justify-content: flex-start;
