@@ -1,16 +1,16 @@
 import React from "react";
 import styles from "./Footer.module.css";
 import logo from "../../assets/images/white-logo.png";
-import { FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa';
-import { useTranslation } from 'react-i18next';
+import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
   const { t } = useTranslation();
 
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer} role="contentinfo" aria-label="Site footer">
       <div className={styles.logoTitle}>
-        <a href="https://museumforintelsen.se/" aria-label="Go to homepage">
+        <a href="https://museumforintelsen.se/" aria-label="Go to museum homepage">
           <img
             src={logo}
             alt="Sveriges Museum om Förintelsen logo"
@@ -19,32 +19,43 @@ const Footer = () => {
         </a>
       </div>
 
-      <nav className={styles.navSection} aria-label="Footer navigation">
-        <div className={styles.mainLinks}>
-          <a href="https://museumforintelsen.se/en/about-the-museum/">
-            {t('footer.about')}
-          </a>
-          <a href="https://museumforintelsen.se/en/about-the-museum/contact-us/">
-            {t('footer.contact')}
-          </a>
-          <a href="https://museumforintelsen.se/en/about-the-museum/press-and-media/">
-            {t('footer.press')}
-          </a>
-        </div>
-        <div className={styles.subLinks}>
-          <a href="https://museumforintelsen.se/en/visit-us/">{t('footer.visit')}</a>
-          <a href="https://museumforintelsen.se/en/about-the-museum/research-and-development/">
-            {t('footer.research')}
-          </a>
-        </div>
+      <nav className={styles.navSection} aria-label="Footer links">
+        <h2 className="sr-only">Footer Navigation</h2>
+        <ul className={styles.mainLinks}>
+          <li>
+            <a href="https://museumforintelsen.se/en/about-the-museum/">
+              {t("footer.about")}
+            </a>
+          </li>
+          <li>
+            <a href="https://museumforintelsen.se/en/about-the-museum/contact-us/">
+              {t("footer.contact")}
+            </a>
+          </li>
+          <li>
+            <a href="https://museumforintelsen.se/en/about-the-museum/press-and-media/">
+              {t("footer.press")}
+            </a>
+          </li>
+        </ul>
+        <ul className={styles.subLinks}>
+          <li>
+            <a href="https://museumforintelsen.se/en/visit-us/">{t("footer.visit")}</a>
+          </li>
+          <li>
+            <a href="https://museumforintelsen.se/en/about-the-museum/research-and-development/">
+              {t("footer.research")}
+            </a>
+          </li>
+        </ul>
       </nav>
 
       <address className={styles.contact}>
-        {t('footer.contactLabel')}:{" "}
-        <a href={`mailto:${t('footer.email')}`}>{t('footer.email')}</a>
+        <span>{t("footer.contactLabel")}:</span>{" "}
+        <a href={`mailto:${t("footer.email")}`}>{t("footer.email")}</a>
       </address>
 
-      <div className={styles.social}>
+      <div className={styles.social} aria-label="Social media links">
         <a
           href="https://www.facebook.com/museumforintelsen.se"
           target="_blank"
