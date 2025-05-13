@@ -76,5 +76,23 @@
       "email": "info@museumforintelsen.se",
       "extra": "eller besök vår kontaktsida."
     }
-  }
+  },
+    "faq": [
+    {
+      "question": "Varför behöver ni donationer? Är inte museet statligt finansierat?",
+      "answer": "SMF är en del av Sveriges nationella museiorganisation, men fungerar för närvarande som ett tillfälligt museum. För att bli en permanent institution behöver vi ytterligare finansiering. Din donation stödjer direkt utbyggnaden av museets utställningar, program och tillgänglighet-och säkerställer att minnet av Förintelsen förblir närvarande och starkt i det svenska samhället."
+    },
+    {
+      "question": "Hur kommer min donation att användas?",
+      "answer": "Donationer går till att skapa permanenta utställningar, bevara överlevandes vittnesmål, utöka utbildningsprogram och förbättra museets fysiska miljö. SMF är engagerat i transparens och all användning av medel redovisas i årliga offentliga rapporter."
+    },
+    {
+      "question": "Spelar en liten donation verkligen någon roll?",
+      "answer": "Absolut. Det viktigaste är viljan att minnas och stödja detta arbete. Varje bidrag-oavsett storlek-hjälper oss att bygga en bestående plats för minnet av och utbildning om Förintelsen i Sverige."
+    },
+    {
+      "question": "Kommer mitt namn att offentliggöras? Kan jag donera anonymt?",
+      "answer": "Du kan absolut donera anonymt om du vill. Att få ett intyg eller bli listad som givare är helt frivilligt. Vi respekterar din integritet och uppskattar alla former av stöd, både offentliga och privata."
+    }
+  ]
 }
