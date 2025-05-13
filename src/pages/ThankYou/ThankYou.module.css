@@ -69,7 +69,8 @@
 
 .getDiploma h3 {
   padding: 1rem;
-  line-height: 3rem;
+  margin: 2rem;
+  line-height: 2rem;
   text-align: center;
   font-size: 1.5rem;
   font-family: var(--font-sans);
@@ -85,9 +86,29 @@
 @media (max-width: 768px) {
   .getDiploma h3 {
     padding: 1rem;
-    line-height: 1.2rem;
+    margin: 2rem;
+    line-height: 1.8rem;
     text-align: center;
     font-size: 1.5rem;
+    font-family: var(--font-sans);
+    font-weight: lighter;
+  }
+}
+
+@media (max-width: 650px) {
+  .logo {
+    max-height: 4.5rem;
+  }
+
+  .titleThankYou {
+    font-size: 2.5rem;
+  }
+  .getDiploma h3 {
+    padding: 1rem;
+    margin: 2rem;
+    line-height: 1.8rem;
+    text-align: center;
+    font-size: 1.2rem;
     font-family: var(--font-sans);
     font-weight: lighter;
   }
@@ -99,14 +120,15 @@
   }
 
   .titleThankYou {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .getDiploma h3 {
     padding: 1rem;
+    margin: 0.2rem;
     line-height: 1.4rem;
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-family: var(--font-sans);
     font-weight: lighter;
   }
