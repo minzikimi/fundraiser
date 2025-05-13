@@ -12,7 +12,7 @@ const CheckoutBox = ({ onDonation }) => {
   const [paymentMethod, setPaymentMethod] = useState("");
   const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
-    const { t } = useTranslation();
+  const { t } = useTranslation();
 
   const handleConfirm = () => {
     if (amount) {
