@@ -3,6 +3,7 @@ import styles from "./ThankYou.module.css";
 import { useNavigate } from "react-router-dom";
 import Button from "../../components/Button/Button";
 import logo from "../../assets/images/smf-logo.png";
+import GoBackArrow from "../../assets/images/GoBackBtnArrow.svg";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import { useState } from "react";
 
@@ -18,9 +19,24 @@ const ThankYou = () => {
 
   return (
     <main className={styles.thankYouContainer}>
+      <nav className={styles.btnSection}>
+        <Button className={styles.goBackBtn} onClick={() => navigate("/")}>
+          <img
+            src={GoBackArrow}
+            alt="GoBackArrow"
+            className={styles.goBackArrow}
+          ></img>
+          GO BACK
+        </Button>
+      </nav>
       <div className={styles.thankYouWrapper}>
         <header className={styles.headerThankYou}>
-          <img src={logo} alt="Logo" className={styles.logo} />
+          <img
+            src={logo}
+            alt="Logo"
+            className={styles.logo}
+            onClick={() => navigate("/")}
+          />
           <h1 className={styles.titleThankYou}>Thank you!</h1>
         </header>
 
