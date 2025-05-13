@@ -108,7 +108,6 @@ const NavBar = () => {
           className={styles.mobileLanguage}
           aria-label="Language selection"
         >
-          <p>{t("nav.language")}</p>
           <button onClick={() => selectLanguage("EN")}>EN</button>
           <button onClick={() => selectLanguage("SV")}>SV</button>
         </section>

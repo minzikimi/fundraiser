@@ -66,6 +66,7 @@
     .quoteSectionHeading {
         font-size: 2.5rem;
         margin-bottom: 2rem;
+        text-align: center;
     }
 }
 
@@ -73,7 +74,7 @@
 
     .quoteSectionHeading {
         font-size: 1.9rem;
-        text-align: center;
+       
     }
     .quoteDiscription {   
         font-size: 1.4rem;
