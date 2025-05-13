@@ -1,5 +1,5 @@
 .container {
-  background-color: #1F2A44;
+  background: linear-gradient(to top, #1c1f2a, #1F2A44 );
   min-height: 100vh;
   position: relative;
   display: flex;
