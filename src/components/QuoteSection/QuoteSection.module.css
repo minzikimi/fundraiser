@@ -46,7 +46,7 @@
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
-    font-family: var(--font-sans-light);
+    font-family: var(--font-sans);
 }
 
 @media (max-width: 1200px) {
@@ -73,10 +73,23 @@
 
     .quoteSectionHeading {
         font-size: 1.9rem;
+        text-align: center;
     }
     .quoteDiscription {   
         font-size: 1.4rem;
+        text-align: center;
     }
-
+    .quoteSection{
+        padding:3rem 2rem;
+    }
 }
 
+@media (max-width: 390px) {
+
+    .quoteSectionHeading {
+        font-size: 1.3rem;
+    }
+    .quoteDiscription {   
+        font-size: 1rem;
+    }
+}
