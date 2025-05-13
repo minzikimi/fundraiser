@@ -43,7 +43,7 @@
   .textBox {
     position: absolute;
     right:8%;
-    top: 65%; /* Slightly below center */
+    top: 65%; 
     transform: translateY(-50%);
     border-radius: 4px;
     z-index: 2;
