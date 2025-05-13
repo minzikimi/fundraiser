@@ -1,5 +1,5 @@
 .container {
-  background-color: #1F2A44;
+  background-color: #1f2a44;
   min-height: 100vh;
   position: relative;
   display: flex;
@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   color: white;
   margin: 0 auto;
 }
@@ -32,15 +32,14 @@ h2 {
   flex-direction: row;
   max-width: 500px;
   align-items: baseline;
-  gap: 20px;  
+  gap: 20px;
 }
 
 .nameForm label {
   justify-items: center;
   font-weight: 600;
-  color: #B9D3DC;
+  color: #b9d3dc;
   font-size: 1.1rem;
-
 }
 
 .input {
@@ -61,7 +60,7 @@ h2 {
 .language p {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #B9D3DC;
+  color: #b9d3dc;
   margin-bottom: 14px;
 }
 
@@ -82,7 +81,7 @@ h2 {
   gap: 12px;
 }
 
-.button {
+/* .button {
   width: 100%;
   max-width: 500px;
   background-color: #B9D3DC;
@@ -97,4 +96,4 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 1px;
 
-}
+} */
