@@ -14,6 +14,7 @@ const CheckoutBox = ({ onDonation }) => {
   const navigate = useNavigate();
   const { t } = useTranslation();
 
+
   const handleConfirm = () => {
     if (amount) {
       setStage(2);
