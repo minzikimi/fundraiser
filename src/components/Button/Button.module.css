@@ -1,13 +1,13 @@
 .button {
     background: var(--color-dimblue);
     color: var(--color-sand20);
-    padding: 1rem;
+    padding: 1.2rem;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     font-family: var(--font-sans);
     font-size:1rem;
-    font-weight: 500;
+    font-weight: bold;
     margin:2rem;
   }
 

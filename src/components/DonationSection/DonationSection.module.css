@@ -2,29 +2,16 @@
   position: relative;
   width: 100%;
   height: auto;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-midnight);
 }
 
 .fullImage {
   width: 100%;
   height: auto;
   display: block;
-  transition: margin-bottom 0.3s;
-}
-
-.checkoutBox {
-  position: absolute;
-  top: 200px;
-  left: 200px;
-  background-color: var(--color-midnight);
-  padding: clamp(0.7rem, 2vw, 1.5rem) clamp(1rem, 5vw, 3rem);
-  border-radius: 10px;
-  z-index: 2;
-  width: clamp(220px, 30vw, 500px);
-  min-width: 120px;
-  max-width: 95vw;
-  box-sizing: border-box;
-  font-size: clamp(0.9rem, 2vw, 1.1rem);
-  transition: all 0.3s cubic-bezier(.4,0,.2,1);
+  margin: 0;
 }
 
 
@@ -32,40 +19,25 @@
   .checkoutBox { top: 140px; left: 120px; }
 }
 @media (max-width: 1200px) {
-
   .checkoutBox {
     position: static;
     top: auto;
     left: auto;
-    width: clamp(260px, 90vw, 700px);
-    max-width: 700px;
-    min-width: 160px;
-    margin: 32px auto 0 auto;
-    border-radius: 12px;
-    font-size: clamp(1rem, 3vw, 1.25rem);
-    padding: clamp(1.2rem, 4vw, 2.5rem) clamp(1.5rem, 8vw, 3rem);
-    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-    z-index: 2;
-  }
-  .fullImage {
-    margin-bottom: 32px;
-  }
-}
-
-
-@media (max-width: 768px) {
-  .checkoutBox {
     width: clamp(220px, 98vw, 700px);
     max-width: 98vw;
     min-width: 120px;
     font-size: clamp(1.05rem, 4vw, 1.3rem);
     padding: clamp(0.8rem, 3vw, 1.5rem) clamp(0.6rem, 6vw, 2rem);
     margin: 20px auto 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    z-index: 2;
   }
   .fullImage {
     margin-bottom: 20px;
   }
 }
+
 @media (max-width: 480px) {
   .checkoutBox {
     width: 99vw;

@@ -28,6 +28,7 @@ const ThankYou = () => {
         <div
           className={styles.progressBarSection}
           aria-label="Donation Progress"
+          aria-live="polite"
         >
           <ProgressBar raised={totalRaised} goal={GOAL_AMOUNT} />
         </div>
@@ -41,6 +42,7 @@ const ThankYou = () => {
           <Button
             className={styles.button}
             onClick={() => navigate("/personal-diploma")}
+            aria-label="Get your personal diploma for your contribution"
           >
             GET YOUR PERSONAL DIPLOMA
           </Button>
