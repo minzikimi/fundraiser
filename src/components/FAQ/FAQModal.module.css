@@ -83,3 +83,47 @@
   background: var(--color-seablue);
   color: var(--color-midnight)
 }
+
+@media (max-width: 768px) {
+  .modalContent {
+    width: 90%;
+    height: auto;
+    padding: 2rem;
+  }
+  .headingWrapper {
+    width: 90%;
+  }
+
+  .modalContent p {
+    font-size: 1rem;
+    width: 90%;
+  }
+
+  .modalContent h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .modalContent {
+    width: 95%;
+    height: 100%;
+    padding: 1.5rem;
+  }
+
+  .modalContent p {
+    font-size: 0.95rem;
+    width: 90%;
+    padding-top: 1.5rem;
+  }
+
+  .modalContent h3 {
+    font-size: 1.1rem;
+  }
+
+  .closeButton {
+    width: 32px;
+    height: 32px;
+    font-size: 2rem;
+  }
+}
