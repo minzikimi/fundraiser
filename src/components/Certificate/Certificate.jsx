@@ -29,10 +29,7 @@ const Certificate = ({
      </div>
       <div className={styles.date}>Date: {date}</div>
     </div>
-    <p className={styles.quote}>
-      “For the dead and the living, we must bear witness.”<br />
-      - Elie Wiesel
-    </p>
+  
   </div>
 );
 

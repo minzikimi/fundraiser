@@ -1,99 +1,138 @@
 .container {
-  background-color: #1f2a44;
+  background-color: #1F2A44;
   min-height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
-  font-family: var(--font-sans);
+  padding: 3rem;
+  font-family: 'Arial', sans-serif;
   color: white;
   margin: 0 auto;
 }
 
 .logo {
-  width: 200px;
-  margin-top: 40px;
+  width: 260px;
+  margin-top: 60px;
+  filter: invert(100%);
 }
 
 h2 {
   color: #f2f0ed;
-  font-size: 2.2rem;
+  font-size: 2.8rem;
   font-weight: bold;
   text-align: center;
-  margin-top: 50px;
-  margin-bottom: 40px;
+  margin-top: 60px;
+  margin-bottom: 50px;
   line-height: 1.4;
 }
+
 .nameForm {
   width: 100%;
   display: flex;
   flex-direction: row;
-  max-width: 500px;
+  max-width: 700px;
   align-items: baseline;
-  gap: 20px;
+  gap: 28px;  
 }
 
 .nameForm label {
-  justify-items: center;
   font-weight: 600;
-  color: #b9d3dc;
-  font-size: 1.1rem;
+  color: #B9D3DC;
+  font-size: 1.3rem;
 }
 
 .input {
-  padding: 14px 16px;
-  font-size: 1rem;
+  padding: 18px 20px;
+  font-size: 1.3rem;
   border: 1px solid;
-  border-radius: 6px;
-  width: 600px;
+  border-radius: 8px;
+  width: 60%;
 }
 
 .language {
   width: 100%;
-  max-width: 500px;
-  margin-bottom: 40px;
-  margin-top: 30px;
-  gap: 16px;
+  max-width: 700px;
+  margin-bottom: 50px;
+  margin-top: 40px;
+  gap: 20px;
 }
 .language p {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: 600;
-  color: #b9d3dc;
-  margin-bottom: 14px;
+  color: #B9D3DC;
+  margin-bottom: 18px;
 }
 
 .language label {
   display: flex;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   color: #f2f0ed;
-  margin-bottom: 14px;
-  gap: 16px;
+  margin-bottom: 18px;
+  gap: 20px;
 }
 .checkbox {
   width: 100%;
-  max-width: 500px;
-  font-size: 1rem;
+  max-width: 700px;
+  font-size: 1.2rem;
   color: #f2f0ed;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
   display: flex;
-  gap: 12px;
+  gap: 16px;
 }
 
-/* .button {
-  width: 100%;
-  max-width: 500px;
-  background-color: #B9D3DC;
-  color: #061127;
-  border: none;
-  padding: 18px;
-  font-weight: bold;
-  border-radius: 8px;
-  font-size: 1.15rem;
-  cursor: pointer;
-  margin-top: 28px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+/* Tablet: 768px */
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem;
+  }
+  .logo {
+    width: 180px;
+    margin-top: 30px;
+  }
+  h2 {
+    font-size: 2rem;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+  .nameForm,
+  .language,
+  .checkbox {
+    max-width: 90vw;
+  }
+  .input {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 14px 12px;
+  }
+}
 
-} */
+/* Mobile: 390px */
+@media (max-width: 430px) {
+  .container {
+    padding: 1rem;
+  }
+  .logo {
+    width: 120px;
+    margin-top: 16px;
+  }
+  h2 {
+    font-size: 1.3rem;
+    margin-top: 20px;
+    margin-bottom: 18px;
+  }
+  .nameForm {
+    flex-direction: column;
+    gap: 12px;
+    max-width: 100vw;
+  }
+  .input,
+  .language,
+  .checkbox {
+    width: 100%;
+    max-width: 100vw;
+    font-size: 1rem;
+  }
+}
+
