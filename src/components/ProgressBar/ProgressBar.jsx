@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from "react";
 import styles from "./ProgressBar.module.css";
+import { useTranslation } from "react-i18next";
+
 
 const ProgressBar = ({ raised, goal }) => {
   const [displayPercent, setDisplayPercent] = useState(0);
   const percent = Math.min((raised / goal) * 100, 100);
+  const { t } = useTranslation();
+
 
   useEffect(() => {
     setDisplayPercent(percent);
@@ -16,8 +20,7 @@ const ProgressBar = ({ raised, goal }) => {
         className={styles.progressParagraph}
         aria-live="polite"
       >
-        Togeteher we've raised {percent.toFixed(1)}% of our goal to preserve
-        history.
+         {t("progressBar.status", { percent: percent.toFixed(1) })}
       </p>
       <div
         className={styles.progressBackground}
