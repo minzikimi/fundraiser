@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  font-family: "Arial", sans-serif;
+  font-family: var(--font-sans);
   color: white;
   margin: 0 auto;
 }
