@@ -20,7 +20,6 @@ const Footer = () => {
       </div>
 
       <nav className={styles.navSection} aria-label="Footer links">
-        <h2 className="sr-only">Footer Navigation</h2>
         <ul className={styles.mainLinks}>
           <li>
             <a href="https://museumforintelsen.se/en/about-the-museum/">
