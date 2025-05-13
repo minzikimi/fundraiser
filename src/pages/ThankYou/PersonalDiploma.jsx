@@ -11,8 +11,10 @@ import Button from '../../components/Button/Button';
   const [language, setLanguage] = useState('English');
   const certificateRef = useRef(); 
 
-  
-  const handleDownload = () => {
+  const [subscribe, setSubscribe] = useState(false);
+const [consent, setConsent] = useState(false);
+
+  const handleCertificateDownload = () => {
     const element = certificateRef.current;
     const opt = {
       margin:       0.5,
@@ -27,7 +29,7 @@ import Button from '../../components/Button/Button';
 
   return (
     <div className={styles.container}>
-        <a href="https://museumforintelsen.se/" aria-label="Go to homepage">
+        <a href="https://fundraiser-smf.vercel.app/" aria-label="Go to homepage">
                 <img
                   src={logo}
                   alt="Sveriges Museum om Förintelsen logo"
@@ -35,53 +37,78 @@ import Button from '../../components/Button/Button';
                 />
               </a>
       <h2>Receive Your Personalized <br/>Donation Certificate</h2>
-      <div className={styles.nameForm}>
-      <label htmlFor="DonorName">Name</label>
-      <input
-        id="name"
-        type="text"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        className={styles.input}
-      />
-       </div>
-      <div className={styles.language}>
-        <p>Choose language</p>
-        <label>
+       <form className={styles.form} onSubmit={handleCertificateDownload}>
+        <div className={styles.nameForm}>
+          <label htmlFor="DonorName">Name</label>
           <input
-            type="radio"
-            value="Svenska"
-            checked={language === 'Svenska'}
-            onChange={() => setLanguage('Svenska')}
+            id="DonorName"
+            name="DonorName"
+            type="text"
+            value={name}
+            onChange={e => setName(e.target.value)}
+            className={styles.input}
+            aria-label="Donor Name"
+            required
           />
-          Svenska
-        </label>
-        <label>
+        </div>
+        <div className={styles.language}>
+          <legend>Choose language</legend>
+          <label>
+            <input
+              type="radio"
+              name="language"
+              value="Svenska"
+              checked={language === 'Svenska'}
+              onChange={() => setLanguage('Svenska')}
+            />
+            Svenska
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="language"
+              value="English"
+              checked={language === 'English'}
+              onChange={() => setLanguage('English')}
+            />
+            English
+          </label>
+        </div>
+        <label className={styles.checkbox}>
           <input
-            type="radio"
-            value="English"
-            checked={language === 'English'}
-            onChange={() => setLanguage('English')}
+            type="checkbox"
+            name="subscribe"
+            checked={subscribe}
+            onChange={e => setSubscribe(e.target.checked)}
           />
-          English
+          Yes, I’d like to receive updates and stories from the Swedish Holocaust Museum. (SAMPLE TEXT)
         </label>
-      </div>
-
-      <label className={styles.checkbox}>
-        <input type="checkbox" />
-        Yes, I’d like to receive updates and stories from the Swedish Holocaust Museum. (SAMPLE TEXT)
-      </label>
-
-      <label className={styles.checkbox}>
-        <input type="checkbox" />
-        I consent to my name being printed on the digital donor wall (optional). SAMPLE TEXT
-      </label>
-
-      <Button className={styles.button} onClick={handleDownload}>DOWNLOAD YOUR CERTIFICATE</Button>
-       <div style={{ display: 'inline-block', width: '100%' }} ref={certificateRef}>
+        <label className={styles.checkbox}>
+          <input
+            type="checkbox"
+            name="consent"
+            checked={consent}
+            onChange={e => setConsent(e.target.checked)}
+          />
+          I consent to my name being printed on the digital donor wall (optional). SAMPLE TEXT
+        </label>
+        <Button
+          className={styles.button}
+          type="submit"
+          disabled={name.trim() === ""}
+        >
+          DOWNLOAD YOUR CERTIFICATE
+        </Button>
+      </form>
+      {/* Render certificate preview (not included in form, so not submitted) */}
+      <div
+        style={{ display: 'inline-block', width: '100%' }}
+        ref={certificateRef}
+        aria-label="Certificate Preview"
+      >
         <Certificate donorName={name.trim() !== "" ? name : "Anonymous"} />
       </div>
-      </div>
+    </div>
   );
 };
 
