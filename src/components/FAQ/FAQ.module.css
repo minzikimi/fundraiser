@@ -62,10 +62,65 @@
 cursor: pointer;
 }
 
-
 .faqImage{
   width: 42%;
   height: 23rem;
   align-self: center;
   padding-bottom: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .faqHeading {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .faqContent {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button {
+    width: 90%;
+    font-size: 1rem;
+    margin: 0 0 2rem 0;
+    margin-left: 2rem;
+  }
+
+  .faqImage {
+    width: 80%;
+    height: auto;
+    margin-top: 2rem;
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 390px) {
+  .faqHeading {
+    font-size: 2rem;
+    padding-top: 2rem;
+  }
+
+  .underline {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .button {
+    font-size: 0.95rem;
+    width: 100%;
+    height: auto;
+    padding: 0.75rem 1rem;
+  }
+
+  .faqImage {
+    width: 100%;
+    padding: 0;
+    height: auto;
+  }
+
+  .faqContent {
+    margin: 2rem 0;
+    gap: 1rem;
+  }
 }
