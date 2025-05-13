@@ -24,13 +24,26 @@
   transition: all 0.3s cubic-bezier(.4,0,.2,1);
 }
 
+@media (max-width: 1800px) {
+  .checkoutBox { top: 40px; left: 161px; }
+}
 
-@media (max-width: 1550px) {
-  .checkoutBox { top: 100px; left: 132px; }
+@media (max-width: 1700px) {
+  .checkoutBox { top: 30px; left: 151px; }
 }
+
+@media (max-width: 1600px) {
+  .checkoutBox { top: 25px; left: 141px; }
+}
+
+@media (max-width: 1500px) {
+  .checkoutBox { top: 20px; left: 131px; }
+}
+
 @media (max-width: 1400px) {
-  .checkoutBox { top: 80px; left: 132px; }
+  .checkoutBox { top: 5px; left: 131px; }
 }
+
 @media (max-width: 1300px) {
   .checkoutBox {
     position: static;
