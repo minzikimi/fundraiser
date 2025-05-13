@@ -1,10 +1,21 @@
+.pageWrapper {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-midnight);
+}
+
 .faqSection {
-  background: linear-gradient(to bottom, #1c1f2a, #1F2A44 );
+  background-color: var(--color-midnight);
   font-family: var(--font-sans);
-  padding: 3rem;
   display: flex;
   flex-direction: column;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box; 
 }
+
 .faqHeading{
   padding-top: 3rem;
   margin-bottom: 0;
@@ -12,26 +23,29 @@
   color: var(--color-seablue);
   font-size: 3.5rem;
 }
+
 .underline{
   border: none;
-  border-top: 1px solid var(--color-seablue);
+  border-top: 2px solid var(--color-seablue);
   margin-top: 2rem;
-  margin-bottom: 4rem;;
+  margin-bottom: 4rem;
+  width: 100%;
 }
+
 .faqContent{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 3rem 0 5rem 0 ;
-   
+  margin: 3rem 0 5rem 0 ;  
 }
+
 .questionsContainer{
   display: flex;
-  flex-direction: column;
-    
+  flex-direction: column;   
 }
+
 .button{
-  margin: 0 3rem 3rem 0;
+  margin: 0 4rem 3rem 0;
   height: 3.5rem;
   padding-left: 1rem;
   text-align: start;
@@ -41,14 +55,17 @@
   width: 98%;
   background-color: var(--color-darkblue);
   color: var(--color-sand20);
-  border: 2px solid #f2f0ed;
-
+  border: 2px solid var(--color-sand20)
 }
+
 .button:hover{
 cursor: pointer;
 }
 
+
 .faqImage{
-  width: 50%;
+  width: 42%;
   height: 23rem;
+  align-self: center;
+  padding-bottom: 2.5rem;
 }

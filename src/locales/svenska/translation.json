@@ -8,39 +8,73 @@
   },
   "quote-section": {
     "title": "Ditt stöd hjälper oss att inte glömma",
-    "text" :"Din donation hjälper oss att bevara Förintelsens historia och utbilda framtida generationer, så att lärdomarna från det förflutna aldrig glöms bort."
+    "text": "Din donation hjälper oss att bevara Förintelsens historia och utbilda framtida generationer, så att lärdomarna från det förflutna aldrig glöms bort."
   },
-"donation-box": {
-  "title": "Välj ditt donationsbelopp",
-  "optional amount": "Valfritt belopp",
-  "confirm": "Bekräfta",
-  "bank transfer": "Banköverföring",
-  "check out": "BETALA",
-  "back": "TILLBAKA",
-  "swish payment": "Swish Betalning",
-  "choose payment": "Välj betalningsmetod"
-},
-  "donation-modal":{
-    "swish title" : "Swish Betalning",
-    "bank title" :"Banköverföring",
-    "instruction" :"Skanna QR-koden för att fortsätta med betalningen. Stäng fönstret för att avbryta.",
-    "button" : "JAG HAR DONERAT"
+  "donation-box": {
+    "title": "Välj ditt donationsbelopp",
+    "optional amount": "Valfritt belopp",
+    "confirm": "BEKRÄFTA",
+    "bank transfer": "Banköverföring",
+    "check out": "BETALA",
+    "back": "TILLBAKA",
+    "swish payment": "Swish Betalning",
+    "choose payment": "Välj betalningsmetod"
+  },
+  "donation-modal": {
+    "swish title": "Swish Betalning",
+    "bank title": "Banköverföring",
+    "instruction": "Skanna QR-koden för att fortsätta med betalningen. Stäng fönstret för att avbryta.",
+    "button": "JAG HAR DONERAT"
   },
   "footer": {
-  "about": "OM MUSEET",
-  "press": "PRESS OCH MEDIA",
-  "contact": "KONTAKT",
-  "visit": "Besök oss",
-  "research": "Forskning",
-  "contactLabel": "Kontakt oss",
-  "email": "info@museumforintelsen.se"
-},
-"thank-you": {
-  "title": "Thank you!",
-  "message": "Your contribution helps preserve the stories of those who can no longer speak. Thank you for supporting our mission to ensure history is never forgotten.",
-  "getDiploma": "GET YOUR PERSONAL DIPLOMA",
-  "progressPlaceholder": "Progress bar goes here"
-}
-
-
+    "about": "OM MUSEET",
+    "press": "PRESS OCH MEDIA",
+    "contact": "KONTAKT",
+    "visit": "Besök oss",
+    "research": "Forskning",
+    "contactLabel": "Kontakt oss",
+    "email": "info@museumforintelsen.se"
+  },
+  "thank-you": {
+    "title": "Tack!",
+    "message": "Ditt bidrag hjälper till att bevara berättelserna från dem som inte längre kan tala. Tack för att du stödjer vårt uppdrag att säkerställa att historien aldrig glöms bort.",
+    "getDiploma": "HÄMTA DITT PERSONLIGA DIPLOM",
+    "progressPlaceholder": "Här visas framstegsmätaren"
+  },
+  "howItWorks": {
+    "title": "Så fungerar det",
+    "intro": "Att ge ska vara enkelt och meningsfullt. Som en del av Sveriges nationella museinätverk är vi transparenta och ansvarstagande för att ditt stöd gör skillnad. Även utan kortbetalning är det enkelt och säkert att donera via Swish eller banköverföring. Ditt bidrag hjälper oss att bevara minnet av Förintelsen och stödja utställningar, utbildning och insamling av vittnesmål. Tack för ditt stöd!",
+    "steps": [
+      {
+        "title": "1. Välj din donationsmetod",
+        "text": "Du kan donera på något av dessa två sätt:",
+        "list": [
+          "Banköverföring",
+          "Swish (endast Sverige)"
+        ]
+      },
+      {
+        "title": "2. Bekräfta din donation",
+        "text": "När du har skickat din donation kan du valfritt mejla oss för att få en bekräftelse eller kvitto:",
+        "email": "✉️ info@museumforintelsen.se",
+        "sampleText": "Ange ditt namn, donationsbelopp och datum om du vill ha ett kvitto eller en bekräftelse."
+      },
+      {
+        "title": "3. Se din påverkan",
+        "text": "Din donation hjälper oss att finansiera verkliga, pågående projekt. Vi delar regelbundna uppdateringar via:",
+        "list": [
+          "Vårt nyhetsbrev",
+          "Instagram",
+          "Webbplatsblogg :  https://museumforintelsen.se/om-museet/permanent-museum/"
+        ]
+      }
+    ],
+    "divider": "-",
+    "contact": {
+      "questionTitle": "Har du fler frågor?",
+      "text": "Vi finns här för att hjälpa dig! Kontakta",
+      "email": "info@museumforintelsen.se",
+      "extra": "eller besök vår kontaktsida."
+    }
+  }
 }
