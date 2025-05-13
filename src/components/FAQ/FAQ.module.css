@@ -96,31 +96,35 @@ cursor: pointer;
 }
 
 @media (max-width: 390px) {
+
   .faqHeading {
     font-size: 2rem;
     padding-top: 2rem;
+    align-self: flex-start;
+    margin-left: 2rem;
   }
 
   .underline {
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+    width: 80%;
+    margin: 2rem;
   }
 
   .button {
     font-size: 0.95rem;
-    width: 100%;
+    width: 80%;
     height: auto;
-    padding: 0.75rem 1rem;
-  }
-
-  .faqImage {
-    width: 100%;
-    padding: 0;
-    height: auto;
+    padding: 0.5rem;
   }
 
   .faqContent {
     margin: 2rem 0;
     gap: 1rem;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .faqImage{
+    margin-bottom: 2rem;
+    margin-top: 0;
   }
 }
