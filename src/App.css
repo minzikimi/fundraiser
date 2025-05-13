@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Arial Light';
   src: url('../../assets/fonts/ARIALI.TTF') format('truetype'); 
-  font-weight: normal; 
+  font-weight: lighter; 
   font-style: normal; 
 }
 
@@ -14,8 +14,8 @@
 
 @font-face {
   font-family: 'Georgia light';
-  src: url('../../assets/fonts/sd-georgia-light.ttf') format('truetype'); 
-  font-weight: normal; 
+  src: url('../../assets/fonts/SdGeorgiaLight') format('truetype'); 
+  font-weight: lighter;
   font-style: normal; 
 }
 
