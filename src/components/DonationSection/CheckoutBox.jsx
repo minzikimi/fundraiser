@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import swishSample from "../../assets/images/swishSample.jpeg";
 import { useTranslation } from "react-i18next";
 
-const CheckoutBox = ({ onDonation }) => {
+const CheckoutBox = () => {
   const [amount, setAmount] = useState("");
   const [stage, setStage] = useState(1);
   const [paymentMethod, setPaymentMethod] = useState("");
@@ -144,7 +144,7 @@ const CheckoutBox = ({ onDonation }) => {
       {showModal && (
         <CheckoutModal onClose={handleCloseModal}>
           {paymentMethod === "Swish" && (
-            <div>
+            <div className={styles.modalContent}>
               <h2>{t("donation-modal.swish title")}</h2>
               <p>{t("donation-modal.instruction")}</p>
               <img
@@ -152,13 +152,32 @@ const CheckoutBox = ({ onDonation }) => {
                 alt="swish sample"
                 className={styles.swishSample}
               />
-              <button onClick={() => navigate("/thank-you")}>
-                I HAVE DONATED!
-              </button>
+              <div className={styles.buttonWrapper}>
+                <Button className={styles.confirmButton} onClick={() => navigate("/thank-you")}>
+                  I HAVE DONATED!
+                </Button>
+              </div>
             </div>
           )}
-          {paymentMethod === "Bank Account" && <div></div>}
+          {paymentMethod === "Bank Account" && (
+            <div className={styles.modalContent}>
+              <h2>{t("donation-modal.bank title") }</h2>
+              <div className={styles.bankDetails}>
+                <p><strong>Bank Name:</strong> Example Bank</p>
+                <p><strong>Account Number:</strong> 1234 5678 9012</p>
+                <p><strong>IBAN:</strong> SE12 3456 7890 1234 5678 9012</p>
+                <p><strong>BIC/SWIFT:</strong> EXAMPSE1</p>
+                <p><strong>Reference:</strong> Your Name or Email</p>
+              </div>
+              <div className={styles.buttonWrapper}>
+                <Button className={styles.confirmButton} onClick={() => navigate("/thank-you")}>
+                  I HAVE DONATED!
+                </Button>
+              </div>
+            </div>
+          )}
         </CheckoutModal>
+
       )}
     </>
   );

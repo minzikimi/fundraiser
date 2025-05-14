@@ -98,10 +98,10 @@
   font-weight: bold;
 }
 
+
 .radioGroup {
   display: flex;
   flex-direction: column;
-  gap: clamp(0.3rem, 1vw, 0.7rem);
   font-family: var(--font-sans);
   background-color: var(--color-sand20);
   font-size: clamp(0.9rem, 2vw, 1.1rem);
@@ -111,6 +111,12 @@
 .radioItem {
   padding: clamp(0.6rem, 1vw, 1.1rem);
   border-bottom: 1px solid var(--color-darkblue);
+}
+
+.radioItem label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; 
 }
 
 .radioItem:last-child {
@@ -130,19 +136,44 @@
   gap: 3px; 
 }
 
-.button {
-  margin-top: clamp(0.7rem, 1vw, 1.2rem);
-  background: var(--color-sand20);
-  color: var(--color-darkblue);
-  border: none;
-  padding: clamp(0.4rem, 1vw, 0.8rem) clamp(0.9rem, 2vw, 1.7rem);
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: clamp(1rem, 2vw, 1.15rem);
-  transition: font-size 0.3s, padding 0.3s;
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+  width: 100%;
 }
+
 
 .swishSample {
   width: clamp(110px, 40vw, 200px);
 }
+
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+.modalContent h2 {
+  font-size: 1.6rem;
+  margin-bottom: 3rem;
+  color: var(--color-dimblue, #3a506b);
+  font-weight: bold;
+}
+
+.modalContent p {
+  font-size: 1.1rem;
+  color: var(--color-midnight, #22223b);
+  margin-bottom: 1.5rem;
+}
+
+.swishSample {
+  width: clamp(110px, 40vw, 200px);
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  margin-bottom: 1.5rem;
+}
+
