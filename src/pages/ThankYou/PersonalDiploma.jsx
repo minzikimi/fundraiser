@@ -46,13 +46,15 @@ const PersonalDiploma = () => {
 
   return (
     <div className={styles.container}>
-      <a href="https://fundraiser-smf.vercel.app/" aria-label="Go to homepage">
-        <img
-          src={logo}
-          alt="Sveriges Museum om Förintelsen logo"
-          className={styles.logo}
-        />
-      </a>
+    <nav className={styles.navbar}>
+  <a href="https://fundraiser-smf.vercel.app/" aria-label="Go to homepage">
+    <img
+      src={logo}
+      alt="Sveriges Museum om Förintelsen logo"
+      className={styles.logo}
+    />
+  </a>
+</nav>
       <h2>
         Receive Your Personalized <br />
         Donation Certificate
