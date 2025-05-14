@@ -110,7 +110,6 @@ border: none;
 
   .faqHeading {
     font-size: 2rem;
-    padding-top: 2rem;
     align-self: flex-start;
     margin-left: 0;
   }
@@ -140,5 +139,9 @@ border: none;
     margin-bottom: 2rem;
     margin-top: 0;
     width: 100%;
+  }
+
+  .faqSection {
+    padding: 3rem; 
   }
 }
