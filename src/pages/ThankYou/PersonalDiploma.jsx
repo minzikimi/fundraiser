@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import html2pdf from 'html2pdf.js';
 import styles from './PersonalDiploma.module.css';
 import logo from "../../assets/images/smf-logo.png";
