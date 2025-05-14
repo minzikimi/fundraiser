@@ -10,7 +10,10 @@ const DonationSection = () => {
   };
 
   return (
-    <section className={styles.donationSection}>
+    <section
+      className={styles.donationSection}
+      aria-labelledby="donation-section-heading"
+    >
       <img src={donationImage} alt="Donation" className={styles.fullImage} />
       <CheckoutBox onDonation={handleDonation} />
     </section>
