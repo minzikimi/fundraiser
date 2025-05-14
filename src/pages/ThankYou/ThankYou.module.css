@@ -7,7 +7,7 @@
   justify-content: center;
   margin: 0 auto;
   padding: 2rem;
-  background: linear-gradient(to top, #1c1f2a, #1F2A44 );
+  background: linear-gradient(to top, #1c1f2a, #1f2a44);
   color: var(--color-sand40);
   font-family: var(--font-sans);
 }
@@ -24,8 +24,8 @@
   flex-direction: row;
   align-items: flex-start;
   position: absolute;
-  top: 16px;
-  left: 16px;
+  top: 1rem;
+  left: 2rem;
   z-index: 10;
 }
 
@@ -33,11 +33,9 @@
   margin-right: 8px;
   height: 1.2rem;
   width: 1.2rem;
-  filter: invert(100%);
 }
 
 .goBackArrow:hover {
-  /* FIX FILTER TO MATCH TEXT COLOR ON HOVER */
   filter: none;
 }
 
@@ -124,21 +122,22 @@
 }
 
 @media (max-width: 430px) {
-
   .goBackBtn {
-    top: 10px;
-    left: 10px;
+    top: 1rem;
+    left: 0.5rem;
   }
 
   .goBackArrow {
-    margin-right: 5px;
-    height: 0.7rem;
-    width: 0.7rem;
-    filter: invert(100%);
+    margin-right: 3px;
+    height: 0.5rem;
+    width: 0.5rem;
   }
+
+
   .thankYouWrapper {
     margin-top: 6rem;
   }
+
 
   .logo {
     height: 3rem;
