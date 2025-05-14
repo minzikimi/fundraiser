@@ -5,6 +5,8 @@ import logo from "../../assets/images/smf-logo.png";
 import Certificate from "../../components/Certificate/Certificate";
 import Button from '../../components/Button/Button';
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+
 
 
   const PersonalDiploma = () => {
@@ -35,13 +37,13 @@ import { useTranslation } from "react-i18next";
 
   return (
     <div className={styles.container}>
-        <a href="https://museumforintelsen.se/" aria-label="Go to homepage">
-                <img
-                  src={logo}
-                  alt={t("certificate.logoAlt")}
-                  className={styles.logo}
-                />
-              </a>
+        <Link to="/">
+          <img
+            src={logo}
+            alt="Sveriges Museum om Förintelsen logo"
+            className={styles.logo}
+          />
+        </Link>
       <h2>{t('personalDiploma.title')}</h2>
       <div className={styles.nameForm}>
         <label htmlFor="DonorName" className={styles.formLabel}>
@@ -99,4 +101,3 @@ import { useTranslation } from "react-i18next";
 };
 
 export default PersonalDiploma;
-
