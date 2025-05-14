@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import html2pdf from 'html2pdf.js';
 import styles from './PersonalDiploma.module.css';
 import logo from "../../assets/images/smf-logo.png";
@@ -6,92 +6,130 @@ import Certificate from "../../components/Certificate/Certificate";
 import Button from '../../components/Button/Button';
 import { useTranslation } from "react-i18next";
 
-
-  const PersonalDiploma = () => {
+const PersonalDiploma = () => {
   const [name, setName] = useState('');
   const [language, setLanguage] = useState('English');
-  const certificateRef = useRef(); 
+  const [subscribe, setSubscribe] = useState(false);
+  const [consent, setConsent] = useState(false);
+
   const { t, i18n } = useTranslation();
 
-  const handleDownload = async () => {
+  const certificateRef = useRef();
+
+  const handleCertificateDownload = async (e) => {
+    e.preventDefault();
+    if (!certificateRef.current) {
+      alert('Certificate is not rendered yet.');
+      return;
+    }
+
+  
     if (language === 'English' && i18n.language !== 'en') {
-    await i18n.changeLanguage('en');
-  } else if (language === 'Svenska' && i18n.language !== 'sv') {
-    await i18n.changeLanguage('sv');
-  }
-   await new Promise(resolve => setTimeout(resolve, 100));
+      await i18n.changeLanguage('en');
+    } else if (language === 'Svenska' && i18n.language !== 'sv') {
+      await i18n.changeLanguage('sv');
+    }
 
-    const element = certificateRef.current;
-    const opt = {
-      margin:       0.5,
-      filename:     'donation-certificate.pdf',
-      image:        { type: 'jpeg', quality: 0.98 },
-      html2canvas:  { scale: 2 },
-      jsPDF:        { unit: 'pt', format: 'a4', orientation: 'landscape' }
+   
+    await new Promise(resolve => setTimeout(resolve, 100));
+
+    const options = {
+      margin: 0.5,
+      filename: 'donation-certificate.pdf',
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2 },
+      jsPDF: { unit: 'pt', format: 'a4', orientation: 'landscape' }
     };
-    html2pdf().set(opt).from(element).save();
-  };
 
+    html2pdf().set(options).from(certificateRef.current).save();
+  };
 
   return (
     <div className={styles.container}>
-        <a href="https://museumforintelsen.se/" aria-label="Go to homepage">
-                <img
-                  src={logo}
-                  alt={t("certificate.logoAlt")}
-                  className={styles.logo}
-                />
-              </a>
-      <h2>{t('personalDiploma.title')}</h2>
-      <div className={styles.nameForm}>
-      <label htmlFor="DonorName">{t('personalDiploma.nameLabel')}</label>
-      <input
-        id="name"
-        type="text"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        className={styles.input}
-      />
-       </div>
-      <div className={styles.language}>
-        <p>{t('personalDiploma.chooseLanguage')}</p>
-        <label>
+      <a href="https://fundraiser-smf.vercel.app/" aria-label="Go to homepage">
+        <img
+          src={logo}
+          alt="Sveriges Museum om Förintelsen logo"
+          className={styles.logo}
+        />
+      </a>
+      <h2>
+        Receive Your Personalized <br />
+        Donation Certificate
+      </h2>
+      <form className={styles.form} onSubmit={handleCertificateDownload}>
+        <div className={styles.nameForm}>
+          <label htmlFor="DonorName">Name</label>
           <input
-            type="radio"
-            value="Svenska"
-            checked={language === 'Svenska'}
-            onChange={() => setLanguage('Svenska')}
+            id="DonorName"
+            name="DonorName"
+            type="text"
+            value={name}
+            onChange={e => setName(e.target.value)}
+            className={styles.input}
+            aria-label="Donor Name"
           />
-          Svenska
-        </label>
-        <label>
+        </div>
+        <div className={styles.language}>
+          <div className={styles.legend}>Choose language</div>
+          <label>
+            <input
+              type="radio"
+              name="language"
+              value="Svenska"
+              checked={language === 'Svenska'}
+              onChange={() => setLanguage('Svenska')}
+            />
+            Svenska
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="language"
+              value="English"
+              checked={language === 'English'}
+              onChange={() => setLanguage('English')}
+            />
+            English
+          </label>
+        </div>
+        <label className={styles.checkbox}>
           <input
-            type="radio"
-            value="English"
-            checked={language === 'English'}
-            onChange={() => setLanguage('English')}
+            type="checkbox"
+            name="subscribe"
+            checked={subscribe}
+            onChange={e => setSubscribe(e.target.checked)}
           />
-          English
+          Yes, I’d like to receive updates and stories from the Swedish Holocaust Museum. (SAMPLE TEXT)
         </label>
+        <label className={styles.checkbox}>
+          <input
+            type="checkbox"
+            name="consent"
+            checked={consent}
+            onChange={e => setConsent(e.target.checked)}
+          />
+          I consent to my name being printed on the digital donor wall (optional). SAMPLE TEXT
+        </label>
+        <div className={styles.buttonContainer}>
+        <Button
+          className={styles.button}
+          type="submit"
+        >
+          DOWNLOAD YOUR CERTIFICATE
+        </Button>
+        </div>
+      </form>
+      {/* Certificate Preview */}
+      <div
+        style={{ display: 'inline-block', width: '100%' }}
+        ref={certificateRef}
+        aria-label="Certificate Preview"
+      >
+        <Certificate donorName={name.trim() !== "" ? name : "Anonymous"} />
       </div>
-
-      <label className={styles.checkbox}>
-        <input type="checkbox" />
-        {t('personalDiploma.updatesConsent')}
-      </label>
-
-      <label className={styles.checkbox}>
-        <input type="checkbox" />
-        {t('personalDiploma.donorWallConsent')}
-      </label>
-
-      <Button className={styles.button} onClick={handleDownload}>{t('personalDiploma.downloadButton')}</Button>
-       <div style={{ display: 'inline-block', width: '100%' }} ref={certificateRef}>
-        <Certificate donorName={name.trim() !== "" ? name : t('certificate.anonymous')} />
-      </div>
-      </div>
+    </div>
   );
 };
 
 export default PersonalDiploma;
-
