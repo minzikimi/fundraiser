@@ -124,8 +124,22 @@
 }
 
 @media (max-width: 430px) {
+
+  .goBackBtn {
+    top: 10px;
+    left: 10px;
+  }
+
+  .goBackArrow {
+    margin-right: 5px;
+    height: 0.7rem;
+    width: 0.7rem;
+    filter: invert(100%);
+  }
+
+
   .logo {
-    max-height: 3.5rem;
+    height: 3rem;
   }
 
   .titleThankYou {
