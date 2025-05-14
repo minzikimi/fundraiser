@@ -13,10 +13,12 @@
 }
 
 .logo {
-  width: 260px;
-  margin-top: 60px;
+  height: 100px;
   filter: invert(100%);
+  margin-bottom: 3rem;
+  cursor: pointer;
 }
+
 
 h2 {
   color: #f2f0ed;
@@ -37,10 +39,12 @@ h2 {
   gap: 28px;  
 }
 
-.nameForm label {
+.formLabel {
+  display: block;
   font-weight: 600;
-  color: #B9D3DC;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+
 }
 
 .input {
@@ -65,13 +69,14 @@ h2 {
   margin-bottom: 18px;
 }
 
-.language label {
-  display: flex;
-  font-size: 1.3rem;
-  color: #f2f0ed;
-  margin-bottom: 18px;
-  margin-top: 20px;
-  gap: 20px;
+
+.formLabel {
+  display: block;
+  font-weight: 600;
+  font-size: 1.3rem;  
+  margin-bottom: 0.5rem;
+  color: var(--color-seablue);      
+  letter-spacing: 0.01em;
 }
 
 .checkbox {
@@ -89,10 +94,7 @@ h2 {
   .container {
     padding: 2rem;
   }
-  .logo {
-    width: 180px;
-    margin-top: 30px;
-  }
+
   h2 {
     font-size: 2rem;
     margin-top: 40px;
@@ -107,6 +109,12 @@ h2 {
     width: 100%;
     font-size: 1.1rem;
     padding: 14px 12px;
+  }
+}
+
+@media (max-width: 650px) {
+  .logo {
+    max-height: 4.5rem;
   }
 }
 
