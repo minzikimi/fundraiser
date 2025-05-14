@@ -100,7 +100,9 @@ const CheckoutBox = () => {
                 </label>
               </div>
             </div>
-            <Button onClick={handleConfirm}>{t("donation-box.confirm")}</Button>
+            <div className={styles.confirmButtonWrapper}>
+              <Button onClick={handleConfirm}>{t("donation-box.confirm")}</Button>
+            </div>
           </>
         )}
         {stage === 2 && (
@@ -132,12 +134,14 @@ const CheckoutBox = () => {
                 </label>
               </div>
             </div>
-            <Button onClick={handlePaymentConfirm}>
-              {t("donation-box.check out")}
-            </Button>
-            <Button onClick={() => setStage(1)}>
-              {t("donation-box.back")}
-            </Button>
+        <div className={styles.buttonRow}>
+          <Button onClick={handlePaymentConfirm}>
+            {t("donation-box.check out")}
+          </Button>
+          <Button onClick={() => setStage(1)}>
+            {t("donation-box.back")}
+          </Button>
+        </div>
           </>
         )}
       </div>

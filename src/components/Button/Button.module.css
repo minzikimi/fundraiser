@@ -9,7 +9,6 @@
   font-size: 1rem;
   font-weight: bold;
   margin:2rem 0;
-  margin-right:2rem;
 }
 
 .button:hover {
@@ -21,7 +20,7 @@
   .button {
     padding: 1rem;
     font-size: 1rem;
-    /* margin: 2rem; */
+    margin: 2rem;
   }
 }
 
@@ -29,7 +28,7 @@
   .button {
     padding: 1rem;
     font-size: 0.8rem;
-    /* margin: 1.8rem; */
+    margin: 1.8rem;
   }
 }
 
@@ -37,6 +36,6 @@
   .button {
     padding: 0.8rem;
     font-size: 0.7rem;
-    /* margin: 1.8rem; */
+    margin: 1.8rem;
   }
 }
