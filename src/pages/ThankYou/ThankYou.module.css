@@ -136,7 +136,9 @@
     width: 0.7rem;
     filter: invert(100%);
   }
-
+  .thankYouWrapper {
+    margin-top: 6rem;
+  }
 
   .logo {
     height: 3rem;
