@@ -102,7 +102,7 @@ border: none;
   }
 
   .faqImage {
-    width: 90%;
+    max-width: 90%;
     height: auto;
     margin-bottom: 2rem;
   }
