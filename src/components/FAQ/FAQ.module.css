@@ -2,22 +2,22 @@
   width: 100%;
   margin: 0;
   padding: 0;
-  background-color: var(--color-midnight);
+  background-image: linear-gradient(to bottom, var(--color-darkblue),var(--color-midnight));
 }
 
 .faqSection {
-  background-color: var(--color-midnight);
   font-family: var(--font-sans);
   display: flex;
   flex-direction: column;
   max-width: 1400px;
   margin: 0 auto;
   width: 100%;
-  box-sizing: border-box; 
+  box-sizing: border-box;
+  padding: 8rem 3rem; 
 }
 
 .faqHeading{
-  padding-top: 3rem;
+  /* padding-top: 2rem; */
   margin-bottom: 0;
   text-align: left;
   color: var(--color-seablue);
@@ -55,11 +55,16 @@
   width: 98%;
   background-color: var(--color-darkblue);
   color: var(--color-sand20);
-  border: 2px solid var(--color-sand20)
+  border: 2px solid var(--color-sand20);
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
 }
 
 .button:hover{
 cursor: pointer;
+background-color: var(--color-seablue);
+color: var(--color-midnight);
+font-weight: 500;
+border: none;
 }
 
 .faqImage{
@@ -101,25 +106,26 @@ cursor: pointer;
   }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 430px) {
 
   .faqHeading {
     font-size: 2rem;
-    padding-top: 2rem;
     align-self: flex-start;
-    margin-left: 2rem;
+    margin-left: 0;
   }
 
   .underline {
-    width: 80%;
+    width: 100%;
     margin: 2rem;
   }
 
   .button {
     font-size: 0.95rem;
-    width: 80%;
+    width: 100%;
     height: auto;
-    padding: 0.5rem;
+    padding: 0.7rem;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .faqContent {
@@ -132,5 +138,10 @@ cursor: pointer;
   .faqImage{
     margin-bottom: 2rem;
     margin-top: 0;
+    width: 100%;
+  }
+
+  .faqSection {
+    padding: 3rem; 
   }
 }

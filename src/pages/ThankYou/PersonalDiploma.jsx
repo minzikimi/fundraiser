@@ -1,18 +1,26 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import html2pdf from 'html2pdf.js';
 import styles from './PersonalDiploma.module.css';
 import logo from "../../assets/images/smf-logo.png";
 import Certificate from "../../components/Certificate/Certificate";
 import Button from '../../components/Button/Button';
+import { useTranslation } from "react-i18next";
 
 
   const PersonalDiploma = () => {
   const [name, setName] = useState('');
   const [language, setLanguage] = useState('English');
   const certificateRef = useRef(); 
+  const { t, i18n } = useTranslation();
 
-  
-  const handleDownload = () => {
+  const handleDownload = async () => {
+    if (language === 'English' && i18n.language !== 'en') {
+    await i18n.changeLanguage('en');
+  } else if (language === 'Svenska' && i18n.language !== 'sv') {
+    await i18n.changeLanguage('sv');
+  }
+   await new Promise(resolve => setTimeout(resolve, 100));
+
     const element = certificateRef.current;
     const opt = {
       margin:       0.5,
@@ -30,13 +38,13 @@ import Button from '../../components/Button/Button';
         <a href="https://museumforintelsen.se/" aria-label="Go to homepage">
                 <img
                   src={logo}
-                  alt="Sveriges Museum om Förintelsen logo"
+                  alt={t("certificate.logoAlt")}
                   className={styles.logo}
                 />
               </a>
-      <h2>Receive Your Personalized <br/>Donation Certificate</h2>
+      <h2>{t('personalDiploma.title')}</h2>
       <div className={styles.nameForm}>
-      <label htmlFor="DonorName">Name</label>
+      <label htmlFor="DonorName">{t('personalDiploma.nameLabel')}</label>
       <input
         id="name"
         type="text"
@@ -46,7 +54,7 @@ import Button from '../../components/Button/Button';
       />
        </div>
       <div className={styles.language}>
-        <p>Choose language</p>
+        <p>{t('personalDiploma.chooseLanguage')}</p>
         <label>
           <input
             type="radio"
@@ -69,17 +77,17 @@ import Button from '../../components/Button/Button';
 
       <label className={styles.checkbox}>
         <input type="checkbox" />
-        Yes, I’d like to receive updates and stories from the Swedish Holocaust Museum. (SAMPLE TEXT)
+        {t('personalDiploma.updatesConsent')}
       </label>
 
       <label className={styles.checkbox}>
         <input type="checkbox" />
-        I consent to my name being printed on the digital donor wall (optional). SAMPLE TEXT
+        {t('personalDiploma.donorWallConsent')}
       </label>
 
-      <Button className={styles.button} onClick={handleDownload}>DOWNLOAD YOUR CERTIFICATE</Button>
+      <Button className={styles.button} onClick={handleDownload}>{t('personalDiploma.downloadButton')}</Button>
        <div style={{ display: 'inline-block', width: '100%' }} ref={certificateRef}>
-        <Certificate donorName={name.trim() !== "" ? name : "Anonymous"} />
+        <Certificate donorName={name.trim() !== "" ? name : t('certificate.anonymous')} />
       </div>
       </div>
   );

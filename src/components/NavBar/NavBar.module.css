@@ -176,3 +176,17 @@
     display: block;
   }
 }
+@media (max-width: 430px){
+  .logo{
+    height: 3rem;
+  }
+
+  .hamburger{
+    font-size: 1.4rem;
+  }
+
+  .navbar {
+    padding: 1.5rem;
+
+  }
+}

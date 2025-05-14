@@ -7,7 +7,7 @@
   justify-content: center;
   margin: 0 auto;
   padding: 2rem;
-  background-color: var(--color-darkblue);
+  background: linear-gradient(to top, #1c1f2a, #1F2A44 );
   color: var(--color-sand40);
   font-family: var(--font-sans);
 }
@@ -124,6 +124,7 @@
 }
 
 @media (max-width: 430px) {
+
   .goBackBtn {
     top: 10px;
     left: 10px;
@@ -135,6 +136,7 @@
     width: 0.7rem;
     filter: invert(100%);
   }
+
 
   .logo {
     height: 3rem;
