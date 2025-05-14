@@ -3,101 +3,67 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    padding:8rem 3rem;
+    padding: 3rem 2rem; 
 }
 
 .quoteSectionContent {
+    box-sizing: border-box;
     max-width: 1400px;
     width: 100%;
     display: flex;
-    gap: 8rem;
-    box-sizing: border-box;
-    flex-direction: row;
+    flex-direction: column; 
+    gap: 2rem;
+    align-items: stretch;
 }
 
-.headingWrapper {
-    width: 45%;        
-    display: flex;
-    flex-direction: column;
+.headingWrapper,
+.quoteDiscription {
+    width: 100%;
+    text-align: start;
     justify-content: flex-start;
+    align-items: flex-start;
+    line-height: 2rem;
 }
 
 .quoteSectionHeading {
-    font-size: 3.2rem;
+    font-size: 1.2rem; 
     color: var(--color-seablue);
-    margin: 0;
-    text-align: start;
+    margin: 0 0 2rem 0;
+    text-align: center;
     font-family: var(--font-sans);
 }
 
-.headingPart{
-    color: var(--color-seablue);
-    flex: 1;
-    margin-top: auto; 
-    text-align: start;
-    
-}
-
 .quoteDiscription {
-    width: 55%;              
-    font-size: 1.7rem;
-    line-height: clamp(1.5rem, 4vw, 3rem);
+    font-size: 1rem; 
     color: var(--color-sand20);
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
     font-family: var(--font-sans);
+    text-align: center;
+    line-height: 2.5rem;
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 431px) {
+    .quoteSectionHeading { font-size: 1.5rem; }
+    .quoteDiscription { font-size: 1.2rem; }
+}
+
+@media (min-width: 769px) {
+    .quoteSection { padding: 8rem 3rem; }
     .quoteSectionContent {
-        flex-direction: column;
-        gap: 2rem;
-        align-items: stretch;
-    }
-    .headingWrapper,
-    .quoteDiscription {
-        width: 100%;
-        text-align: start;
-        justify-content: flex-start;
-        align-items: flex-start;
-        line-height: 2rem;   
-    }
-    .quoteSectionHeading {
-        font-size: 2.5rem;
-        margin-bottom: 2rem;
-        text-align: center;
-    }
-}
-
-@media (max-width: 768px) {
-
-    .quoteSectionHeading {
-        font-size: 1.5rem;
-       
-    }
-    .quoteDiscription {   
-        text-align: center; 
-        font-size: 1.2rem;
-    }
-    .quoteSection{
-        padding:3rem 2rem;
-    }
-    .headingWrapper{
-        display: flex;
         flex-direction: row;
-        align-items: center;
-        justify-content: center;
+        gap: 8rem;
     }
-
-}
-
-@media (max-width: 430px) {
-
+    .headingWrapper { width: 45%; }
+    .quoteDiscription { width: 55%; }
     .quoteSectionHeading {
-        font-size: 1.2rem;
+        font-size: 3.2rem;
+        margin-bottom: 0;
+        text-align: start;
     }
-    .quoteDiscription {   
-        font-size: 1rem;
+    .quoteDiscription {
+        text-align: end;
+        font-size: 1.7rem;
     }
 }
