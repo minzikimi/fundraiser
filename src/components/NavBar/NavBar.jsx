@@ -20,7 +20,7 @@ const NavBar = () => {
     setLanguage(lang);
     i18n.changeLanguage(lang.toLowerCase());
     setDropdownOpen(false);
-    setMenuOpen(false); 
+    setMenuOpen(false);
   };
 
   useEffect(() => {
@@ -37,13 +37,14 @@ const NavBar = () => {
     <>
       <nav className={styles.navbar} aria-label="Main Navigation">
         <div className={styles.logoContainer}>
-          <img
-            src={logo}
-            alt="Swedish Holocaust Museum logo"
-            className={styles.logo}
-          />
+          <Link to="/">
+            <img
+              src={logo}
+              alt="Swedish Holocaust Museum logo"
+              className={styles.logo}
+            />
+          </Link>
         </div>
-
         <ul className={styles.navLinks}>
           <li>
             <Link to="/" className={styles.link}>
@@ -85,9 +86,7 @@ const NavBar = () => {
         </button>
       </nav>
 
-      {menuOpen && (
-        <div className={styles.backdrop} onClick={toggleMenu}></div>
-      )}
+      {menuOpen && <div className={styles.backdrop} onClick={toggleMenu}></div>}
 
       <div className={`${styles.mobileMenu} ${menuOpen ? styles.open : ""}`}>
         <button

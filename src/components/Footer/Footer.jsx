@@ -3,20 +3,25 @@ import styles from "./Footer.module.css";
 import logo from "../../assets/images/white-logo.png";
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const { t } = useTranslation();
 
   return (
-    <footer className={styles.footer} role="contentinfo" aria-label="Site footer">
+    <footer
+      className={styles.footer}
+      role="contentinfo"
+      aria-label="Site footer"
+    >
       <div className={styles.logoTitle}>
-        <a href="https://museumforintelsen.se/" aria-label="Go to museum homepage">
+        <Link to="/">
           <img
             src={logo}
             alt="Sveriges Museum om Förintelsen logo"
             className={styles.logo}
           />
-        </a>
+        </Link>
       </div>
 
       <nav className={styles.navSection} aria-label="Footer links">
@@ -39,7 +44,9 @@ const Footer = () => {
         </ul>
         <ul className={styles.subLinks}>
           <li>
-            <a href="https://museumforintelsen.se/en/visit-us/">{t("footer.visit")}</a>
+            <a href="https://museumforintelsen.se/en/visit-us/">
+              {t("footer.visit")}
+            </a>
           </li>
           <li>
             <a href="https://museumforintelsen.se/en/about-the-museum/research-and-development/">
