@@ -57,31 +57,31 @@ import { Link } from "react-router-dom";
     className={styles.input}
   />
 </div>
-<div className={styles.language}>
-  <label className={styles.formLabel}>
-    {t('personalDiploma.chooseLanguage')}
-  </label>
-  <label>
-    <input
-      type="radio"
-      value="Svenska"
-      checked={language === 'Svenska'}
-      onChange={() => setLanguage('Svenska')}
-    />
-    Svenska
-  </label>
-  <label>
-    <input
-      type="radio"
-      value="English"
-      checked={language === 'English'}
-      onChange={() => setLanguage('English')}
-    />
-    English
-  </label>
-</div>
-
-
+  <div className={styles.language}>
+    <label className={styles.formLabel}>
+      {t('personalDiploma.chooseLanguage')}
+    </label>
+    <div className={styles.radioGroup}>
+      <label>
+        <input
+          type="radio"
+          value="Svenska"
+          checked={language === 'Svenska'}
+          onChange={() => setLanguage('Svenska')}
+        />
+        Svenska
+      </label>
+      <label>
+        <input
+          type="radio"
+          value="English"
+          checked={language === 'English'}
+          onChange={() => setLanguage('English')}
+        />
+            English
+          </label>
+        </div>
+      </div>
       <label className={styles.checkbox}>
         <input type="checkbox" />
         {t('personalDiploma.updatesConsent')}

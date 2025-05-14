@@ -158,7 +158,7 @@ const CheckoutBox = () => {
               />
               <div className={styles.buttonWrapper}>
                 <Button className={styles.confirmButton} onClick={() => navigate("/thank-you")}>
-                  I HAVE DONATED!
+                   {t("donatedButton.text")}
                 </Button>
               </div>
             </div>
@@ -175,7 +175,7 @@ const CheckoutBox = () => {
               </div>
               <div className={styles.buttonWrapper}>
                 <Button className={styles.confirmButton} onClick={() => navigate("/thank-you")}>
-                  I HAVE DONATED!
+                   {t("donatedButton.text")}
                 </Button>
               </div>
             </div>

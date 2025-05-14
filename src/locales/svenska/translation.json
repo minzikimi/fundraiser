@@ -114,5 +114,8 @@
     "downloadButton": "HÄMTA DITT INTYG",
     "updatesConsent": "Ja, jag vill få uppdateringar och berättelser från Sveriges Museum om Förintelsen.",
     "donorWallConsent": "Jag samtycker till att mitt namn skrivs ut på den digitala donorväggen (valfritt)."
+  },
+  "donatedButton":{
+    "text":"JAG HAR DONERAT"
   }
 }

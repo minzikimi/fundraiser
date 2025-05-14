@@ -104,15 +104,18 @@
     "support": "Your support helps us preserve the memory and lessons of the Holocaust for future generations.",
     "date": "Date"
   },
- "progressBar": {
-    "status": "Together we've raised {{percent}}% of our goal to preserve history."
+  "progressBar": {
+      "status": "Together we've raised {{percent}}% of our goal to preserve history."
+    },
+    "personalDiploma": {
+    "title": "Receive Your Personalized Donation Certificate",
+    "nameLabel": "Name",
+    "chooseLanguage": "Choose language",
+    "downloadButton": "DOWNLOAD YOUR CERTIFICATE",
+    "updatesConsent": "Yes, I’d like to receive updates and stories from the Swedish Holocaust Museum.",
+    "donorWallConsent": "I consent to my name being printed on the digital donor wall (optional)."
   },
-  "personalDiploma": {
-  "title": "Receive Your Personalized Donation Certificate",
-  "nameLabel": "Name",
-  "chooseLanguage": "Choose language",
-  "downloadButton": "DOWNLOAD YOUR CERTIFICATE",
-  "updatesConsent": "Yes, I’d like to receive updates and stories from the Swedish Holocaust Museum.",
-  "donorWallConsent": "I consent to my name being printed on the digital donor wall (optional)."
-}
+    "donatedButton":{
+    "text":"I HAVE DONATED"
+  }
 }
