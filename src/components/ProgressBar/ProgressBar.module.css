@@ -83,7 +83,7 @@
   }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 430px) {
   .progressContainer {
     height: 4rem;
     width: 100%;
