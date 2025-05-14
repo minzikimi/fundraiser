@@ -2,6 +2,7 @@
   width: 100%;
   margin: 0;
   padding: 0;
+  padding:8rem 3rem;
   background-image: linear-gradient(to bottom, var(--color-darkblue),var(--color-midnight));
 }
 
@@ -12,7 +13,9 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  padding:8rem 3rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  
 }
 
 .faqHeading{
@@ -67,7 +70,7 @@ border: none;
 
 .faqImage{
   width: 42%;
-  height: 23rem;
+  height: auto;
   align-self: center;
   padding-bottom: 2.5rem;
 }
@@ -102,7 +105,7 @@ border: none;
   }
 
   .faqImage {
-    max-width: 90%;
+    width: 90%;
     height: auto;
     margin-bottom: 2rem;
   }

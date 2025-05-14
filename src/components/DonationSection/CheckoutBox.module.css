@@ -91,13 +91,16 @@
   .heading {
     font-size: 0.5rem;
   }
+  label{
+  padding:0.8rem;
+  }
 }
 
 .heading {
   color: var(--color-sand20);
   font-family: var(--font-sans);
   margin-bottom:3rem;
-  font-size: clamp(1.8rem, 5vw, 1.8rem);
+  font-size: clamp(1.5rem, 5vw, 1.8rem);
   font-weight: bold;
 }
 
