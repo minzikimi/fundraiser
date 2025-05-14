@@ -44,17 +44,21 @@ import { useTranslation } from "react-i18next";
               </a>
       <h2>{t('personalDiploma.title')}</h2>
       <div className={styles.nameForm}>
-      <label htmlFor="DonorName">{t('personalDiploma.nameLabel')}</label>
-      <input
-        id="name"
-        type="text"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        className={styles.input}
-      />
-       </div>
+        <label htmlFor="DonorName" className={styles.formLabel}>
+          {t('personalDiploma.nameLabel')}
+        </label>
+        <input
+          id="DonorName"
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          className={styles.input}
+        />
+      </div>
       <div className={styles.language}>
-        <p>{t('personalDiploma.chooseLanguage')}</p>
+        <label className={styles.formLabel}>
+          {t('personalDiploma.chooseLanguage')}
+        </label>
         <label>
           <input
             type="radio"
@@ -74,6 +78,7 @@ import { useTranslation } from "react-i18next";
           English
         </label>
       </div>
+
 
       <label className={styles.checkbox}>
         <input type="checkbox" />
