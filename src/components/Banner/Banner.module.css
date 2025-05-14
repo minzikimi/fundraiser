@@ -89,7 +89,7 @@
   }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 430px) {
   .banner {
     height: 30vh;
   }
@@ -98,10 +98,10 @@
     bottom: 10%;
     right: 5%;
     max-width: 95vw;
-    padding: 0.3rem 0.6rem;
   }
 
   .text {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    text-align: center;
   }
 }

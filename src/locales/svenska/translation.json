@@ -35,12 +35,13 @@
     "contactLabel": "Kontakt oss",
     "email": "info@museumforintelsen.se"
   },
-  "thank-you": {
-    "title": "Tack!",
-    "message": "Ditt bidrag hjälper till att bevara berättelserna från dem som inte längre kan tala. Tack för att du stödjer vårt uppdrag att säkerställa att historien aldrig glöms bort.",
-    "getDiploma": "HÄMTA DITT PERSONLIGA DIPLOM",
-    "progressPlaceholder": "Här visas framstegsmätaren"
-  },
+ "thank-you": {
+  "goBack": "TILLBAKA",
+  "goBackAlt": "Tillbaka pil",
+  "title": "Tusen tack!",
+  "message": "Ditt bidrag hjälper till att bevara berättelserna från dem som inte längre kan tala. Tack för att du stödjer vårt uppdrag att säkerställa att historien aldrig glöms bort.",
+  "getDiploma": "HÄMTA DITT PERSONLIGA DIPLOM"
+},
   "howItWorks": {
     "title": "Så fungerar det",
     "intro": "Att ge ska vara enkelt och meningsfullt. Som en del av Sveriges nationella museinätverk är vi transparenta och ansvarstagande för att ditt stöd gör skillnad. Även utan kortbetalning är det enkelt och säkert att donera via Swish eller banköverföring. Ditt bidrag hjälper oss att bevara minnet av Förintelsen och stödja utställningar, utbildning och insamling av vittnesmål. Tack för ditt stöd!",
@@ -76,5 +77,42 @@
       "email": "info@museumforintelsen.se",
       "extra": "eller besök vår kontaktsida."
     }
+  },
+    "faq": [
+    {
+      "question": "Varför behöver ni donationer? Är inte museet statligt finansierat?",
+      "answer": "SMF är en del av Sveriges nationella museiorganisation, men fungerar för närvarande som ett tillfälligt museum. För att bli en permanent institution behöver vi ytterligare finansiering. Din donation stödjer direkt utbyggnaden av museets utställningar, program och tillgänglighet-och säkerställer att minnet av Förintelsen förblir närvarande och starkt i det svenska samhället."
+    },
+    {
+      "question": "Hur kommer min donation att användas?",
+      "answer": "Donationer går till att skapa permanenta utställningar, bevara överlevandes vittnesmål, utöka utbildningsprogram och förbättra museets fysiska miljö. SMF är engagerat i transparens och all användning av medel redovisas i årliga offentliga rapporter."
+    },
+    {
+      "question": "Spelar en liten donation verkligen någon roll?",
+      "answer": "Absolut. Det viktigaste är viljan att minnas och stödja detta arbete. Varje bidrag-oavsett storlek-hjälper oss att bygga en bestående plats för minnet av och utbildning om Förintelsen i Sverige."
+    },
+    {
+      "question": "Kommer mitt namn att offentliggöras? Kan jag donera anonymt?",
+      "answer": "Du kan absolut donera anonymt om du vill. Att få ett intyg eller bli listad som givare är helt frivilligt. Vi respekterar din integritet och uppskattar alla former av stöd, både offentliga och privata."
+    }
+  ],
+    "certificate": {
+  "logoAlt": "Sveriges Museum om Förintelsen logotyp",
+  "title": "Donationsintyg",
+  "presented": "Tilldelas",
+  "recognition": "Som tack för din generösa donation till Sveriges museum om Förintelsen.",
+  "support": "Ditt stöd hjälper oss att bevara minnet och lärdomarna från Förintelsen för framtida generationer.",
+  "date": "Datum"
+  },
+   "progressBar": {
+    "status": "Tillsammans har vi samlat {{percent}}% mot vårt mål att bevara historia."
+  },
+    "personalDiploma": {
+    "title": "Hämta ditt personliga donationsintyg",
+    "nameLabel": "Namn",
+    "chooseLanguage": "Välj språk",
+    "downloadButton": "HÄMTA DITT INTYG",
+    "updatesConsent": "Ja, jag vill få uppdateringar och berättelser från Sveriges Museum om Förintelsen.",
+    "donorWallConsent": "Jag samtycker till att mitt namn skrivs ut på den digitala donorväggen (valfritt)."
   }
 }

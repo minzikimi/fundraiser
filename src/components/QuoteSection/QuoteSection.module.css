@@ -1,5 +1,6 @@
 .quoteSection {
-    background-color: var(--color-midnight);
+    background-image: linear-gradient(to bottom, var(--color-midnight), var(--color-darkblue));
+
     width: 100%;
     display: flex;
     justify-content: center;
@@ -66,28 +67,36 @@
     .quoteSectionHeading {
         font-size: 2.5rem;
         margin-bottom: 2rem;
+        text-align: center;
     }
 }
 
 @media (max-width: 768px) {
 
     .quoteSectionHeading {
-        font-size: 1.9rem;
-        text-align: center;
+        font-size: 1.5rem;
+       
     }
     .quoteDiscription {   
-        font-size: 1.4rem;
-        text-align: center;
+        text-align: center; 
+        font-size: 1.2rem;
     }
     .quoteSection{
         padding:3rem 2rem;
     }
+    .headingWrapper{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
 }
 
-@media (max-width: 390px) {
+@media (max-width: 430px) {
 
     .quoteSectionHeading {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
     .quoteDiscription {   
         font-size: 1rem;
