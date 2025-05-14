@@ -88,13 +88,16 @@
     padding: clamp(0.7rem, 3vw, 1.2rem) clamp(0.7rem, 5vw, 1.5rem);
   }
   .fullImage { margin-bottom: 10px; }
+  .heading {
+    font-size: 0.5rem;
+  }
 }
 
 .heading {
   color: var(--color-sand20);
   font-family: var(--font-sans);
   margin-bottom:3rem;
-  font-size: clamp(1.8rem, 5vw, 2rem);
+  font-size: clamp(1.8rem, 5vw, 1.8rem);
   font-weight: bold;
 }
 
