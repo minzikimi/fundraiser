@@ -37,14 +37,27 @@ git clone https://github.com/minzikimi/fundraiser-smf
 
 ### Development Mode
 
-Start the development server with hot reloading:
+1. **Install dependencies** (if you haven't already):
 
-npm run build
-npm run preview
+npm install
 
+
+2. **Start the development server:**
+
+npm run dev
+
+
+This command will launch a local development server with hot reloading. Any changes you make to the code will be instantly reflected in your browser, allowing for real-time feedback and efficient development.
 
 ---
 
-Enjoy building and contributing to the fundraising website for the Swedish Holocaust Museum!
+### Production Mode
 
+1. **Build the project for production:**
+npm run build
+
+
+2. **Preview the optimized production build locally:**
+
+npm run preview
 
