@@ -12,7 +12,11 @@ const QuoteSection = () => {
   const { t } = useTranslation();
 
   return (
-    <div className={styles.quoteSection}>
+     <section
+      className={styles.quoteSection}
+      aria-labelledby="quote-section-heading"
+      tabIndex={-1}
+    >
       <div className={styles.quoteSectionContent}>
         <div className={styles.headingWrapper}>
           <motion.h2
@@ -37,7 +41,7 @@ const QuoteSection = () => {
           {t("quote-section.text")}
         </motion.p>
       </div>
-    </div>
+    </section>
   );
 };
 

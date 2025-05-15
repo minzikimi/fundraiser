@@ -38,7 +38,7 @@ const CheckoutBox = () => {
         {stage === 1 && (
           <>
             <h2 className={styles.heading}>{t("donation-box.title")}</h2>
-            <div className={styles.radioGroup}>
+            <fieldset className={styles.radioGroup}>
               <div className={styles.radioItem}>
                 <label>
                   <input
@@ -47,7 +47,7 @@ const CheckoutBox = () => {
                     checked={amount === "100kr"}
                     onChange={(e) => setAmount(e.target.value)}
                   />
-                  100kr
+                  <label htmlFor="amount-100">100kr</label>
                 </label>
               </div>
               <div className={styles.radioItem}>
@@ -58,7 +58,7 @@ const CheckoutBox = () => {
                     checked={amount === "200kr"}
                     onChange={(e) => setAmount(e.target.value)}
                   />
-                  200kr
+                   <label htmlFor="amount-200">200kr</label>
                 </label>
               </div>
               <div className={styles.radioItem}>
@@ -69,7 +69,7 @@ const CheckoutBox = () => {
                     checked={amount === "500kr"}
                     onChange={(e) => setAmount(e.target.value)}
                   />
-                  500kr
+                  <label htmlFor="amount-500">500kr</label>
                 </label>
               </div>
               <div className={styles.radioItem}>
@@ -84,6 +84,7 @@ const CheckoutBox = () => {
                     }
                     onChange={() => setAmount("")}
                   />
+                   <label htmlFor="amount-other" className={styles.optionalAmount}></label>
                   <input
                     type="text"
                     placeholder={t("donation-box.optional amount")}
@@ -99,7 +100,7 @@ const CheckoutBox = () => {
                   />
                 </label>
               </div>
-            </div>
+            </fieldset>
             <div className={styles.confirmButtonWrapper}>
               <Button onClick={handleConfirm}>{t("donation-box.confirm")}</Button>
             </div>
@@ -158,7 +159,7 @@ const CheckoutBox = () => {
               />
               <div className={styles.buttonWrapper}>
                 <Button className={styles.confirmButton} onClick={() => navigate("/thank-you")}>
-                  I HAVE DONATED!
+                   {t("donatedButton.text")}
                 </Button>
               </div>
             </div>
@@ -175,7 +176,7 @@ const CheckoutBox = () => {
               </div>
               <div className={styles.buttonWrapper}>
                 <Button className={styles.confirmButton} onClick={() => navigate("/thank-you")}>
-                  I HAVE DONATED!
+                   {t("donatedButton.text")}
                 </Button>
               </div>
             </div>

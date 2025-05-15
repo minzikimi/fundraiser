@@ -44,8 +44,6 @@
     position: absolute;
     right:8%;
     top: 65%; 
-    transform: translateY(-50%);
-    border-radius: 4px;
     z-index: 2;
   }
   
@@ -58,9 +56,7 @@
   }
   @media (max-width: 1224px) {
   .textBox {
-    left: 3rem;
-    max-width: 50vw;
-    padding: 0.4rem 0.8rem;
+    max-width: 80vw;
   }
 }
 
@@ -76,12 +72,9 @@
   }
 
   .textBox {
-    top: auto;
-    bottom: 20%;
-    right: var(--spacing-medium, 1rem);
-    max-width: 90vw;
-    padding: var(--spacing-xsmall, 0.3rem) var(--spacing-small, 1rem);
-    transform: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .text {
@@ -92,16 +85,5 @@
 @media (max-width: 430px) {
   .banner {
     height: 30vh;
-  }
-
-  .textBox {
-    bottom: 10%;
-    right: 5%;
-    max-width: 95vw;
-  }
-
-  .text {
-    font-size: 1.3rem;
-    text-align: center;
   }
 }

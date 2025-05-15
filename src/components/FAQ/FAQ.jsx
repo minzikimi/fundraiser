@@ -26,35 +26,36 @@ const FAQ = () => {
 
   return (
     <div className={styles.pageWrapper}>
-      <section className={styles.faqSection} aria-labelledby="faq-heading">
-        <h2 id="faq-heading" className={styles.faqHeading}>
-          FAQ
-        </h2>
-        <hr className={styles.underline} />
-        <div className={styles.faqContent}>
-          <dl className={styles.questionsContainer}>
-            {faqData.map((faq, index) => (
-              <div key={index} data-aos="fade-up">
-                <dt>
-                  <button
-                    className={styles.button}
-                    onClick={() => openModal(faq)}
-                    aria-expanded={activeFAQ?.question === faq.question}
-                    aria-controls={`faq-answer-${index}`}
-                  >
-                    Q. {faq.question}
-                  </button>
-                </dt>
-              </div>
-            ))}
-          </dl>
-          <img
-            src={faqImage}
-            alt="Illustration related to frequently asked questions"
-            className={styles.faqImage}
-          />
+      <div className={styles.faqSection} aria-labelledby="faq-heading">
+        <div className={styles.faqSectionContent}>
+          <h2 id="faq-heading" className={styles.faqHeading}>
+            FAQ
+          </h2>
+          <hr className={styles.underline} />
+          <div className={styles.faqContent}>
+            <dl className={styles.questionsContainer}>
+              {faqData.map((faq, index) => (
+                <div key={index} data-aos="fade-up">
+                  <dt>
+                    <button
+                      className={styles.button}
+                      onClick={() => openModal(faq)}
+                      aria-expanded={activeFAQ?.question === faq.question}
+                      aria-controls={`faq-answer-${index}`}
+                    >
+                      Q. {faq.question}
+                    </button>
+                  </dt>
+                </div>
+              ))}
+            </dl>
+            <img
+              src={faqImage}
+              alt="Illustration related to frequently asked questions"
+              className={styles.faqImage}
+            />
+          </div>
         </div>
-
         {activeFAQ && (
           <FAQModal
             question={activeFAQ.question}
@@ -62,8 +63,10 @@ const FAQ = () => {
             onClose={closeModal}
           />
         )}
-      </section>
+      </div>
     </div>
+
+
   );
 };
 

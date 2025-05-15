@@ -46,42 +46,42 @@ import { Link } from "react-router-dom";
         </Link>
       <h2>{t('personalDiploma.title')}</h2>
       <div className={styles.nameForm}>
-        <label htmlFor="DonorName" className={styles.formLabel}>
-          {t('personalDiploma.nameLabel')}
-        </label>
+  <label htmlFor="DonorName" className={styles.formLabel}>
+    {t('personalDiploma.nameLabel')}
+  </label>
+  <input
+    id="DonorName"
+    type="text"
+    value={name}
+    onChange={(e) => setName(e.target.value)}
+    className={styles.input}
+  />
+</div>
+  <div className={styles.language}>
+    <label className={styles.formLabel}>
+      {t('personalDiploma.chooseLanguage')}
+    </label>
+    <div className={styles.radioGroup}>
+      <label>
         <input
-          id="DonorName"
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          className={styles.input}
+          type="radio"
+          value="Svenska"
+          checked={language === 'Svenska'}
+          onChange={() => setLanguage('Svenska')}
         />
+        Svenska
+      </label>
+      <label>
+        <input
+          type="radio"
+          value="English"
+          checked={language === 'English'}
+          onChange={() => setLanguage('English')}
+        />
+            English
+          </label>
+        </div>
       </div>
-      <div className={styles.language}>
-        <label className={styles.formLabel}>
-          {t('personalDiploma.chooseLanguage')}
-        </label>
-        <label>
-          <input
-            type="radio"
-            value="Svenska"
-            checked={language === 'Svenska'}
-            onChange={() => setLanguage('Svenska')}
-          />
-          Svenska
-        </label>
-        <label>
-          <input
-            type="radio"
-            value="English"
-            checked={language === 'English'}
-            onChange={() => setLanguage('English')}
-          />
-          English
-        </label>
-      </div>
-
-
       <label className={styles.checkbox}>
         <input type="checkbox" />
         {t('personalDiploma.updatesConsent')}

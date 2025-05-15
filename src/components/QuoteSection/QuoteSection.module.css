@@ -1,104 +1,69 @@
 .quoteSection {
-  background-image: linear-gradient(
-    to bottom,
-    var(--color-midnight),
-    var(--color-darkblue)
-  );
-
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 8rem 3rem;
+    background-image: linear-gradient(to bottom, var(--color-midnight), var(--color-darkblue));
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 3rem 2rem; 
 }
 
 .quoteSectionContent {
-  max-width: 1400px;
-  width: 100%;
-  display: flex;
-  gap: 8rem;
-  box-sizing: border-box;
-  flex-direction: row;
-}
-
-.headingWrapper {
-  width: 45%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.quoteSectionHeading {
-  font-size: 3.2rem;
-  color: var(--color-seablue);
-  margin: 0;
-  text-align: start;
-  font-family: var(--font-sans);
-}
-
-.headingPart {
-  color: var(--color-seablue);
-  flex: 1;
-  margin-top: auto;
-  text-align: start;
-}
-
-.quoteDiscription {
-  width: 55%;
-  font-size: 1.7rem;
-  line-height: clamp(1.5rem, 4vw, 3rem);
-  color: var(--color-sand20);
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  font-family: var(--font-sans);
-}
-
-@media (max-width: 1200px) {
-  .quoteSectionContent {
-    flex-direction: column;
+    box-sizing: border-box;
+    max-width: 1400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column; 
     gap: 2rem;
     align-items: stretch;
-  }
-  .headingWrapper,
-  .quoteDiscription {
+}
+
+.headingWrapper,
+.quoteDiscription {
     width: 100%;
     text-align: start;
     justify-content: flex-start;
     align-items: flex-start;
     line-height: 2rem;
-  }
-  .quoteSectionHeading {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    text-align: center;
-  }
 }
 
-@media (max-width: 768px) {
-  .quoteSectionHeading {
-    font-size: 1.5rem;
-  }
-  .quoteDiscription {
+.quoteSectionHeading {
+    font-size: 1.2rem; 
+    color: var(--color-seablue);
+    margin: 0 0 2rem 0;
     text-align: center;
-    font-size: 1.2rem;
-  }
-  .quoteSection {
-    padding: 3rem 2rem;
-  }
-  .headingWrapper {
+    font-family: var(--font-sans);
+}
+
+.quoteDiscription {
+    font-size: 1rem; 
+    color: var(--color-sand20);
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-family: var(--font-sans);
+    text-align: center;
+    line-height: 2.5rem;
 }
 
-@media (max-width: 430px) {
-  .quoteSectionHeading {
-    font-size: 1.2rem;
-  }
-  .quoteDiscription {
-    font-size: 1rem;
-    line-height: 1.3rem;
-  }
+@media (min-width: 431px) {
+    .quoteSectionHeading { font-size: 1.5rem; }
+    .quoteDiscription { font-size: 1.2rem; line-height: 1.3rem;}
+}
+
+@media (min-width: 769px) {
+    .quoteSection { padding: 8rem 3rem; }
+    .quoteSectionContent {
+        flex-direction: row;
+        gap: 8rem;
+    }
+    .headingWrapper { width: 45%; }
+    .quoteDiscription { width: 55%; }
+    .quoteSectionHeading {
+        font-size: 3.2rem;
+        margin-bottom: 0;
+        text-align: start;
+    }
+    .quoteDiscription {
+        text-align: end;
+        font-size: 1.7rem;
+    }
 }
