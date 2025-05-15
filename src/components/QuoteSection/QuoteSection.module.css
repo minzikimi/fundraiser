@@ -22,7 +22,6 @@
     text-align: start;
     justify-content: flex-start;
     align-items: flex-start;
-    line-height: 2rem;
 }
 
 .quoteSectionHeading {
@@ -41,12 +40,12 @@
     justify-content: flex-end;
     font-family: var(--font-sans);
     text-align: center;
-    line-height: 2.5rem;
+    line-height: 3rem;
 }
 
 @media (min-width: 431px) {
     .quoteSectionHeading { font-size: 1.5rem; }
-    .quoteDiscription { font-size: 1.2rem; line-height: 1.3rem;}
+    .quoteDiscription { font-size: 1.2rem; }
 }
 
 @media (min-width: 769px) {
