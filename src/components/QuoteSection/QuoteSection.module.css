@@ -46,7 +46,7 @@
 
 @media (min-width: 431px) {
     .quoteSectionHeading { font-size: 1.5rem; }
-    .quoteDiscription { font-size: 1.2rem; }
+    .quoteDiscription { font-size: 1.2rem; line-height: 1.3rem;}
 }
 
 @media (min-width: 769px) {
